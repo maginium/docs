@@ -1,3 +1,4 @@
+
 # Concurrency
 
 * [Introduction](concurrency.md#introduction)
@@ -12,11 +13,11 @@ Maginium's `Concurrency` facade is currently in beta while we gather community f
 
 Sometimes you may need to execute several slow tasks that do not depend on one another. In many cases, significant performance improvements can be realized by executing the tasks concurrently. Maginium's `Concurrency` facade provides a simple, convenient API for executing closures concurrently.
 
-[**Concurrency Compatibility**](https://laravel.com/docs/11.x/concurrency#concurrency-compatibility)
+[**Concurrency Compatibility**](concurrency.md#concurrency-compatibility)
 
 Maginium extends the `Illuminate\Concurrency` classes to make it compatible with Maginium, a framework built on top of Magento 2. This integration enables Magento applications to leverage concurrency for better task execution.
 
-[**How it Works**](https://laravel.com/docs/11.x/concurrency#how-it-works)
+[**How it Works**](concurrency.md#how-it-works)
 
 Maginium achieves concurrency by serializing the given closures and dispatching them to a hidden Artisan CLI command. This command unserializes the closures and invokes them within its PHP process. After the closure has been invoked, the resulting value is serialized back to the parent process.
 
@@ -30,12 +31,12 @@ composer require spatie/fork
 
 The `sync` driver is primarily useful during testing when you want to disable all concurrency and execute the given closures in sequence within the parent process.
 
-### [Running Concurrent Tasks](https://laravel.com/docs/11.x/concurrency#running-concurrent-tasks) <a href="#running-concurrent-tasks" id="running-concurrent-tasks"></a>
+### [Running Concurrent Tasks](concurrency.md#running-concurrent-tasks) <a href="#running-concurrent-tasks" id="running-concurrent-tasks"></a>
 
 To run concurrent tasks, you may invoke the `Concurrency` facade's `run` method. The `run` method accepts an array of closures that should be executed simultaneously in child PHP processes:
 
 ```
-use Maginium\Framework\Support\Facades\Concurrency;use Illuminate\Support\Facades\DB; [$userCount, $orderCount] = Concurrency::run([    fn () => DB::table('users')->count(),    fn () => DB::table('orders')->count(),]);
+use Maginium\Framework\Support\Facades\Concurrency;use Illuminate\Support\Facades\DB; [$userCount, $orderCount] = Concurrency::run([    fn () => DB::table('users')->count(),    fn () => DB::table('orders')->count(),]);
 ```
 
 To use a specific driver, you may use the `driver` method:
@@ -50,7 +51,7 @@ Or, to change the default concurrency driver, you can set the corresponding envi
 CONCURRENCY_DRIVER=fork
 ```
 
-### [Deferring Concurrent Tasks](https://laravel.com/docs/11.x/concurrency#deferring-concurrent-tasks) <a href="#deferring-concurrent-tasks" id="deferring-concurrent-tasks"></a>
+### [Deferring Concurrent Tasks](concurrency.md#deferring-concurrent-tasks) <a href="#deferring-concurrent-tasks" id="deferring-concurrent-tasks"></a>
 
 If you would like to execute an array of closures concurrently but are not interested in the results returned by those closures, you should consider using the `defer` method. When the `defer` method is invoked, the given closures are not executed immediately. Instead, Maginium will execute the closures concurrently after the HTTP response has been sent to the user:
 
