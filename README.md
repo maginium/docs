@@ -1,22 +1,7 @@
----
-icon: hand-wave
-cover: https://gitbookio.github.io/onboarding-template-images/header.png
-coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
+# Maginium Documentation
 
-# Welcome
+You can find the online version of the Laravel documentation at [[https://laravel.com/docs](https://pixiedia.gitbook.io/maginium)
 
+## Contribution Guidelines
+
+If you are submitting documentation for the **current stable release**, submit it to the corresponding branch. For example, documentation for Laravel 1.2 would be submitted to the `1.x` branch. Documentation intended for the next release of Laravel should be submitted to the `master` branch.
