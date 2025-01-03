@@ -21,11 +21,11 @@
 
 Some of the data retrieval or processing tasks performed by your application could be CPU intensive or take several seconds to complete. When this is the case, it is common to cache the retrieved data for a time so it can be retrieved quickly on subsequent requests for the same data. The cached data is usually stored in a very fast data store such as [Memcached](https://memcached.org/) or [Redis](https://redis.io/).
 
-Thankfully, Maginium provides an expressive, unified API for various cache backends, allowing you to take advantage of their blazing fast data retrieval and speed up your web application.
+Thankfully, Maginium provides an expressive, unified API for various cache backends, allowing you to take advantage of their blazing-fast data retrieval and speed up your web application.
 
 ### [Configuration](cache.md#configuration) <a href="#configuration" id="configuration"></a>
 
-Your application's cache configuration file is located at `config/cache.php`. In this file, you may specify which cache store you would like to be used by default throughout your application. Maginium supports popular caching backends like [Memcached](https://memcached.org/), [Redis](https://redis.io/), [DynamoDB](https://aws.amazon.com/dynamodb), and relational databases out of the box. In addition, a file based cache driver is available, while `array` and "null" cache drivers provide convenient cache backends for your automated tests.
+Your application's cache configuration file is located at `app/etc/env.php`. In this file, you may specify which cache store you would like to be used by default throughout your application. Maginium supports popular caching backends like [Memcached](https://memcached.org/), [Redis](https://redis.io/), [DynamoDB](https://aws.amazon.com/dynamodb), and relational databases out of the box. In addition, a file-based cache driver is available, while `array` and "null" cache drivers provide convenient cache backends for your automated tests.
 
 The cache configuration file also contains a variety of other options that you may review. By default, Maginium is configured to use the `database` cache driver, which stores the serialized, cached objects in your application's database.
 
