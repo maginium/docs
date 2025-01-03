@@ -11,6 +11,7 @@ Laravel includes a variety of functions for manipulating string values. Many of 
 
 #### [Strings](strings.md/strings/#strings-method-list) <a href="#strings-method-list" id="strings-method-list"></a>
 
+| Column 1                              | Column 2                              | Column 3                              |
 |---------------------------------------|---------------------------------------|---------------------------------------|
 | [__](strings.md/strings#method-__)    | [class_basename](strings.md/strings#method-class-basename) | [e](strings.md/strings#method-e) |
 | [preg_replace_array](strings.md/strings#method-preg-replace-array) | [Str::after](strings.md/strings#method-str-after) | [Str::afterLast](strings.md/strings#method-str-after-last) |
@@ -45,6 +46,7 @@ Laravel includes a variety of functions for manipulating string values. Many of 
 
 #### [Fluent Strings](strings.md/strings/#fluent-strings-method-list) <a href="#fluent-strings-method-list" id="fluent-strings-method-list"></a>
 
+| Column 1                              | Column 2                              | Column 3                              |
 |---------------------------------------|---------------------------------------|---------------------------------------|
 | [after](strings.md/strings/#method-fluent-str-after)  | [afterLast](strings.md/strings/#method-fluent-str-after-last)  | [apa](strings.md/strings/#method-fluent-str-apa)  |
 | [append](strings.md/strings/#method-fluent-str-append)  | [ascii](strings.md/strings/#method-fluent-str-ascii)  | [basename](strings.md/strings/#method-fluent-str-basename)  |
