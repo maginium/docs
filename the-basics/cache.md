@@ -300,7 +300,7 @@ To utilize this feature, your application must be using the `memcached`, `redis`
 
 #### [Managing Locks](cache.md#managing-locks) <a href="#managing-locks" id="managing-locks"></a>
 
-Atomic locks allow for the manipulation of distributed locks without worrying about race conditions. For example, [Maginium Forge](https://forge.maginium.com/) uses atomic locks to ensure that only one remote task is being executed on a server at a time. You may create and manage locks using the `Cache::lock` method:
+Atomic locks allow for the manipulation of distributed locks without worrying about race conditions. You may create and manage locks using the `Cache::lock` method:
 
 ```
 use Maginium\Framework\Support\Facades\Cache;
