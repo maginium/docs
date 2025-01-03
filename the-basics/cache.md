@@ -269,7 +269,7 @@ Cache::flush();
 ```
 
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Flushing the cache does not respect your configured cache "prefix" and will remove all entries from the cache. Consider this carefully when clearing a cache which is shared by other applications.
 {% endhint %}
 
@@ -303,7 +303,7 @@ When testing calls to the global `cache` function, you may use the `Cache::shoul
 
 ## [Atomic Locks](cache.md#atomic-locks)
 
-{% hint style="info" %}
+{% hint style="warning" %}
 To utilize this feature, your application must be using the `memcached`, `redis`, `dynamodb`, `database`, `file`, or `array` cache driver as your application's default cache driver. In addition, all servers must be communicating with the same central cache server.
 {% endhint %}
 
