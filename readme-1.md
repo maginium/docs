@@ -1,9 +1,8 @@
 ---
-hidden: true
 icon: hand-wave
 ---
 
-# ReadMe
+# Welcome
 
 You can find the online version of the Laravel documentation at \[[https://laravel.com/docs](https://pixiedia.gitbook.io/maginium)
 
