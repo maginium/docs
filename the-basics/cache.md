@@ -98,7 +98,7 @@ For more information on configuring MongoDB, please refer to the MongoDB [Cache 
 
 <a name="obtaining-a-cache-instance" id="obtaining-a-cache-instance" href="obtaining-a-cache-instance"></a>
 
-### [Obtaining a Cache Instance](cache.md#obtaining-a-cache-instance)
+#### [Obtaining a Cache Instance](cache.md#obtaining-a-cache-instance)
 
 To obtain a cache store instance, you may use the `Cache` facade, which is what we will use throughout this documentation. The `Cache` facade provides convenient, terse access to the underlying implementations of the Maginium cache contracts:
 
@@ -135,7 +135,7 @@ Using the `Cache` facade, you may access various cache stores via the `store` me
 
 <a name="retrieving-items-from-the-cache" id="retrieving-items-from-the-cache" href="retrieving-items-from-the-cache"></a>
 
-### [Retrieving Items From the Cache](cache.md#retrieving-items-from-the-cache)
+#### [Retrieving Items From the Cache](cache.md#retrieving-items-from-the-cache)
 
 The `Cache` facade's `get` method is used to retrieve items from the cache. If the item does not exist in the cache, `null` will be returned. If you wish, you may pass a second argument to the `get` method specifying the default value you wish to be returned if the item doesn't exist:
 
@@ -218,7 +218,7 @@ If you need to retrieve an item from the cache and then delete the item, you may
 
 <a name="storing-items-in-the-cache" id="storing-items-in-the-cache" href="storing-items-in-the-cache"></a>
 
-### [Storing Items in the Cache](cache.md#storing-items-in-the-cache)
+#### [Storing Items in the Cache](cache.md#storing-items-in-the-cache)
 
 You may use the `put` method on the `Cache` facade to store items in the cache:
 
@@ -253,7 +253,7 @@ The `forever` method may be used to store an item in the cache permanently. Sinc
 
 <a name="removing-items-from-the-cache" id="removing-items-from-the-cache" href="removing-items-from-the-cache"></a>
 
-### [Removing Items From the Cache](cache.md#removing-items-from-the-cache)
+#### [Removing Items From the Cache](cache.md#removing-items-from-the-cache)
 
 You may remove items from the cache using the `forget` method:
 
@@ -274,7 +274,7 @@ You may clear the entire cache using the `flush` method:
 
 <a name="the-cache-helper" id="the-cache-helper" href="the-cache-helper"></a>
 
-### [The Cache Helper](cache.md#the-cache-helper)
+#### [The Cache Helper](cache.md#the-cache-helper)
 
 In addition to using the `Cache` facade, you may also use the global `cache` function to retrieve and store data via the cache. When the `cache` function is called with a single, string argument, it will return the value of the given key:
 
@@ -304,7 +304,7 @@ When the `cache` function is called without any arguments, it returns an instanc
 
 <a name="managing-locks" id="managing-locks" href="managing-locks"></a>
 
-### [Managing Locks](cache.md#managing-locks)
+#### [Managing Locks](cache.md#managing-locks)
 
 Atomic locks allow for the manipulation of distributed locks without worrying about race conditions. For example, [Maginium Forge](https://forge.maginium.com) uses atomic locks to ensure that only one remote task is being executed on a server at a time. You may create and manage locks using the `Cache::lock` method:
 
@@ -348,7 +348,7 @@ The example above may be simplified by passing a closure to the `block` method. 
 
 <a name="managing-locks-across-processes" id="managing-locks-across-processes" href="managing-locks-across-processes"></a>
 
-### [Managing Locks Across Processes](cache.md#managing-locks-across-processes)
+#### [Managing Locks Across Processes](cache.md#managing-locks-across-processes)
 
 Sometimes, you may wish to acquire a lock in one process and release it in another process. For example, you may acquire a lock during a web request and wish to release the lock at the end of a queued job that is triggered by that request. In this scenario, you should pass the lock's scoped "owner token" to the queued job so that the job can re-instantiate the lock using the given token.
 
