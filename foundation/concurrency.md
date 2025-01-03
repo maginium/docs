@@ -1,7 +1,5 @@
 # Concurrency
 
-## Concurrency
-
 * [Introduction](concurrency.md#introduction)
 * [Running Concurrent Tasks](concurrency.md#running-concurrent-tasks)
 * [Deferring Concurrent Tasks](concurrency.md#deferring-concurrent-tasks)
