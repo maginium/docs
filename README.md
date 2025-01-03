@@ -1,4 +1,4 @@
-# Laravel Documentation
+# Maginium Documentation
 
 You can find the online version of the Laravel documentation at \[[https://pixiedia.gitbook.io/maginium](https://pixiedia.gitbook.io/maginium)
 
