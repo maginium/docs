@@ -6,8 +6,9 @@
 
 * [Quickstart](getting-started/quickstart.md)
 * [Installation](getting-started/publish-your-docs.md)
+* [Structure](getting-started/structure.md)
 
-## 🧱 Foundation
+## Foundation
 
 * [Concurrency](foundation/concurrency.md)
 * [Strings](foundation/strings.md)
