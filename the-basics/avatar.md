@@ -94,7 +94,7 @@ Returns an instance of the Intervention image object, enabling further processin
 
 <a name="non-ascii-character" href="#non-ascii-character" id="non-ascii-character"></a>
 
-#### [Non-ASCII Character](avatar.md#override-config-at-runtime)
+#### [Non-ASCII Character](avatar.md#non-ascii-character)
 
 The library tries to render initials as supplied. For non-ASCII characters (e.g., ā, Ě), their visibility depends on font support. Alternatively, non-ASCII characters can be converted to their closest ASCII counterparts using Stringy.
 
