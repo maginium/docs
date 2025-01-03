@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Laravel Documentation](README.md)
+* [Maginium Documentation](README.md)
 * [Welcome](readme-1.md)
 
 ## Getting Started
