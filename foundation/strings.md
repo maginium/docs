@@ -82,13 +82,13 @@ Laravel includes a variety of functions for manipulating string values. Many of 
 | [whenIsUlid](strings.md/strings/#method-fluent-str-when-is-ulid)           | [whenIsUuid](strings.md/strings/#method-fluent-str-when-is-uuid)        | [whenTest](strings.md/strings/#method-fluent-str-when-test)          |
 | [wordCount](strings.md/strings/#method-fluent-str-word-count)              | [words](strings.md/strings/#method-fluent-str-words)                    | [wrap](strings.md/strings/#method-fluent-str-wrap)                   |
 
-### [Strings](strings.md/strings/#strings) <a href="#strings" id="strings"></a>
+### [Strings](strings.md/strings#strings) <a href="#strings" id="strings"></a>
 
-[**`__()`**](strings.md/strings/#method-__)
+[**`__()`**](strings.md/strings#method-__)
 
-The `__` function translates the given translation string or translation key using your [language files](strings.md/localization/):
+The `__` function translates the given translation string or translation key using your [language files](strings.md/localization):
 
-````php
+```php
 echo __('Welcome to our application'); echo __('messages.welcome');
 ```
 
@@ -100,7 +100,7 @@ The `class_basename` function returns the class name of the given class with the
 
 ```php
 $class = class_basename('Foo\Bar\Baz'); // Baz
-```php
+```
 
 [**`e()`**](strings.md/strings#method-e)
 
@@ -108,7 +108,7 @@ The `e` function runs PHP's `htmlspecialchars` function with the `double_encode`
 
 ```php
 echo e('<html>foo</html>'); // &lt;html&gt;foo&lt;/html&gt;
-```php
+```
 
 [**`preg_replace_array()`**](strings.md/strings#method-preg-replace-array)
 
@@ -116,7 +116,7 @@ The `preg_replace_array` function replaces a given pattern in the string sequent
 
 ```php
 $string = 'The event will take place between :start and :end'; $replaced = preg_replace_array('/:[a-z_]+/', ['8:30', '9:00'], $string); // The event will take place between 8:30 and 9:00
-```php
+```
 
 [**`Str::after()`**](strings.md/strings#method-str-after)
 
@@ -124,7 +124,7 @@ The `Str::after` method returns everything after the given value in a string. Th
 
 ```php
 use Illuminate\Support\Str; $slice = Str::after('This is my name', 'This is'); // ' my name'
-```php
+```
 
 [**`Str::afterLast()`**](strings.md/strings#method-str-after-last)
 
@@ -132,7 +132,7 @@ The `Str::afterLast` method returns everything after the last occurrence of the 
 
 ```php
 use Illuminate\Support\Str; $slice = Str::afterLast('App\Http\Controllers\Controller', '\\'); // 'Controller'
-```php
+```
 
 [**`Str::apa()`**](strings.md/strings#method-str-apa)
 
@@ -140,7 +140,7 @@ The `Str::apa` method converts the given string to title case following the [APA
 
 ```php
 use Illuminate\Support\Str; $title = Str::apa('Creating A Project'); // 'Creating a Project'
-```php
+```
 
 [**`Str::ascii()`**](strings.md/strings#method-str-ascii)
 
@@ -148,7 +148,7 @@ The `Str::ascii` method will attempt to transliterate the string into an ASCII v
 
 ```php
 use Illuminate\Support\Str; $slice = Str::ascii('û'); // 'u'
-```php
+```
 
 [**`Str::before()`**](strings.md/strings#method-str-before)
 
@@ -156,7 +156,7 @@ The `Str::before` method returns everything before the given value in a string:
 
 ```php
 use Illuminate\Support\Str; $slice = Str::before('This is my name', 'my name'); // 'This is '
-```php
+```
 
 [**`Str::beforeLast()`**](strings.md/strings#method-str-before-last)
 
@@ -164,7 +164,7 @@ The `Str::beforeLast` method returns everything before the last occurrence of th
 
 ```php
 use Illuminate\Support\Str; $slice = Str::beforeLast('This is my name', 'is'); // 'This '
-```php
+```
 
 [**`Str::between()`**](strings.md/strings#method-str-between)
 
@@ -172,7 +172,7 @@ The `Str::between` method returns the portion of a string between two values:
 
 ```php
 use Illuminate\Support\Str; $slice = Str::between('This is my name', 'This', 'name'); // ' is my '
-```php
+```
 
 [**`Str::betweenFirst()`**](strings.md/strings#method-str-between-first)
 
@@ -180,7 +180,7 @@ The `Str::betweenFirst` method returns the smallest possible portion of a string
 
 ```php
 use Illuminate\Support\Str; $slice = Str::betweenFirst('[a] bc [d]', '[', ']'); // 'a'
-```php
+```
 
 [**`Str::camel()`**](strings.md/strings#method-camel-case)
 
@@ -188,7 +188,7 @@ The `Str::camel` method converts the given string to `camelCase`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::camel('foo_bar'); // 'fooBar'
-```php
+```
 
 [**`Str::charAt()`**](strings.md/strings#method-char-at)
 
@@ -196,7 +196,7 @@ The `Str::charAt` method returns the character at the specified index. If the in
 
 ```php
 use Illuminate\Support\Str; $character = Str::charAt('This is my name.', 6); // 's'
-```php
+```
 
 [**`Str::chopStart()`**](strings.md/strings#method-str-chop-start)
 
@@ -210,7 +210,7 @@ You may also pass an array as the second argument. If the string starts with any
 
 ```php
 use Illuminate\Support\Str; $url = Str::chopStart('http://laravel.com', ['https://', 'http://']); // 'laravel.com'
-```php
+```
 
 [**`Str::chopEnd()`**](strings.md/strings#method-str-chop-end)
 
@@ -224,7 +224,7 @@ You may also pass an array as the second argument. If the string ends with any o
 
 ```php
 use Illuminate\Support\Str; $url = Str::chopEnd('laravel.com/index.php', ['/index.html', '/index.php']); // 'laravel.com'
-```php
+```
 
 [**`Str::contains()`**](strings.md/strings#method-str-contains)
 
@@ -244,7 +244,7 @@ You may disable case sensitivity by setting the `ignoreCase` argument to `true`:
 
 ```php
 use Illuminate\Support\Str; $contains = Str::contains('This is my name', 'MY', ignoreCase: true); // true
-```php
+```
 
 [**`Str::containsAll()`**](strings.md/strings#method-str-contains-all)
 
@@ -258,7 +258,7 @@ You may disable case sensitivity by setting the `ignoreCase` argument to `true`:
 
 ```php
 use Illuminate\Support\Str; $containsAll = Str::containsAll('This is my name', ['MY', 'NAME'], ignoreCase: true); // true
-```php
+```
 
 [**`Str::doesntContain()`**](strings.md/strings#method-str-doesnt-contain)
 
@@ -278,7 +278,7 @@ You may disable case sensitivity by setting the `ignoreCase` argument to `true`:
 
 ```php
 use Illuminate\Support\Str; $doesntContain = Str::doesntContain('This is name', 'MY', ignoreCase: true); // true
-```php
+```
 
 [**`Str::deduplicate()`**](strings.md/strings#method-deduplicate)
 
@@ -292,7 +292,7 @@ You may specify a different character to deduplicate by passing it in as the sec
 
 ```php
 use Illuminate\Support\Str; $result = Str::deduplicate('The---Laravel---Framework', '-'); // The-Laravel-Framework
-```php
+```
 
 [**`Str::endsWith()`**](strings.md/strings#method-ends-with)
 
@@ -306,7 +306,7 @@ You may also pass an array of values to determine if the given string ends with 
 
 ```php
 use Illuminate\Support\Str; $result = Str::endsWith('This is my name', ['name', 'foo']); // true $result = Str::endsWith('This is my name', ['this', 'foo']); // false
-```php
+```
 
 [**`Str::excerpt()`**](strings.md/strings#method-excerpt)
 
@@ -322,7 +322,7 @@ In addition, you may use the `omission` option to define the string that will be
 
 ```php
 use Illuminate\Support\Str; $excerpt = Str::excerpt('This is my name', 'name', [    'radius' => 3,    'omission' => '(...) ']); // '(...) my name'
-```php
+```
 
 [**`Str::finish()`**](strings.md/strings#method-str-finish)
 
@@ -330,7 +330,7 @@ The `Str::finish` method adds a single instance of the given value to a string i
 
 ```php
 use Illuminate\Support\Str; $adjusted = Str::finish('this/string', '/'); // this/string/ $adjusted = Str::finish('this/string/', '/'); // this/string/
-```php
+```
 
 [**`Str::headline()`**](strings.md/strings#method-str-headline)
 
@@ -338,7 +338,7 @@ The `Str::headline` method will convert strings delimited by casing, hyphens, or
 
 ```php
 use Illuminate\Support\Str; $headline = Str::headline('steve_jobs'); // Steve Jobs $headline = Str::headline('EmailNotificationSent'); // Email Notification Sent
-```php
+```
 
 [**`Str::inlineMarkdown()`**](strings.md/strings#method-str-inline-markdown)
 
@@ -354,7 +354,7 @@ By default, Markdown supports raw HTML, which will expose Cross-Site Scripting (
 
 ```php
 use Illuminate\Support\Str; Str::inlineMarkdown('Inject: <script>alert("Hello XSS!");</script>', [    'html_input' => 'strip',    'allow_unsafe_links' => false,]); // Inject: alert(&quot;Hello XSS!&quot;);
-```php
+```
 
 [**`Str::is()`**](strings.md/strings#method-str-is)
 
@@ -368,7 +368,7 @@ You may disable case sensitivity by setting the `ignoreCase` argument to `true`:
 
 ```php
 use Illuminate\Support\Str; $matches = Str::is('*.jpg', 'photo.JPG', ignoreCase: true); // true
-```php
+```
 
 [**`Str::isAscii()`**](strings.md/strings#method-str-is-ascii)
 
@@ -376,7 +376,7 @@ The `Str::isAscii` method determines if a given string is 7 bit ASCII:
 
 ```php
 use Illuminate\Support\Str; $isAscii = Str::isAscii('Taylor'); // true $isAscii = Str::isAscii('ü'); // false
-```php
+```
 
 [**`Str::isJson()`**](strings.md/strings#method-str-is-json)
 
@@ -384,7 +384,7 @@ The `Str::isJson` method determines if the given string is valid JSON:
 
 ```php
 use Illuminate\Support\Str; $result = Str::isJson('[1,2,3]'); // true $result = Str::isJson('{"first": "John", "last": "Doe"}'); // true $result = Str::isJson('{first: "John", last: "Doe"}'); // false
-```php
+```
 
 [**`Str::isUrl()`**](strings.md/strings#method-str-is-url)
 
@@ -398,7 +398,7 @@ The `isUrl` method considers a wide range of protocols as valid. However, you ma
 
 ```php
 $isUrl = Str::isUrl('http://example.com', ['http', 'https']);
-```php
+```
 
 [**`Str::isUlid()`**](strings.md/strings#method-str-is-ulid)
 
@@ -406,7 +406,7 @@ The `Str::isUlid` method determines if the given string is a valid ULID:
 
 ```php
 use Illuminate\Support\Str; $isUlid = Str::isUlid('01gd6r360bp37zj17nxb55yv40'); // true $isUlid = Str::isUlid('laravel'); // false
-```php
+```
 
 [**`Str::isUuid()`**](strings.md/strings#method-str-is-uuid)
 
@@ -414,7 +414,7 @@ The `Str::isUuid` method determines if the given string is a valid UUID:
 
 ```php
 use Illuminate\Support\Str; $isUuid = Str::isUuid('a0a2a2d2-0b87-4a18-83f2-2529882be2de'); // true $isUuid = Str::isUuid('laravel'); // false
-```php
+```
 
 [**`Str::kebab()`**](strings.md/strings#method-kebab-case)
 
@@ -422,7 +422,7 @@ The `Str::kebab` method converts the given string to `kebab-case`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::kebab('fooBar'); // foo-bar
-```php
+```
 
 [**`Str::lcfirst()`**](strings.md/strings#method-str-lcfirst)
 
@@ -430,7 +430,7 @@ The `Str::lcfirst` method returns the given string with the first character lowe
 
 ```php
 use Illuminate\Support\Str; $string = Str::lcfirst('Foo Bar'); // foo Bar
-```php
+```
 
 [**`Str::length()`**](strings.md/strings#method-str-length)
 
@@ -438,7 +438,7 @@ The `Str::length` method returns the length of the given string:
 
 ```php
 use Illuminate\Support\Str; $length = Str::length('Laravel'); // 7
-```php
+```
 
 [**`Str::limit()`**](strings.md/strings#method-str-limit)
 
@@ -458,7 +458,7 @@ If you would like to preserve complete words when truncating the string, you may
 
 ```php
 $truncated = Str::limit('The quick brown fox', 12, preserveWords: true); // The quick...
-```php
+```
 
 [**`Str::lower()`**](strings.md/strings#method-str-lower)
 
@@ -466,7 +466,7 @@ The `Str::lower` method converts the given string to lowercase:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::lower('LARAVEL'); // laravel
-```php
+```
 
 [**`Str::markdown()`**](strings.md/strings#method-str-markdown)
 
@@ -482,7 +482,7 @@ By default, Markdown supports raw HTML, which will expose Cross-Site Scripting (
 
 ```php
 use Illuminate\Support\Str; Str::markdown('Inject: <script>alert("Hello XSS!");</script>', [    'html_input' => 'strip',    'allow_unsafe_links' => false,]); // <p>Inject: alert(&quot;Hello XSS!&quot;);</p>
-```php
+```
 
 [**`Str::mask()`**](strings.md/strings#method-str-mask)
 
@@ -496,7 +496,7 @@ If needed, you provide a negative number as the third argument to the `mask` met
 
 ```php
 $string = Str::mask('taylor@example.com', '*', -15, 3); // tay***@example.com
-```php
+```
 
 [**`Str::orderedUuid()`**](strings.md/strings#method-str-ordered-uuid)
 
@@ -504,7 +504,7 @@ The `Str::orderedUuid` method generates a "timestamp first" UUID that may be eff
 
 ```php
 use Illuminate\Support\Str; return (string) Str::orderedUuid();
-```php
+```
 
 [**`Str::padBoth()`**](strings.md/strings#method-str-padboth)
 
@@ -512,7 +512,7 @@ The `Str::padBoth` method wraps PHP's `str_pad` function, padding both sides of 
 
 ```php
 use Illuminate\Support\Str; $padded = Str::padBoth('James', 10, '_'); // '__James___' $padded = Str::padBoth('James', 10); // '  James   '
-```php
+```
 
 [**`Str::padLeft()`**](strings.md/strings#method-str-padleft)
 
@@ -520,7 +520,7 @@ The `Str::padLeft` method wraps PHP's `str_pad` function, padding the left side 
 
 ```php
 use Illuminate\Support\Str; $padded = Str::padLeft('James', 10, '-='); // '-=-=-James' $padded = Str::padLeft('James', 10); // '     James'
-```php
+```
 
 [**`Str::padRight()`**](strings.md/strings#method-str-padright)
 
@@ -528,7 +528,7 @@ The `Str::padRight` method wraps PHP's `str_pad` function, padding the right sid
 
 ```php
 use Illuminate\Support\Str; $padded = Str::padRight('James', 10, '-'); // 'James-----' $padded = Str::padRight('James', 10); // 'James     '
-```php
+```
 
 [**`Str::password()`**](strings.md/strings#method-str-password)
 
@@ -536,7 +536,7 @@ The `Str::password` method may be used to generate a secure, random password of 
 
 ```php
 use Illuminate\Support\Str; $password = Str::password(); // 'EbJo2vE-AS:U,$%_gkrV4n,q~1xy/-_4' $password = Str::password(12); // 'qwuar>#V|i]N'
-```php
+```
 
 [**`Str::plural()`**](strings.md/strings#method-str-plural)
 
@@ -550,7 +550,7 @@ You may provide an integer as a second argument to the function to retrieve the 
 
 ```php
 use Illuminate\Support\Str; $plural = Str::plural('child', 2); // children $singular = Str::plural('child', 1); // child
-```php
+```
 
 [**`Str::pluralStudly()`**](strings.md/strings#method-str-plural-studly)
 
@@ -564,7 +564,7 @@ You may provide an integer as a second argument to the function to retrieve the 
 
 ```php
 use Illuminate\Support\Str; $plural = Str::pluralStudly('VerifiedHuman', 2); // VerifiedHumans $singular = Str::pluralStudly('VerifiedHuman', 1); // VerifiedHuman
-```php
+```
 
 [**`Str::position()`**](strings.md/strings#method-str-position)
 
@@ -572,7 +572,7 @@ The `Str::position` method returns the position of the first occurrence of a sub
 
 ```php
 use Illuminate\Support\Str; $position = Str::position('Hello, World!', 'Hello'); // 0 $position = Str::position('Hello, World!', 'W'); // 7
-```php
+```
 
 [**`Str::random()`**](strings.md/strings#method-str-random)
 
@@ -592,7 +592,7 @@ To instruct the `random` method to return to generating random strings normally,
 
 ```php
 Str::createRandomStringsNormally();
-```php
+```
 
 [**`Str::remove()`**](strings.md/strings#method-str-remove)
 
@@ -610,7 +610,7 @@ The `Str::repeat` method repeats the given string:
 
 ```php
 use Illuminate\Support\Str; $string = 'a'; $repeat = Str::repeat($string, 5); // aaaaa
-```php
+```
 
 [**`Str::replace()`**](strings.md/strings#method-str-replace)
 
@@ -624,7 +624,7 @@ The `replace` method also accepts a `caseSensitive` argument. By default, the `r
 
 ```php
 Str::replace('Framework', 'Laravel', caseSensitive: false);
-```php
+```
 
 [**`Str::replaceArray()`**](strings.md/strings#method-str-replace-array)
 
@@ -632,7 +632,7 @@ The `Str::replaceArray` method replaces a given value in the string sequentially
 
 ```php
 use Illuminate\Support\Str; $string = 'The event will take place between ? and ?'; $replaced = Str::replaceArray('?', ['8:30', '9:00'], $string); // The event will take place between 8:30 and 9:00
-```php
+```
 
 [**`Str::replaceFirst()`**](strings.md/strings#method-str-replace-first)
 
@@ -640,7 +640,7 @@ The `Str::replaceFirst` method replaces the first occurrence of a given value in
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::replaceFirst('the', 'a', 'the quick brown fox jumps over the lazy dog'); // a quick brown fox jumps over the lazy dog
-```php
+```
 
 [**`Str::replaceLast()`**](strings.md/strings#method-str-replace-last)
 
@@ -648,7 +648,7 @@ The `Str::replaceLast` method replaces the last occurrence of a given value in a
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::replaceLast('the', 'a', 'the quick brown fox jumps over the lazy dog'); // the quick brown fox jumps over a lazy dog
-```php
+```
 
 [**`Str::replaceMatches()`**](strings.md/strings#method-str-replace-matches)
 
@@ -662,7 +662,7 @@ The `replaceMatches` method also accepts a closure that will be invoked with eac
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::replaceMatches('/\d/', function (array $matches) {    return '['.$matches[0].']';}, '123'); // '[1][2][3]'
-```php
+```
 
 [**`Str::replaceStart()`**](strings.md/strings#method-str-replace-start)
 
@@ -670,7 +670,7 @@ The `Str::replaceStart` method replaces the first occurrence of the given value 
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::replaceStart('Hello', 'Laravel', 'Hello World'); // Laravel World $replaced = Str::replaceStart('World', 'Laravel', 'Hello World'); // Hello World
-```php
+```
 
 [**`Str::replaceEnd()`**](strings.md/strings#method-str-replace-end)
 
@@ -678,7 +678,7 @@ The `Str::replaceEnd` method replaces the last occurrence of the given value onl
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::replaceEnd('World', 'Laravel', 'Hello World'); // Hello Laravel $replaced = Str::replaceEnd('Hello', 'Laravel', 'Hello World'); // Hello World
-```php
+```
 
 [**`Str::reverse()`**](strings.md/strings#method-str-reverse)
 
@@ -686,7 +686,7 @@ The `Str::reverse` method reverses the given string:
 
 ```php
 use Illuminate\Support\Str; $reversed = Str::reverse('Hello World'); // dlroW olleH
-```php
+```
 
 [**`Str::singular()`**](strings.md/strings#method-str-singular)
 
@@ -694,7 +694,7 @@ The `Str::singular` method converts a string to its singular form. This function
 
 ```php
 use Illuminate\Support\Str; $singular = Str::singular('cars'); // car $singular = Str::singular('children'); // child
-```php
+```
 
 [**`Str::slug()`**](strings.md/strings#method-str-slug)
 
@@ -702,7 +702,7 @@ The `Str::slug` method generates a URL friendly "slug" from the given string:
 
 ```php
 use Illuminate\Support\Str; $slug = Str::slug('Laravel 5 Framework', '-'); // laravel-5-framework
-```php
+```
 
 [**`Str::snake()`**](strings.md/strings#method-snake-case)
 
@@ -710,7 +710,7 @@ The `Str::snake` method converts the given string to `snake_case`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::snake('fooBar'); // foo_bar $converted = Str::snake('fooBar', '-'); // foo-bar
-```php
+```
 
 [**`Str::squish()`**](strings.md/strings#method-str-squish)
 
@@ -718,7 +718,7 @@ The `Str::squish` method removes all extraneous white space from a string, inclu
 
 ```php
 use Illuminate\Support\Str; $string = Str::squish('    laravel    framework    '); // laravel framework
-```php
+```
 
 [**`Str::start()`**](strings.md/strings#method-str-start)
 
@@ -726,7 +726,7 @@ The `Str::start` method adds a single instance of the given value to a string if
 
 ```php
 use Illuminate\Support\Str; $adjusted = Str::start('this/string', '/'); // /this/string $adjusted = Str::start('/this/string', '/'); // /this/string
-```php
+```
 
 [**`Str::startsWith()`**](strings.md/strings#method-starts-with)
 
@@ -740,7 +740,7 @@ If an array of possible values is passed, the `startsWith` method will return `t
 
 ```php
 $result = Str::startsWith('This is my name', ['This', 'That', 'There']); // true
-```php
+```
 
 [**`Str::studly()`**](strings.md/strings#method-studly-case)
 
@@ -748,7 +748,7 @@ The `Str::studly` method converts the given string to `StudlyCase`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::studly('foo_bar'); // FooBar
-```php
+```
 
 [**`Str::substr()`**](strings.md/strings#method-str-substr)
 
@@ -756,7 +756,7 @@ The `Str::substr` method returns the portion of string specified by the start an
 
 ```php
 use Illuminate\Support\Str; $converted = Str::substr('The Laravel Framework', 4, 7); // Laravel
-```php
+```
 
 [**`Str::substrCount()`**](strings.md/strings#method-str-substrcount)
 
@@ -764,7 +764,7 @@ The `Str::substrCount` method returns the number of occurrences of a given value
 
 ```php
 use Illuminate\Support\Str; $count = Str::substrCount('If you like ice cream, you will like snow cones.', 'like'); // 2
-```php
+```
 
 [**`Str::substrReplace()`**](strings.md/strings#method-str-substrreplace)
 
@@ -772,7 +772,7 @@ The `Str::substrReplace` method replaces text within a portion of a string, star
 
 ```php
 use Illuminate\Support\Str; $result = Str::substrReplace('1300', ':', 2);// 13: $result = Str::substrReplace('1300', ':', 2, 0);// 13:00
-```php
+```
 
 [**`Str::swap()`**](strings.md/strings#method-str-swap)
 
@@ -780,7 +780,7 @@ The `Str::swap` method replaces multiple values in the given string using PHP's 
 
 ```php
 use Illuminate\Support\Str; $string = Str::swap([    'Tacos' => 'Burritos',    'great' => 'fantastic',], 'Tacos are great!'); // Burritos are fantastic!
-```php
+```
 
 [**`Str::take()`**](strings.md/strings#method-take)
 
@@ -788,7 +788,7 @@ The `Str::take` method returns a specified number of characters from the beginni
 
 ```php
 use Illuminate\Support\Str; $taken = Str::take('Build something amazing!', 5); // Build
-```php
+```
 
 [**`Str::title()`**](strings.md/strings#method-title-case)
 
@@ -796,7 +796,7 @@ The `Str::title` method converts the given string to `Title Case`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::title('a nice title uses the correct case'); // A Nice Title Uses The Correct Case
-```php
+```
 
 [**`Str::toBase64()`**](strings.md/strings#method-str-to-base64)
 
@@ -804,7 +804,7 @@ The `Str::toBase64` method converts the given string to Base64:
 
 ```php
 use Illuminate\Support\Str; $base64 = Str::toBase64('Laravel'); // TGFyYXZlbA==
-```php
+```
 
 [**`Str::transliterate()`**](strings.md/strings#method-str-transliterate)
 
@@ -812,7 +812,7 @@ The `Str::transliterate` method will attempt to convert a given string into its 
 
 ```php
 use Illuminate\Support\Str; $email = Str::transliterate('ⓣⓔⓢⓣ@ⓛⓐⓡⓐⓥⓔⓛ.ⓒⓞⓜ'); // 'test@laravel.com'
-```php
+```
 
 [**`Str::trim()`**](strings.md/strings#method-str-trim)
 
@@ -820,7 +820,7 @@ The `Str::trim` method strips whitespace (or other characters) from the beginnin
 
 ```php
 use Illuminate\Support\Str; $string = Str::trim(' foo bar '); // 'foo bar'
-```php
+```
 
 [**`Str::ltrim()`**](strings.md/strings#method-str-ltrim)
 
@@ -828,7 +828,7 @@ The `Str::ltrim` method strips whitespace (or other characters) from the beginni
 
 ```php
 use Illuminate\Support\Str; $string = Str::ltrim('  foo bar  '); // 'foo bar  '
-```php
+```
 
 [**`Str::rtrim()`**](strings.md/strings#method-str-rtrim)
 
@@ -836,7 +836,7 @@ The `Str::rtrim` method strips whitespace (or other characters) from the end of 
 
 ```php
 use Illuminate\Support\Str; $string = Str::rtrim('  foo bar  '); // '  foo bar'
-```php
+```
 
 [**`Str::ucfirst()`**](strings.md/strings#method-str-ucfirst)
 
@@ -844,7 +844,7 @@ The `Str::ucfirst` method returns the given string with the first character capi
 
 ```php
 use Illuminate\Support\Str; $string = Str::ucfirst('foo bar'); // Foo bar
-```php
+```
 
 [**`Str::ucsplit()`**](strings.md/strings#method-str-ucsplit)
 
@@ -852,7 +852,7 @@ The `Str::ucsplit` method splits the given string into an array by uppercase cha
 
 ```php
 use Illuminate\Support\Str; $segments = Str::ucsplit('FooBar'); // [0 => 'Foo', 1 => 'Bar']
-```php
+```
 
 [**`Str::upper()`**](strings.md/strings#method-str-upper)
 
@@ -860,7 +860,7 @@ The `Str::upper` method converts the given string to uppercase:
 
 ```php
 use Illuminate\Support\Str; $string = Str::upper('laravel'); // LARAVEL
-```php
+```
 
 [**`Str::ulid()`**](strings.md/strings#method-str-ulid)
 
@@ -886,7 +886,7 @@ To instruct the `ulid` method to return to generating ULIDs normally, you may in
 
 ```php
 Str::createUlidsNormally();
-```php
+```
 
 [**`Str::unwrap()`**](strings.md/strings#method-str-unwrap)
 
@@ -894,7 +894,7 @@ The `Str::unwrap` method removes the specified strings from the beginning and en
 
 ```php
 use Illuminate\Support\Str; Str::unwrap('-Laravel-', '-'); // Laravel Str::unwrap('{framework: "Laravel"}', '{', '}'); // framework: "Laravel"
-```php
+```
 
 [**`Str::uuid()`**](strings.md/strings#method-str-uuid)
 
@@ -914,7 +914,7 @@ To instruct the `uuid` method to return to generating UUIDs normally, you may in
 
 ```php
 Str::createUuidsNormally();
-```php
+```
 
 [**`Str::wordCount()`**](strings.md/strings#method-str-word-count)
 
@@ -922,7 +922,7 @@ The `Str::wordCount` method returns the number of words that a string contains:
 
 ```php
 use Illuminate\Support\Str; Str::wordCount('Hello, world!'); // 2
-```php
+```
 
 [**`Str::wordWrap()`**](strings.md/strings#method-str-word-wrap)
 
@@ -930,7 +930,7 @@ The `Str::wordWrap` method wraps a string to a given number of characters:
 
 ```php
 use Illuminate\Support\Str; $text = "The quick brown fox jumped over the lazy dog." Str::wordWrap($text, characters: 20, break: "<br />\n"); /*The quick brown fox<br />jumped over the lazy<br />dog.*/
-```php
+```
 
 [**`Str::words()`**](strings.md/strings#method-str-words)
 
@@ -938,7 +938,7 @@ The `Str::words` method limits the number of words in a string. An additional st
 
 ```php
 use Illuminate\Support\Str; return Str::words('Perfectly balanced, as all things should be.', 3, ' >>>'); // Perfectly balanced, as >>>
-```php
+```
 
 [**`Str::wrap()`**](strings.md/strings#method-str-wrap)
 
@@ -946,7 +946,7 @@ The `Str::wrap` method wraps the given string with an additional string or pair 
 
 ```php
 use Illuminate\Support\Str; Str::wrap('Laravel', '"'); // "Laravel" Str::wrap('is', before: 'This ', after: ' Laravel!'); // This is Laravel!
-```php
+```
 
 [**`str()`**](strings.md/strings#method-str)
 
@@ -960,7 +960,7 @@ If no argument is provided to the `str` function, the function returns an instan
 
 ```php
 $snake = str()->snake('FooBar'); // 'foo_bar'
-```php
+```
 
 [**`trans()`**](strings.md/strings#method-trans)
 
@@ -992,7 +992,7 @@ The `after` method returns everything after the given value in a string. The ent
 
 ```php
 use Illuminate\Support\Str; $slice = Str::of('This is my name')->after('This is'); // ' my name'
-```php
+```
 
 [**`afterLast`**](strings.md/strings#method-fluent-str-after-last)
 
@@ -1000,7 +1000,7 @@ The `afterLast` method returns everything after the last occurrence of the given
 
 ```php
 use Illuminate\Support\Str; $slice = Str::of('App\Http\Controllers\Controller')->afterLast('\\'); // 'Controller'
-```php
+```
 
 [**`apa`**](strings.md/strings#method-fluent-str-apa)
 
@@ -1008,7 +1008,7 @@ The `apa` method converts the given string to title case following the [APA guid
 
 ```php
 use Illuminate\Support\Str; $converted = Str::of('a nice title uses the correct case')->apa(); // A Nice Title Uses the Correct Case
-```php
+```
 
 [**`append`**](strings.md/strings#method-fluent-str-append)
 
@@ -1016,7 +1016,7 @@ The `append` method appends the given values to the string:
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('Taylor')->append(' Otwell'); // 'Taylor Otwell'
-```php
+```
 
 [**`ascii`**](strings.md/strings#method-fluent-str-ascii)
 
@@ -1024,7 +1024,7 @@ The `ascii` method will attempt to transliterate the string into an ASCII value:
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('ü')->ascii(); // 'u'
-```php
+```
 
 [**`basename`**](strings.md/strings#method-fluent-str-basename)
 
@@ -1038,7 +1038,7 @@ If needed, you may provide an "extension" that will be removed from the trailing
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('/foo/bar/baz.jpg')->basename('.jpg'); // 'baz'
-```php
+```
 
 [**`before`**](strings.md/strings#method-fluent-str-before)
 
@@ -1046,7 +1046,7 @@ The `before` method returns everything before the given value in a string:
 
 ```php
 use Illuminate\Support\Str; $slice = Str::of('This is my name')->before('my name'); // 'This is '
-```php
+```
 
 [**`beforeLast`**](strings.md/strings#method-fluent-str-before-last)
 
@@ -1054,7 +1054,7 @@ The `beforeLast` method returns everything before the last occurrence of the giv
 
 ```php
 use Illuminate\Support\Str; $slice = Str::of('This is my name')->beforeLast('is'); // 'This '
-```php
+```
 
 [**`between`**](strings.md/strings#method-fluent-str-between)
 
@@ -1062,7 +1062,7 @@ The `between` method returns the portion of a string between two values:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::of('This is my name')->between('This', 'name'); // ' is my '
-```php
+```
 
 [**`betweenFirst`**](strings.md/strings#method-fluent-str-between-first)
 
@@ -1070,7 +1070,7 @@ The `betweenFirst` method returns the smallest possible portion of a string betw
 
 ```php
 use Illuminate\Support\Str; $converted = Str::of('[a] bc [d]')->betweenFirst('[', ']'); // 'a'
-```php
+```
 
 [**`camel`**](strings.md/strings#method-fluent-str-camel)
 
@@ -1078,7 +1078,7 @@ The `camel` method converts the given string to `camelCase`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::of('foo_bar')->camel(); // 'fooBar'
-```php
+```
 
 [**`charAt`**](strings.md/strings#method-fluent-str-char-at)
 
@@ -1086,7 +1086,7 @@ The `charAt` method returns the character at the specified index. If the index i
 
 ```php
 use Illuminate\Support\Str; $character = Str::of('This is my name.')->charAt(6); // 's'
-```php
+```
 
 [**`classBasename`**](strings.md/strings#method-fluent-str-class-basename)
 
@@ -1094,7 +1094,7 @@ The `classBasename` method returns the class name of the given class with the cl
 
 ```php
 use Illuminate\Support\Str; $class = Str::of('Foo\Bar\Baz')->classBasename(); // 'Baz'
-```php
+```
 
 [**`chopStart`**](strings.md/strings#method-fluent-str-chop-start)
 
@@ -1108,7 +1108,7 @@ You may also pass an array. If the string starts with any of the values in the a
 
 ```php
 use Illuminate\Support\Str; $url = Str::of('http://laravel.com')->chopStart(['https://', 'http://']); // 'laravel.com'
-```php
+```
 
 [**`chopEnd`**](strings.md/strings#method-fluent-str-chop-end)
 
@@ -1122,7 +1122,7 @@ You may also pass an array. If the string ends with any of the values in the arr
 
 ```php
 use Illuminate\Support\Str; $url = Str::of('http://laravel.com')->chopEnd(['.com', '.io']); // 'http://laravel'
-```php
+```
 
 [**`contains`**](strings.md/strings#method-fluent-str-contains)
 
@@ -1142,7 +1142,7 @@ You can disable case sensitivity by setting the `ignoreCase` argument to `true`:
 
 ```php
 use Illuminate\Support\Str; $contains = Str::of('This is my name')->contains('MY', ignoreCase: true); // true
-```php
+```
 
 [**`containsAll`**](strings.md/strings#method-fluent-str-contains-all)
 
@@ -1156,7 +1156,7 @@ You can disable case sensitivity by setting the `ignoreCase` argument to `true`:
 
 ```php
 use Illuminate\Support\Str; $containsAll = Str::of('This is my name')->containsAll(['MY', 'NAME'], ignoreCase: true); // true
-```php
+```
 
 [**`deduplicate`**](strings.md/strings#method-fluent-str-deduplicate)
 
@@ -1170,7 +1170,7 @@ You may specify a different character to deduplicate by passing it in as the sec
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('The---Laravel---Framework')->deduplicate('-'); // The-Laravel-Framework
-```php
+```
 
 [**`dirname`**](strings.md/strings#method-fluent-str-dirname)
 
@@ -1184,7 +1184,7 @@ If necessary, you may specify how many directory levels you wish to trim from th
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('/foo/bar/baz')->dirname(2); // '/foo'
-```php
+```
 
 [**`endsWith`**](strings.md/strings#method-fluent-str-ends-with)
 
@@ -1198,7 +1198,7 @@ You may also pass an array of values to determine if the given string ends with 
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('This is my name')->endsWith(['name', 'foo']); // true $result = Str::of('This is my name')->endsWith(['this', 'foo']); // false
-```php
+```
 
 [**`exactly`**](strings.md/strings#method-fluent-str-exactly)
 
@@ -1206,7 +1206,7 @@ The `exactly` method determines if the given string is an exact match with anoth
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('Laravel')->exactly('Laravel'); // true
-```php
+```
 
 [**`excerpt`**](strings.md/strings#method-fluent-str-excerpt)
 
@@ -1222,7 +1222,7 @@ In addition, you may use the `omission` option to change the string that will be
 
 ```php
 use Illuminate\Support\Str; $excerpt = Str::of('This is my name')->excerpt('name', [    'radius' => 3,    'omission' => '(...) ']); // '(...) my name'
-```php
+```
 
 [**`explode`**](strings.md/strings#method-fluent-str-explode)
 
@@ -1230,7 +1230,7 @@ The `explode` method splits the string by the given delimiter and returns a coll
 
 ```php
 use Illuminate\Support\Str; $collection = Str::of('foo bar baz')->explode(' '); // collect(['foo', 'bar', 'baz'])
-```php
+```
 
 [**`finish`**](strings.md/strings#method-fluent-str-finish)
 
@@ -1238,7 +1238,7 @@ The `finish` method adds a single instance of the given value to a string if it 
 
 ```php
 use Illuminate\Support\Str; $adjusted = Str::of('this/string')->finish('/'); // this/string/ $adjusted = Str::of('this/string/')->finish('/'); // this/string/
-```php
+```
 
 [**`headline`**](strings.md/strings#method-fluent-str-headline)
 
@@ -1246,7 +1246,7 @@ The `headline` method will convert strings delimited by casing, hyphens, or unde
 
 ```php
 use Illuminate\Support\Str; $headline = Str::of('taylor_otwell')->headline(); // Taylor Otwell $headline = Str::of('EmailNotificationSent')->headline(); // Email Notification Sent
-```php
+```
 
 [**`inlineMarkdown`**](strings.md/strings#method-fluent-str-inline-markdown)
 
@@ -1262,7 +1262,7 @@ By default, Markdown supports raw HTML, which will expose Cross-Site Scripting (
 
 ```php
 use Illuminate\Support\Str; Str::of('Inject: <script>alert("Hello XSS!");</script>')->inlineMarkdown([    'html_input' => 'strip',    'allow_unsafe_links' => false,]); // Inject: alert(&quot;Hello XSS!&quot;);
-```php
+```
 
 [**`is`**](strings.md/strings#method-fluent-str-is)
 
@@ -1270,7 +1270,7 @@ The `is` method determines if a given string matches a given pattern. Asterisks 
 
 ```php
 use Illuminate\Support\Str; $matches = Str::of('foobar')->is('foo*'); // true $matches = Str::of('foobar')->is('baz*'); // false
-```php
+```
 
 [**`isAscii`**](strings.md/strings#method-fluent-str-is-ascii)
 
@@ -1278,7 +1278,7 @@ The `isAscii` method determines if a given string is an ASCII string:
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('Taylor')->isAscii(); // true $result = Str::of('ü')->isAscii(); // false
-```php
+```
 
 [**`isEmpty`**](strings.md/strings#method-fluent-str-is-empty)
 
@@ -1286,7 +1286,7 @@ The `isEmpty` method determines if the given string is empty:
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('  ')->trim()->isEmpty(); // true $result = Str::of('Laravel')->trim()->isEmpty(); // false
-```php
+```
 
 [**`isNotEmpty`**](strings.md/strings#method-fluent-str-is-not-empty)
 
@@ -1294,7 +1294,7 @@ The `isNotEmpty` method determines if the given string is not empty:
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('  ')->trim()->isNotEmpty(); // false $result = Str::of('Laravel')->trim()->isNotEmpty(); // true
-```php
+```
 
 [**`isJson`**](strings.md/strings#method-fluent-str-is-json)
 
@@ -1302,7 +1302,7 @@ The `isJson` method determines if a given string is valid JSON:
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('[1,2,3]')->isJson(); // true $result = Str::of('{"first": "John", "last": "Doe"}')->isJson(); // true $result = Str::of('{first: "John", last: "Doe"}')->isJson(); // false
-```php
+```
 
 [**`isUlid`**](strings.md/strings#method-fluent-str-is-ulid)
 
@@ -1310,7 +1310,7 @@ The `isUlid` method determines if a given string is a ULID:
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('01gd6r360bp37zj17nxb55yv40')->isUlid(); // true $result = Str::of('Taylor')->isUlid(); // false
-```php
+```
 
 [**`isUrl`**](strings.md/strings#method-fluent-str-is-url)
 
@@ -1324,7 +1324,7 @@ The `isUrl` method considers a wide range of protocols as valid. However, you ma
 
 ```php
 $result = Str::of('http://example.com')->isUrl(['http', 'https']);
-```php
+```
 
 [**`isUuid`**](strings.md/strings#method-fluent-str-is-uuid)
 
@@ -1332,7 +1332,7 @@ The `isUuid` method determines if a given string is a UUID:
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('5ace9ab9-e9cf-4ec6-a19d-5881212a452c')->isUuid(); // true $result = Str::of('Taylor')->isUuid(); // false
-```php
+```
 
 [**`kebab`**](strings.md/strings#method-fluent-str-kebab)
 
@@ -1340,7 +1340,7 @@ The `kebab` method converts the given string to `kebab-case`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::of('fooBar')->kebab(); // foo-bar
-```php
+```
 
 [**`lcfirst`**](strings.md/strings#method-fluent-str-lcfirst)
 
@@ -1348,7 +1348,7 @@ The `lcfirst` method returns the given string with the first character lowercase
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('Foo Bar')->lcfirst(); // foo Bar
-```php
+```
 
 [**`length`**](strings.md/strings#method-fluent-str-length)
 
@@ -1356,7 +1356,7 @@ The `length` method returns the length of the given string:
 
 ```php
 use Illuminate\Support\Str; $length = Str::of('Laravel')->length(); // 7
-```php
+```
 
 [**`limit`**](strings.md/strings#method-fluent-str-limit)
 
@@ -1376,7 +1376,7 @@ If you would like to preserve complete words when truncating the string, you may
 
 ```php
 $truncated = Str::of('The quick brown fox')->limit(12, preserveWords: true); // The quick...
-```php
+```
 
 [**`lower`**](strings.md/strings#method-fluent-str-lower)
 
@@ -1384,7 +1384,7 @@ The `lower` method converts the given string to lowercase:
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('LARAVEL')->lower(); // 'laravel'
-```php
+```
 
 [**`markdown`**](strings.md/strings#method-fluent-str-markdown)
 
@@ -1400,7 +1400,7 @@ By default, Markdown supports raw HTML, which will expose Cross-Site Scripting (
 
 ```php
 use Illuminate\Support\Str; Str::of('Inject: <script>alert("Hello XSS!");</script>')->markdown([    'html_input' => 'strip',    'allow_unsafe_links' => false,]); // <p>Inject: alert(&quot;Hello XSS!&quot;);</p>
-```php
+```
 
 [**`mask`**](strings.md/strings#method-fluent-str-mask)
 
@@ -1414,7 +1414,7 @@ If needed, you may provide negative numbers as the third or fourth argument to t
 
 ```php
 $string = Str::of('taylor@example.com')->mask('*', -15, 3); // tay***@example.com $string = Str::of('taylor@example.com')->mask('*', 4, -4); // tayl**********.com
-```php
+```
 
 [**`match`**](strings.md/strings#method-fluent-str-match)
 
@@ -1422,7 +1422,7 @@ The `match` method will return the portion of a string that matches a given regu
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('foo bar')->match('/bar/'); // 'bar' $result = Str::of('foo bar')->match('/foo (.*)/'); // 'bar'
-```php
+```
 
 [**`matchAll`**](strings.md/strings#method-fluent-str-match-all)
 
@@ -1446,7 +1446,7 @@ The `isMatch` method will return `true` if the string matches a given regular ex
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('foo bar')->isMatch('/foo (.*)/'); // true $result = Str::of('laravel')->isMatch('/foo (.*)/'); // false
-```php
+```
 
 [**`newLine`**](strings.md/strings#method-fluent-str-new-line)
 
@@ -1454,7 +1454,7 @@ The `newLine` method appends an "end of line" character to a string:
 
 ```php
 use Illuminate\Support\Str; $padded = Str::of('Laravel')->newLine()->append('Framework'); // 'Laravel//  Framework'
-```php
+```
 
 [**`padBoth`**](strings.md/strings#method-fluent-str-padboth)
 
@@ -1462,7 +1462,7 @@ The `padBoth` method wraps PHP's `str_pad` function, padding both sides of a str
 
 ```php
 use Illuminate\Support\Str; $padded = Str::of('James')->padBoth(10, '_'); // '__James___' $padded = Str::of('James')->padBoth(10); // '  James   '
-```php
+```
 
 [**`padLeft`**](strings.md/strings#method-fluent-str-padleft)
 
@@ -1470,7 +1470,7 @@ The `padLeft` method wraps PHP's `str_pad` function, padding the left side of a 
 
 ```php
 use Illuminate\Support\Str; $padded = Str::of('James')->padLeft(10, '-='); // '-=-=-James' $padded = Str::of('James')->padLeft(10); // '     James'
-```php
+```
 
 [**`padRight`**](strings.md/strings#method-fluent-str-padright)
 
@@ -1478,7 +1478,7 @@ The `padRight` method wraps PHP's `str_pad` function, padding the right side of 
 
 ```php
 use Illuminate\Support\Str; $padded = Str::of('James')->padRight(10, '-'); // 'James-----' $padded = Str::of('James')->padRight(10); // 'James     '
-```php
+```
 
 [**`pipe`**](strings.md/strings#method-fluent-str-pipe)
 
@@ -1486,7 +1486,7 @@ The `pipe` method allows you to transform the string by passing its current valu
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $hash = Str::of('Laravel')->pipe('md5')->prepend('Checksum: '); // 'Checksum: a5c95b86291ea299fcbe64458ed12702' $closure = Str::of('foo')->pipe(function (Stringable $str) {    return 'bar';}); // 'bar'
-```php
+```
 
 [**`plural`**](strings.md/strings#method-fluent-str-plural)
 
@@ -1500,7 +1500,7 @@ You may provide an integer as a second argument to the function to retrieve the 
 
 ```php
 use Illuminate\Support\Str; $plural = Str::of('child')->plural(2); // children $plural = Str::of('child')->plural(1); // child
-```php
+```
 
 [**`position`**](strings.md/strings#method-fluent-str-position)
 
@@ -1508,7 +1508,7 @@ The `position` method returns the position of the first occurrence of a substrin
 
 ```php
 use Illuminate\Support\Str; $position = Str::of('Hello, World!')->position('Hello'); // 0 $position = Str::of('Hello, World!')->position('W'); // 7
-```php
+```
 
 [**`prepend`**](strings.md/strings#method-fluent-str-prepend)
 
@@ -1516,7 +1516,7 @@ The `prepend` method prepends the given values onto the string:
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('Framework')->prepend('Laravel '); // Laravel Framework
-```php
+```
 
 [**`remove`**](strings.md/strings#method-fluent-str-remove)
 
@@ -1534,7 +1534,7 @@ The `repeat` method repeats the given string:
 
 ```php
 use Illuminate\Support\Str; $repeated = Str::of('a')->repeat(5); // aaaaa
-```php
+```
 
 [**`replace`**](strings.md/strings#method-fluent-str-replace)
 
@@ -1548,7 +1548,7 @@ The `replace` method also accepts a `caseSensitive` argument. By default, the `r
 
 ```php
 $replaced = Str::of('macOS 13.x')->replace(    'macOS', 'iOS', caseSensitive: false);
-```php
+```
 
 [**`replaceArray`**](strings.md/strings#method-fluent-str-replace-array)
 
@@ -1556,7 +1556,7 @@ The `replaceArray` method replaces a given value in the string sequentially usin
 
 ```php
 use Illuminate\Support\Str; $string = 'The event will take place between ? and ?'; $replaced = Str::of($string)->replaceArray('?', ['8:30', '9:00']); // The event will take place between 8:30 and 9:00
-```php
+```
 
 [**`replaceFirst`**](strings.md/strings#method-fluent-str-replace-first)
 
@@ -1564,7 +1564,7 @@ The `replaceFirst` method replaces the first occurrence of a given value in a st
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::of('the quick brown fox jumps over the lazy dog')->replaceFirst('the', 'a'); // a quick brown fox jumps over the lazy dog
-```php
+```
 
 [**`replaceLast`**](strings.md/strings#method-fluent-str-replace-last)
 
@@ -1572,7 +1572,7 @@ The `replaceLast` method replaces the last occurrence of a given value in a stri
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::of('the quick brown fox jumps over the lazy dog')->replaceLast('the', 'a'); // the quick brown fox jumps over a lazy dog
-```php
+```
 
 [**`replaceMatches`**](strings.md/strings#method-fluent-str-replace-matches)
 
@@ -1586,7 +1586,7 @@ The `replaceMatches` method also accepts a closure that will be invoked with eac
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::of('123')->replaceMatches('/\d/', function (array $matches) {    return '['.$matches[0].']';}); // '[1][2][3]'
-```php
+```
 
 [**`replaceStart`**](strings.md/strings#method-fluent-str-replace-start)
 
@@ -1594,7 +1594,7 @@ The `replaceStart` method replaces the first occurrence of the given value only 
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::of('Hello World')->replaceStart('Hello', 'Laravel'); // Laravel World $replaced = Str::of('Hello World')->replaceStart('World', 'Laravel'); // Hello World
-```php
+```
 
 [**`replaceEnd`**](strings.md/strings#method-fluent-str-replace-end)
 
@@ -1602,7 +1602,7 @@ The `replaceEnd` method replaces the last occurrence of the given value only if 
 
 ```php
 use Illuminate\Support\Str; $replaced = Str::of('Hello World')->replaceEnd('World', 'Laravel'); // Hello Laravel $replaced = Str::of('Hello World')->replaceEnd('Hello', 'Laravel'); // Hello World
-```php
+```
 
 [**`scan`**](strings.md/strings#method-fluent-str-scan)
 
@@ -1610,7 +1610,7 @@ The `scan` method parses input from a string into a collection according to a fo
 
 ```php
 use Illuminate\Support\Str; $collection = Str::of('filename.jpg')->scan('%[^.].%s'); // collect(['filename', 'jpg'])
-```php
+```
 
 [**`singular`**](strings.md/strings#method-fluent-str-singular)
 
@@ -1618,7 +1618,7 @@ The `singular` method converts a string to its singular form. This function supp
 
 ```php
 use Illuminate\Support\Str; $singular = Str::of('cars')->singular(); // car $singular = Str::of('children')->singular(); // child
-```php
+```
 
 [**`slug`**](strings.md/strings#method-fluent-str-slug)
 
@@ -1626,7 +1626,7 @@ The `slug` method generates a URL friendly "slug" from the given string:
 
 ```php
 use Illuminate\Support\Str; $slug = Str::of('Laravel Framework')->slug('-'); // laravel-framework
-```php
+```
 
 [**`snake`**](strings.md/strings#method-fluent-str-snake)
 
@@ -1634,7 +1634,7 @@ The `snake` method converts the given string to `snake_case`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::of('fooBar')->snake(); // foo_bar
-```php
+```
 
 [**`split`**](strings.md/strings#method-fluent-str-split)
 
@@ -1642,7 +1642,7 @@ The `split` method splits a string into a collection using a regular expression:
 
 ```php
 use Illuminate\Support\Str; $segments = Str::of('one, two, three')->split('/[\s,]+/'); // collect(["one", "two", "three"])
-```php
+```
 
 [**`squish`**](strings.md/strings#method-fluent-str-squish)
 
@@ -1650,7 +1650,7 @@ The `squish` method removes all extraneous white space from a string, including 
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('    laravel    framework    ')->squish(); // laravel framework
-```php
+```
 
 [**`start`**](strings.md/strings#method-fluent-str-start)
 
@@ -1658,7 +1658,7 @@ The `start` method adds a single instance of the given value to a string if it d
 
 ```php
 use Illuminate\Support\Str; $adjusted = Str::of('this/string')->start('/'); // /this/string $adjusted = Str::of('/this/string')->start('/'); // /this/string
-```php
+```
 
 [**`startsWith`**](strings.md/strings#method-fluent-str-starts-with)
 
@@ -1666,7 +1666,7 @@ The `startsWith` method determines if the given string begins with the given val
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('This is my name')->startsWith('This'); // true
-```php
+```
 
 [**`stripTags`**](strings.md/strings#method-fluent-str-strip-tags)
 
@@ -1674,7 +1674,7 @@ The `stripTags` method removes all HTML and PHP tags from a string:
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('<a href="https://laravel.com">Taylor <b>Otwell</b></a>')->stripTags(); // Taylor Otwell $result = Str::of('<a href="https://laravel.com">Taylor <b>Otwell</b></a>')->stripTags('<b>'); // Taylor <b>Otwell</b>
-```php
+```
 
 [**`studly`**](strings.md/strings#method-fluent-str-studly)
 
@@ -1682,7 +1682,7 @@ The `studly` method converts the given string to `StudlyCase`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::of('foo_bar')->studly(); // FooBar
-```php
+```
 
 [**`substr`**](strings.md/strings#method-fluent-str-substr)
 
@@ -1690,7 +1690,7 @@ The `substr` method returns the portion of the string specified by the given sta
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('Laravel Framework')->substr(8); // Framework $string = Str::of('Laravel Framework')->substr(8, 5); // Frame
-```php
+```
 
 [**`substrReplace`**](strings.md/strings#method-fluent-str-substrreplace)
 
@@ -1698,7 +1698,7 @@ The `substrReplace` method replaces text within a portion of a string, starting 
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('1300')->substrReplace(':', 2); // 13: $string = Str::of('The Framework')->substrReplace(' Laravel', 3, 0); // The Laravel Framework
-```php
+```
 
 [**`swap`**](strings.md/strings#method-fluent-str-swap)
 
@@ -1706,7 +1706,7 @@ The `swap` method replaces multiple values in the string using PHP's `strtr` fun
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('Tacos are great!')    ->swap([        'Tacos' => 'Burritos',        'great' => 'fantastic',    ]); // Burritos are fantastic!
-```php
+```
 
 [**`take`**](strings.md/strings#method-fluent-str-take)
 
@@ -1714,7 +1714,7 @@ The `take` method returns a specified number of characters from the beginning of
 
 ```php
 use Illuminate\Support\Str; $taken = Str::of('Build something amazing!')->take(5); // Build
-```php
+```
 
 [**`tap`**](strings.md/strings#method-fluent-str-tap)
 
@@ -1722,7 +1722,7 @@ The `tap` method passes the string to the given closure, allowing you to examine
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('Laravel')    ->append(' Framework')    ->tap(function (Stringable $string) {        dump('String after append: '.$string);    })    ->upper(); // LARAVEL FRAMEWORK
-```php
+```
 
 [**`test`**](strings.md/strings#method-fluent-str-test)
 
@@ -1730,7 +1730,7 @@ The `test` method determines if a string matches the given regular expression pa
 
 ```php
 use Illuminate\Support\Str; $result = Str::of('Laravel Framework')->test('/Laravel/'); // true
-```php
+```
 
 [**`title`**](strings.md/strings#method-fluent-str-title)
 
@@ -1738,7 +1738,7 @@ The `title` method converts the given string to `Title Case`:
 
 ```php
 use Illuminate\Support\Str; $converted = Str::of('a nice title uses the correct case')->title(); // A Nice Title Uses The Correct Case
-```php
+```
 
 [**`toBase64`**](strings.md/strings#method-fluent-str-to-base64)
 
@@ -1746,7 +1746,7 @@ The `toBase64` method converts the given string to Base64:
 
 ```php
 use Illuminate\Support\Str; $base64 = Str::of('Laravel')->toBase64(); // TGFyYXZlbA==
-```php
+```
 
 [**`toHtmlString`**](strings.md/strings#method-fluent-str-to-html-string)
 
@@ -1754,7 +1754,7 @@ The `toHtmlString` method converts the given string to an instance of `Illuminat
 
 ```php
 use Illuminate\Support\Str; $htmlString = Str::of('Nuno Maduro')->toHtmlString();
-```php
+```
 
 [**`transliterate`**](strings.md/strings#method-fluent-str-transliterate)
 
@@ -1762,7 +1762,7 @@ The `transliterate` method will attempt to convert a given string into its close
 
 ```php
 use Illuminate\Support\Str; $email = Str::of('ⓣⓔⓢⓣ@ⓛⓐⓡⓐⓥⓔⓛ.ⓒⓞⓜ')->transliterate() // 'test@laravel.com'
-```php
+```
 
 [**`trim`**](strings.md/strings#method-fluent-str-trim)
 
@@ -1770,7 +1770,7 @@ The `trim` method trims the given string. Unlike PHP's native `trim` function, L
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('  Laravel  ')->trim(); // 'Laravel' $string = Str::of('/Laravel/')->trim('/'); // 'Laravel'
-```php
+```
 
 [**`ltrim`**](strings.md/strings#method-fluent-str-ltrim)
 
@@ -1778,7 +1778,7 @@ The `ltrim` method trims the left side of the string. Unlike PHP's native `ltrim
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('  Laravel  ')->ltrim(); // 'Laravel  ' $string = Str::of('/Laravel/')->ltrim('/'); // 'Laravel/'
-```php
+```
 
 [**`rtrim`**](strings.md/strings#method-fluent-str-rtrim)
 
@@ -1786,7 +1786,7 @@ The `rtrim` method trims the right side of the given string. Unlike PHP's native
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('  Laravel  ')->rtrim(); // '  Laravel' $string = Str::of('/Laravel/')->rtrim('/'); // '/Laravel'
-```php
+```
 
 [**`ucfirst`**](strings.md/strings#method-fluent-str-ucfirst)
 
@@ -1794,7 +1794,7 @@ The `ucfirst` method returns the given string with the first character capitaliz
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('foo bar')->ucfirst(); // Foo bar
-```php
+```
 
 [**`ucsplit`**](strings.md/strings#method-fluent-str-ucsplit)
 
@@ -1802,7 +1802,7 @@ The `ucsplit` method splits the given string into a collection by uppercase char
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('Foo Bar')->ucsplit(); // collect(['Foo', 'Bar'])
-```php
+```
 
 [**`unwrap`**](strings.md/strings#method-fluent-str-unwrap)
 
@@ -1810,7 +1810,7 @@ The `unwrap` method removes the specified strings from the beginning and end of 
 
 ```php
 use Illuminate\Support\Str; Str::of('-Laravel-')->unwrap('-'); // Laravel Str::of('{framework: "Laravel"}')->unwrap('{', '}'); // framework: "Laravel"
-```php
+```
 
 [**`upper`**](strings.md/strings#method-fluent-str-upper)
 
@@ -1818,7 +1818,7 @@ The `upper` method converts the given string to uppercase:
 
 ```php
 use Illuminate\Support\Str; $adjusted = Str::of('laravel')->upper(); // LARAVEL
-```php
+```
 
 [**`when`**](strings.md/strings#method-fluent-str-when)
 
@@ -1844,7 +1844,7 @@ You may also pass an array of values to determine if the given string contains a
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('tony stark')            ->whenContains(['tony', 'hulk'], function (Stringable $string) {                return $string->title();            }); // Tony Stark
-```php
+```
 
 [**`whenContainsAll`**](strings.md/strings#method-fluent-str-when-contains-all)
 
@@ -1862,7 +1862,7 @@ The `whenEmpty` method invokes the given closure if the string is empty. If the 
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('  ')->whenEmpty(function (Stringable $string) {    return $string->trim()->prepend('Laravel');}); // 'Laravel'
-```php
+```
 
 [**`whenNotEmpty`**](strings.md/strings#method-fluent-str-when-not-empty)
 
@@ -1870,7 +1870,7 @@ The `whenNotEmpty` method invokes the given closure if the string is not empty. 
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('Framework')->whenNotEmpty(function (Stringable $string) {    return $string->prepend('Laravel ');}); // 'Laravel Framework'
-```php
+```
 
 [**`whenStartsWith`**](strings.md/strings#method-fluent-str-when-starts-with)
 
@@ -1878,7 +1878,7 @@ The `whenStartsWith` method invokes the given closure if the string starts with 
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('disney world')->whenStartsWith('disney', function (Stringable $string) {    return $string->title();}); // 'Disney World'
-```php
+```
 
 [**`whenEndsWith`**](strings.md/strings#method-fluent-str-when-ends-with)
 
@@ -1886,7 +1886,7 @@ The `whenEndsWith` method invokes the given closure if the string ends with the 
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('disney world')->whenEndsWith('world', function (Stringable $string) {    return $string->title();}); // 'Disney World'
-```php
+```
 
 [**`whenExactly`**](strings.md/strings#method-fluent-str-when-exactly)
 
@@ -1894,7 +1894,7 @@ The `whenExactly` method invokes the given closure if the string exactly matches
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('laravel')->whenExactly('laravel', function (Stringable $string) {    return $string->title();}); // 'Laravel'
-```php
+```
 
 [**`whenNotExactly`**](strings.md/strings#method-fluent-str-when-not-exactly)
 
@@ -1902,7 +1902,7 @@ The `whenNotExactly` method invokes the given closure if the string does not exa
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('framework')->whenNotExactly('laravel', function (Stringable $string) {    return $string->title();}); // 'Framework'
-```php
+```
 
 [**`whenIs`**](strings.md/strings#method-fluent-str-when-is)
 
@@ -1910,7 +1910,7 @@ The `whenIs` method invokes the given closure if the string matches a given patt
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('foo/bar')->whenIs('foo/*', function (Stringable $string) {    return $string->append('/baz');}); // 'foo/bar/baz'
-```php
+```
 
 [**`whenIsAscii`**](strings.md/strings#method-fluent-str-when-is-ascii)
 
@@ -1918,7 +1918,7 @@ The `whenIsAscii` method invokes the given closure if the string is 7 bit ASCII.
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('laravel')->whenIsAscii(function (Stringable $string) {    return $string->title();}); // 'Laravel'
-```php
+```
 
 [**`whenIsUlid`**](strings.md/strings#method-fluent-str-when-is-ulid)
 
@@ -1926,7 +1926,7 @@ The `whenIsUlid` method invokes the given closure if the string is a valid ULID.
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('01gd6r360bp37zj17nxb55yv40')->whenIsUlid(function (Stringable $string) {    return $string->substr(0, 8);}); // '01gd6r36'
-```php
+```
 
 [**`whenIsUuid`**](strings.md/strings#method-fluent-str-when-is-uuid)
 
@@ -1934,7 +1934,7 @@ The `whenIsUuid` method invokes the given closure if the string is a valid UUID.
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('a0a2a2d2-0b87-4a18-83f2-2529882be2de')->whenIsUuid(function (Stringable $string) {    return $string->substr(0, 8);}); // 'a0a2a2d2'
-```php
+```
 
 [**`whenTest`**](strings.md/strings#method-fluent-str-when-test)
 
@@ -1942,7 +1942,7 @@ The `whenTest` method invokes the given closure if the string matches the given 
 
 ```php
 use Illuminate\Support\Str;use Illuminate\Support\Stringable; $string = Str::of('laravel framework')->whenTest('/laravel/', function (Stringable $string) {    return $string->title();}); // 'Laravel Framework'
-```php
+```
 
 [**`wordCount`**](strings.md/strings#method-fluent-str-word-count)
 
@@ -1950,7 +1950,7 @@ The `wordCount` method returns the number of words that a string contains:
 
 ```php
 use Illuminate\Support\Str; Str::of('Hello, world!')->wordCount(); // 2
-```php
+```
 
 [**`words`**](strings.md/strings#method-fluent-str-words)
 
@@ -1958,7 +1958,7 @@ The `words` method limits the number of words in a string. If necessary, you may
 
 ```php
 use Illuminate\Support\Str; $string = Str::of('Perfectly balanced, as all things should be.')->words(3, ' >>>'); // Perfectly balanced, as >>>
-```php
+```
 
 [**`wrap`**](strings.md/strings#method-fluent-str-wrap)
 
@@ -1967,4 +1967,3 @@ The `wrap` method wraps the given string with an additional string or pair of st
 ```php
 use Illuminate\Support\Str; Str::of('Laravel')->wrap('"'); // "Laravel" Str::is('is')->wrap(before: 'This ', after: ' Laravel!'); // This is Laravel!
 ```php
-````
