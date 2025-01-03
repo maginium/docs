@@ -37,7 +37,7 @@
 * [📤 Dto](the-basics/dto.md)
 * [🌍 Locale](the-basics/locale.md)
 * [🔗 Token](the-basics/token.md)
-* [🕘 MessageQueue](the-basics/messagequeue.md)
+* [🕘 Message Queue](the-basics/message-queue.md)
 * [🖼️ Media](the-basics/media.md)
 
 ## Commerce Modules
