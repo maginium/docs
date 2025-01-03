@@ -4,7 +4,7 @@
 * [Running Concurrent Tasks](concurrency.md#running-concurrent-tasks)
 * [Deferring Concurrent Tasks](concurrency.md#deferring-concurrent-tasks)
 
-### [Introduction](https://laravel.com/docs/11.x/concurrency#introduction) <a href="#introduction" id="introduction"></a>
+### [Introduction](concurrency.md#introduction) <a href="#introduction" id="introduction"></a>
 
 {% hint style="warning" %}
 Maginium's `Concurrency` facade is currently in beta while we gather community feedback.
@@ -12,11 +12,11 @@ Maginium's `Concurrency` facade is currently in beta while we gather community f
 
 Sometimes you may need to execute several slow tasks that do not depend on one another. In many cases, significant performance improvements can be realized by executing the tasks concurrently. Maginium's `Concurrency` facade provides a simple, convenient API for executing closures concurrently.
 
-[**Concurrency Compatibility**](https://laravel.com/docs/11.x/concurrency#concurrency-compatibility)
+**Concurrency Compatibility**
 
 Maginium extends the `Illuminate\Concurrency` classes to make it compatible with Maginium, a framework built on top of Magento 2. This integration enables Magento applications to leverage concurrency for better task execution.
 
-[**How it Works**](https://laravel.com/docs/11.x/concurrency#how-it-works)
+**How it Works**
 
 Maginium achieves concurrency by serializing the given closures and dispatching them to a hidden Artisan CLI command. This command unserializes the closures and invokes them within its PHP process. After the closure has been invoked, the resulting value is serialized back to the parent process.
 
