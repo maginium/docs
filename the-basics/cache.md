@@ -284,7 +284,7 @@ cache(['key' => 'value'], $seconds);
 cache(['key' => 'value'], now()->addMinutes(10));
 ```
 
-When the `cache` function is called without any arguments, it returns an instance of the `Illuminate\Contracts\Cache\Factory` implementation, allowing you to call other caching methods:
+When the `cache` function is called without any arguments, it returns an instance of the `Maginium\Framework\Cache\Interfaces\Factory` implementation, allowing you to call other caching methods:
 
 ```
 cache()->remember('users', $seconds, function () {
@@ -322,10 +322,10 @@ Cache::lock('foo', 10)->get(function () {
 });
 ```
 
-If the lock is not available at the moment you request it, you may instruct Maginium to wait for a specified number of seconds. If the lock cannot be acquired within the specified time limit, an `Illuminate\Contracts\Cache\LockTimeoutException` will be thrown:
+If the lock is not available at the moment you request it, you may instruct Maginium to wait for a specified number of seconds. If the lock cannot be acquired within the specified time limit, an `Maginium\Framework\Cache\Interfaces\LockTimeoutException` will be thrown:
 
 ```
-use Illuminate\Contracts\Cache\LockTimeoutException;
+use Maginium\Framework\Cache\Interfaces\LockTimeoutException;
  
 $lock = Cache::lock('foo', 10);
  
@@ -382,7 +382,7 @@ To execute code on every cache operation, you may listen for various [events](ht
 
 | Event Name                             |
 | -------------------------------------- |
-| `Illuminate\Cache\Events\CacheHit`     |
-| `Illuminate\Cache\Events\CacheMissed`  |
-| `Illuminate\Cache\Events\KeyForgotten` |
-| `Illuminate\Cache\Events\KeyWritten`   |
+| `Maginium\Framework\Cache\Events\CacheHit`     |
+| `Maginium\Framework\Cache\Events\CacheMissed`  |
+| `Maginium\Framework\Cache\Events\KeyForgotten` |
+| `Maginium\Framework\Cache\Events\KeyWritten`   |
