@@ -1,8 +1,12 @@
 # 👤 Avatar
 
+{% hint style="warning" %}
+This Module is inspired by [Laravolt](https://github.com/laravolt/avatar)
+{% endhint %}
+
 ### Output as base64
 
-```
+```php
 //this will output data-uri (base64 image data)
 //something like data:image/png;base64,iVBORw0KGg....
 Avatar::create('Joko Widodo')->toBase64();
@@ -14,14 +18,14 @@ Avatar::create('Joko Widodo')->toBase64();
 
 ### Save as file
 
-```
+```php
 Avatar::create('Susilo Bambang Yudhoyono')->save('sample.png');
 Avatar::create('Susilo Bambang Yudhoyono')->save('sample.jpg', 100); // quality = 100
 ```
 
 ### Output as Gravatar
 
-```
+```php
 Avatar::create('uyab@example.net')->toGravatar();
 // Output: http://gravatar.com/avatar/0c5cbf5a8762d91d930795a6107b2ce5814a6ab26e60c7ec6b75bc81c7dfe3ee
 
@@ -35,36 +39,36 @@ Gravatar parameter [reference](https://docs.gravatar.com/api/avatars/images/)
 
 ### Output as SVG
 
-```
+```php
 Avatar::create('Susilo Bambang Yudhoyono')->toSvg();
 ```
 
 You may specify a custom font family for your SVG text.
 
-```
+```php
 <head>
     <!--Prepare custom font family, using Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Laravolt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=inter" rel="stylesheet">
 
     <!--OR-->
 
     <!--Setup your own style-->
     <style>
     @font-face {
-        font-family: Laravolt;
-        src: url({{ asset('fonts/laravolt.woff')) }});
+        font-family: Inter;
+        src: url({{ asset('fonts/inter.woff')) }});
     }
     </style>
 </head>
 ```
 
-```
-Avatar::create('Susilo Bambang Yudhoyono')->setFontFamily('Laravolt')->toSvg();
+```php
+Avatar::create('Susilo Bambang Yudhoyono')->setFontFamily('Inter')->toSvg();
 ```
 
 ### Get underlying Intervention image object
 
-```
+```php
 Avatar::create('Abdul Somad')->getImageObject();
 ```
 
