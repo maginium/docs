@@ -12,11 +12,11 @@ Maginium's `Concurrency` facade is currently in beta while we gather community f
 
 Sometimes you may need to execute several slow tasks that do not depend on one another. In many cases, significant performance improvements can be realized by executing the tasks concurrently. Maginium's `Concurrency` facade provides a simple, convenient API for executing closures concurrently.
 
-**Concurrency Compatibility**
+[**Concurrency Compatibility**](https://laravel.com/docs/11.x/concurrency#concurrency-compatibility)
 
 Maginium extends the `Illuminate\Concurrency` classes to make it compatible with Maginium, a framework built on top of Magento 2. This integration enables Magento applications to leverage concurrency for better task execution.
 
-**How it Works**
+[**How it Works**](https://laravel.com/docs/11.x/concurrency#how-it-works)
 
 Maginium achieves concurrency by serializing the given closures and dispatching them to a hidden Artisan CLI command. This command unserializes the closures and invokes them within its PHP process. After the closure has been invoked, the resulting value is serialized back to the parent process.
 
