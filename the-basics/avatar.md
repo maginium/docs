@@ -15,11 +15,10 @@ This Module is inspired by [Laravolt](https://github.com/laravolt/avatar)
 
 <a name="usage" href="#usage" id="usage"></a>
 
-### Usage
+## [Usage](avatar.md#usage)
 
 <a name="output-as-base64" href="#output-as-base64" id="output-as-base64"></a>
-
-### Output as Base64
+#### [Output as Base64](avatar.md#output-as-base64)
 
 ```php
 // This will output data-uri (base64 image data), e.g., data:image/png;base64,iVBORw0KGg...
