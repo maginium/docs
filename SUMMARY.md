@@ -19,3 +19,4 @@
 ## 🧱 Foundation
 
 * [Concurrency](foundation/concurrency.md)
+* [Strings](foundation/strings.md)
