@@ -84,7 +84,7 @@ Laravel includes a variety of functions for manipulating string values. Many of 
 
 ### [Strings](strings.md/#strings) <a href="#strings" id="strings"></a>
 
-[**`__()`**](strings.md#method-__)
+[**`__()`**](strings.md#method-__)  <a href="#method-__" id="method-__"></a>
 
 The `__` function translates the given translation string or translation key using your [language files](strings.md/localization):
 
@@ -95,7 +95,7 @@ echo __('messages.welcome');
 
 If the specified translation string or key does not exist, the `__` function will return the given value. So, using the example above, the `__` function would return `messages.welcome` if that translation key does not exist.
 
-[**`class_basename()`**](strings.md#method-class-basename)
+[**`class_basename()`**](strings.md#method-class-basename)  <a href="#method-class-basename" id="method-class-basename"></a>
 
 The `class_basename` function returns the class name of the given class with the class's namespace removed:
 
@@ -104,7 +104,7 @@ $class = class_basename('Foo\Bar\Baz');
 // Baz
 ```
 
-[**`e()`**](strings.md#method-e)
+[**`e()`**](strings.md#method-e)  <a href="#method-e" id="method-e"></a>
 
 The `e` function runs PHP's `htmlspecialchars` function with the `double_encode` option set to `true` by default:
 
@@ -113,7 +113,7 @@ echo e('<html>foo</html>');
 // &lt;html&gt;foo&lt;/html&gt;
 ```
 
-[**`preg_replace_array()`**](strings.md#method-preg-replace-array)
+[**`preg_replace_array()`**](strings.md#method-preg-replace-array)  <a href="#method-preg-replace-array" id="method-preg-replace-array"></a>
 
 The `preg_replace_array` function replaces a given pattern in the string sequentially using an array:
 
@@ -123,7 +123,7 @@ $replaced = preg_replace_array('/:[a-z_]+/', ['8:30', '9:00'], $string);
 // The event will take place between 8:30 and 9:00
 ```
 
-[**`Str::after()`**](strings.md#method-str-after)
+[**`Str::after()`**](strings.md#method-str-after)  <a href="#method-str-after" id="method-str-after"></a>
 
 The `Str::after` method returns everything after the given value in a string. The entire string will be returned if the value does not exist within the string:
 
@@ -133,7 +133,7 @@ $slice = Str::after('This is my name', 'This is');
 // ' my name'
 ```
 
-[**`Str::afterLast()`**](strings.md#method-str-after-last)
+[**`Str::afterLast()`**](strings.md#method-str-after-last)  <a href="#method-str-after-last" id="method-str-after-last"></a>
 
 The `Str::afterLast` method returns everything after the last occurrence of the given value in a string. The entire string will be returned if the value does not exist within the string:
 
@@ -143,7 +143,7 @@ $slice = Str::afterLast('App\Http\Controllers\Controller', '\\');
 // 'Controller'
 ```
 
-[**`Str::apa()`**](strings.md#method-str-apa)
+[**`Str::apa()`**](strings.md#method-str-apa)  <a href="#method-str-apa" id="method-str-apa"></a>
 
 The `Str::apa` method converts the given string to title case following the [APA guidelines](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case):
 
@@ -153,7 +153,7 @@ $title = Str::apa('Creating A Project');
 // 'Creating a Project'
 ```
 
-[**`Str::ascii()`**](strings.md#method-str-ascii)
+[**`Str::ascii()`**](strings.md#method-str-ascii)  <a href="#method-str-ascii" id="method-str-ascii"></a>
 
 The `Str::ascii` method will attempt to transliterate the string into an ASCII value:
 
@@ -163,7 +163,7 @@ $slice = Str::ascii('û');
 // 'u'
 ```
 
-[**`Str::before()`**](strings.md#method-str-before)
+[**`Str::before()`**](strings.md#method-str-before)  <a href="#method-str-before" id="method-str-before"></a>
 
 The `Str::before` method returns everything before the given value in a string:
 
@@ -173,7 +173,7 @@ $slice = Str::before('This is my name', 'my name');
 // 'This is '
 ```
 
-[**`Str::beforeLast()`**](strings.md#method-str-before-last)
+[**`Str::beforeLast()`**](strings.md#method-str-before-last)  <a href="#method-str-before-last" id="method-str-before-last"></a>
 
 The `Str::beforeLast` method returns everything before the last occurrence of the given value in a string:
 
@@ -183,7 +183,7 @@ $slice = Str::beforeLast('This is my name', 'is');
 // 'This '
 ```
 
-[**`Str::between()`**](strings.md#method-str-between)
+[**`Str::between()`**](strings.md#method-str-between)  <a href="#method-str-between" id="method-str-between"></a>
 
 The `Str::between` method returns the portion of a string between two values:
 
@@ -193,7 +193,7 @@ $slice = Str::between('This is my name', 'This', 'name');
 // ' is my '
 ```
 
-[**`Str::betweenFirst()`**](strings.md#method-str-between-first)
+[**`Str::betweenFirst()`**](strings.md#method-str-between-first)  <a href="#method-str-between-first" id="method-str-between-first"></a>
 
 The `Str::betweenFirst` method returns the smallest possible portion of a string between two values:
 
@@ -203,7 +203,7 @@ $slice = Str::betweenFirst('[a] bc [d]', '[', ']');
 // 'a'
 ```
 
-[**`Str::camel()`**](strings.md#method-camel-case)
+[**`Str::camel()`**](strings.md#method-camel-case)  <a href="#method-camel-case" id="method-camel-case"></a>
 
 The `Str::camel` method converts the given string to `camelCase`:
 
@@ -213,7 +213,7 @@ $converted = Str::camel('foo_bar');
 // 'fooBar'
 ```
 
-[**`Str::charAt()`**](strings.md#method-char-at)
+[**`Str::charAt()`**](strings.md#method-char-at)  <a href="#method-char-at" id="method-char-at"></a>
 
 The `Str::charAt` method returns the character at the specified index. If the index is out of bounds, `false` is returned:
 
@@ -223,7 +223,7 @@ $character = Str::charAt('This is my name.', 6);
 // 's'
 ```
 
-[**`Str::chopStart()`**](strings.md#method-str-chop-start)
+[**`Str::chopStart()`**](strings.md#method-str-chop-start)  <a href="#method-str-chop-start" id="method-str-chop-start"></a>
 
 The `Str::chopStart` method removes the first occurrence of the given value only if the value appears at the start of the string:
 
@@ -241,7 +241,7 @@ $url = Str::chopStart('http://laravel.com', ['https://', 'http://']);
 // 'laravel.com'
 ```
 
-[**`Str::chopEnd()`**](strings.md#method-str-chop-end)
+[**`Str::chopEnd()`**](strings.md#method-str-chop-end)  <a href="#method-str-chop-end" id="method-str-chop-end"></a>
 
 The `Str::chopEnd` method removes the last occurrence of the given value only if the value appears at the end of the string:
 
@@ -259,7 +259,7 @@ $url = Str::chopEnd('laravel.com/index.php', ['/index.html', '/index.php']);
 // 'laravel.com'
 ```
 
-[**`Str::contains()`**](strings.md#method-str-contains)
+[**`Str::contains()`**](strings.md#method-str-contains)  <a href="#method-str-contains" id="method-str-contains"></a>
 
 The `Str::contains` method determines if the given string contains the given value. By default this method is case sensitive:
 
@@ -285,7 +285,7 @@ $contains = Str::contains('This is my name', 'MY', ignoreCase: true);
 // true
 ```
 
-[**`Str::containsAll()`**](strings.md#method-str-contains-all)
+[**`Str::containsAll()`**](strings.md#method-str-contains-all)  <a href="#method-str-contains-all" id="method-str-contains-all"></a>
 
 The `Str::containsAll` method determines if the given string contains all of the values in a given array:
 
@@ -303,7 +303,7 @@ $containsAll = Str::containsAll('This is my name', ['MY', 'NAME'], ignoreCase: t
 // true
 ```
 
-[**`Str::doesntContain()`**](strings.md#method-str-doesnt-contain)
+[**`Str::doesntContain()`**](strings.md#method-str-doesnt-contain)  <a href="#method-str-doesnt-contain" id="method-str-doesnt-contain"></a>
 
 The `Str::doesntContain` method determines if the given string doesn't contain the given value. By default this method is case sensitive:
 
@@ -329,7 +329,7 @@ $doesntContain = Str::doesntContain('This is name', 'MY', ignoreCase: true);
 // true
 ```
 
-[**`Str::deduplicate()`**](strings.md#method-deduplicate)
+[**`Str::deduplicate()`**](strings.md#method-deduplicate)  <a href="#method-deduplicate" id="method-deduplicate"></a>
 
 The `Str::deduplicate` method replaces consecutive instances of a character with a single instance of that character in the given string. By default, the method deduplicates spaces:
 
@@ -347,7 +347,7 @@ $result = Str::deduplicate('The---Laravel---Framework', '-');
 // The-Laravel-Framework
 ```
 
-[**`Str::endsWith()`**](strings.md#method-ends-with)
+[**`Str::endsWith()`**](strings.md#method-ends-with)  <a href="#method-ends-with" id="method-ends-with"></a>
 
 The `Str::endsWith` method determines if the given string ends with the given value:
 
@@ -367,7 +367,7 @@ $result = Str::endsWith('This is my name', ['this', 'foo']);
 // false
 ```
 
-[**`Str::excerpt()`**](strings.md#method-excerpt)
+[**`Str::excerpt()`**](strings.md#method-excerpt)  <a href="#method-excerpt" id="method-excerpt"></a>
 
 The `Str::excerpt` method extracts an excerpt from a given string that matches the first instance of a phrase within that string:
 
@@ -387,7 +387,7 @@ $excerpt = Str::excerpt('This is my name', 'name', [    'radius' => 3,    'omiss
 // '(...) my name'
 ```
 
-[**`Str::finish()`**](strings.md#method-str-finish)
+[**`Str::finish()`**](strings.md#method-str-finish)  <a href="#method-str-finish" id="method-str-finish"></a>
 
 The `Str::finish` method adds a single instance of the given value to a string if it does not already end with that value:
 
@@ -399,7 +399,7 @@ $adjusted = Str::finish('this/string/', '/');
 // this/string/
 ```
 
-[**`Str::headline()`**](strings.md#method-str-headline)
+[**`Str::headline()`**](strings.md#method-str-headline)  <a href="#method-str-headline" id="method-str-headline"></a>
 
 The `Str::headline` method will convert strings delimited by casing, hyphens, or underscores into a space delimited string with each word's first letter capitalized:
 
@@ -411,7 +411,7 @@ $headline = Str::headline('EmailNotificationSent');
 // Email Notification Sent
 ```
 
-[**`Str::inlineMarkdown()`**](strings.md#method-str-inline-markdown)
+[**`Str::inlineMarkdown()`**](strings.md#method-str-inline-markdown)  <a href="#method-str-inline-markdown" id="method-str-inline-markdown"></a>
 
 The `Str::inlineMarkdown` method converts GitHub flavored Markdown into inline HTML using [CommonMark](https://commonmark.thephpleague.com/). However, unlike the `markdown` method, it does not wrap all generated HTML in a block-level element:
 
@@ -431,7 +431,7 @@ Str::inlineMarkdown('Inject: <script>alert("Hello XSS!");</script>', [    'html_
 // Inject: alert(&quot;Hello XSS!&quot;);
 ```
 
-[**`Str::is()`**](strings.md#method-str-is)
+[**`Str::is()`**](strings.md#method-str-is)  <a href="#method-str-is" id="method-str-is"></a>
 
 The `Str::is` method determines if a given string matches a given pattern. Asterisks may be used as wildcard values:
 
@@ -451,7 +451,7 @@ $matches = Str::is('*.jpg', 'photo.JPG', ignoreCase: true);
 // true
 ```
 
-[**`Str::isAscii()`**](strings.md#method-str-is-ascii)
+[**`Str::isAscii()`**](strings.md#method-str-is-ascii)  <a href="#method-str-is-ascii" id="method-str-is-ascii"></a>
 
 The `Str::isAscii` method determines if a given string is 7 bit ASCII:
 
@@ -463,7 +463,7 @@ $isAscii = Str::isAscii('ü');
 // false
 ```
 
-[**`Str::isJson()`**](strings.md#method-str-is-json)
+[**`Str::isJson()`**](strings.md#method-str-is-json)  <a href="#method-str-is-json" id="method-str-is-json"></a>
 
 The `Str::isJson` method determines if the given string is valid JSON:
 
@@ -477,7 +477,7 @@ $result = Str::isJson('{first: "John", last: "Doe"}');
 // false
 ```
 
-[**`Str::isUrl()`**](strings.md#method-str-is-url)
+[**`Str::isUrl()`**](strings.md#method-str-is-url)  <a href="#method-str-is-url" id="method-str-is-url"></a>
 
 The `Str::isUrl` method determines if the given string is a valid URL:
 
@@ -495,7 +495,7 @@ The `isUrl` method considers a wide range of protocols as valid. However, you ma
 $isUrl = Str::isUrl('http://example.com', ['http', 'https']);
 ```
 
-[**`Str::isUlid()`**](strings.md#method-str-is-ulid)
+[**`Str::isUlid()`**](strings.md#method-str-is-ulid)  <a href="#method-str-is-ulid" id="method-str-is-ulid"></a>
 
 The `Str::isUlid` method determines if the given string is a valid ULID:
 
@@ -507,7 +507,7 @@ $isUlid = Str::isUlid('laravel');
 // false
 ```
 
-[**`Str::isUuid()`**](strings.md#method-str-is-uuid)
+[**`Str::isUuid()`**](strings.md#method-str-is-uuid)  <a href="#method-str-is-uuid" id="method-str-is-uuid"></a>
 
 The `Str::isUuid` method determines if the given string is a valid UUID:
 
@@ -519,7 +519,7 @@ $isUuid = Str::isUuid('laravel');
 // false
 ```
 
-[**`Str::kebab()`**](strings.md#method-kebab-case)
+[**`Str::kebab()`**](strings.md#method-kebab-case)  <a href="#method-kebab-case" id="method-kebab-case"></a>
 
 The `Str::kebab` method converts the given string to `kebab-case`:
 
@@ -529,7 +529,7 @@ $converted = Str::kebab('fooBar');
 // foo-bar
 ```
 
-[**`Str::lcfirst()`**](strings.md#method-str-lcfirst)
+[**`Str::lcfirst()`**](strings.md#method-str-lcfirst)  <a href="#method-str-lcfirst" id="method-str-lcfirst"></a>
 
 The `Str::lcfirst` method returns the given string with the first character lowercased:
 
@@ -539,7 +539,7 @@ $string = Str::lcfirst('Foo Bar');
 // foo Bar
 ```
 
-[**`Str::length()`**](strings.md#method-str-length)
+[**`Str::length()`**](strings.md#method-str-length)  <a href="#method-str-length" id="method-str-length"></a>
 
 The `Str::length` method returns the length of the given string:
 
@@ -549,7 +549,7 @@ $length = Str::length('Laravel');
 // 7
 ```
 
-[**`Str::limit()`**](strings.md#method-str-limit)
+[**`Str::limit()`**](strings.md#method-str-limit)  <a href="#method-str-limit" id="method-str-limit"></a>
 
 The `Str::limit` method truncates the given string to the specified length:
 
@@ -573,7 +573,7 @@ $truncated = Str::limit('The quick brown fox', 12, preserveWords: true);
 // The quick...
 ```
 
-[**`Str::lower()`**](strings.md#method-str-lower)
+[**`Str::lower()`**](strings.md#method-str-lower)  <a href="#method-str-lower" id="method-str-lower"></a>
 
 The `Str::lower` method converts the given string to lowercase:
 
@@ -583,7 +583,7 @@ $converted = Str::lower('LARAVEL');
 // laravel
 ```
 
-[**`Str::markdown()`**](strings.md#method-str-markdown)
+[**`Str::markdown()`**](strings.md#method-str-markdown)  <a href="#method-str-markdown" id="method-str-markdown"></a>
 
 The `Str::markdown` method converts GitHub flavored Markdown into HTML using [CommonMark](https://commonmark.thephpleague.com/):
 
@@ -605,7 +605,7 @@ Str::markdown('Inject: <script>alert("Hello XSS!");</script>', [    'html_input'
 // <p>Inject: alert(&quot;Hello XSS!&quot;);</p>
 ```
 
-[**`Str::mask()`**](strings.md#method-str-mask)
+[**`Str::mask()`**](strings.md#method-str-mask)  <a href="#method-str-mask" id="method-str-mask"></a>
 
 The `Str::mask` method masks a portion of a string with a repeated character, and may be used to obfuscate segments of strings such as email addresses and phone numbers:
 
@@ -622,7 +622,7 @@ $string = Str::mask('taylor@example.com', '*', -15, 3);
 // tay***@example.com
 ```
 
-[**`Str::orderedUuid()`**](strings.md#method-str-ordered-uuid)
+[**`Str::orderedUuid()`**](strings.md#method-str-ordered-uuid)  <a href="#method-str-ordered-uuid" id="method-str-ordered-uuid"></a>
 
 The `Str::orderedUuid` method generates a "timestamp first" UUID that may be efficiently stored in an indexed database column. Each UUID that is generated using this method will be sorted after UUIDs previously generated using the method:
 
@@ -631,7 +631,7 @@ use Illuminate\Support\Str;
 return (string) Str::orderedUuid();
 ```
 
-[**`Str::padBoth()`**](strings.md#method-str-padboth)
+[**`Str::padBoth()`**](strings.md#method-str-padboth)  <a href="#method-str-padboth" id="method-str-padboth"></a>
 
 The `Str::padBoth` method wraps PHP's `str_pad` function, padding both sides of a string with another string until the final string reaches a desired length:
 
@@ -643,7 +643,7 @@ $padded = Str::padBoth('James', 10);
 // '  James   '
 ```
 
-[**`Str::padLeft()`**](strings.md#method-str-padleft)
+[**`Str::padLeft()`**](strings.md#method-str-padleft)  <a href="#method-str-padleft" id="method-str-padleft"></a>
 
 The `Str::padLeft` method wraps PHP's `str_pad` function, padding the left side of a string with another string until the final string reaches a desired length:
 
@@ -655,7 +655,7 @@ $padded = Str::padLeft('James', 10);
 // '     James'
 ```
 
-[**`Str::padRight()`**](strings.md#method-str-padright)
+[**`Str::padRight()`**](strings.md#method-str-padright)  <a href="#method-str-padright" id="method-str-padright"></a>
 
 The `Str::padRight` method wraps PHP's `str_pad` function, padding the right side of a string with another string until the final string reaches a desired length:
 
@@ -667,7 +667,7 @@ $padded = Str::padRight('James', 10);
 // 'James     '
 ```
 
-[**`Str::password()`**](strings.md#method-str-password)
+[**`Str::password()`**](strings.md#method-str-password)  <a href="#method-str-password" id="method-str-password"></a>
 
 The `Str::password` method may be used to generate a secure, random password of a given length. The password will consist of a combination of letters, numbers, symbols, and spaces. By default, passwords are 32 characters long:
 
@@ -679,7 +679,7 @@ $password = Str::password(12);
 // 'qwuar>#V|i]N'
 ```
 
-[**`Str::plural()`**](strings.md#method-str-plural)
+[**`Str::plural()`**](strings.md#method-str-plural)  <a href="#method-str-plural" id="method-str-plural"></a>
 
 The `Str::plural` method converts a singular word string to its plural form. This function supports [any of the languages support by Laravel's pluralizer](strings.md/localization#pluralization-language):
 
@@ -701,7 +701,7 @@ $singular = Str::plural('child', 1);
 // child
 ```
 
-[**`Str::pluralStudly()`**](strings.md#method-str-plural-studly)
+[**`Str::pluralStudly()`**](strings.md#method-str-plural-studly)  <a href="#method-str-plural-studly" id="method-str-plural-studly"></a>
 
 The `Str::pluralStudly` method converts a singular word string formatted in studly caps case to its plural form. This function supports [any of the languages support by Laravel's pluralizer](strings.md/localization#pluralization-language):
 
@@ -723,7 +723,7 @@ $singular = Str::pluralStudly('VerifiedHuman', 1);
 // VerifiedHuman
 ```
 
-[**`Str::position()`**](strings.md#method-str-position)
+[**`Str::position()`**](strings.md#method-str-position)  <a href="#method-str-position" id="method-str-position"></a>
 
 The `Str::position` method returns the position of the first occurrence of a substring in a string. If the substring does not exist in the given string, `false` is returned:
 
@@ -735,7 +735,7 @@ $position = Str::position('Hello, World!', 'W');
 // 7
 ```
 
-[**`Str::random()`**](strings.md#method-str-random)
+[**`Str::random()`**](strings.md#method-str-random)  <a href="#method-str-random" id="method-str-random"></a>
 
 The `Str::random` method generates a random string of the specified length. This function uses PHP's `random_bytes` function:
 
@@ -756,7 +756,7 @@ To instruct the `random` method to return to generating random strings normally,
 Str::createRandomStringsNormally();
 ```
 
-[**`Str::remove()`**](strings.md#method-str-remove)
+[**`Str::remove()`**](strings.md#method-str-remove)  <a href="#method-str-remove" id="method-str-remove"></a>
 
 The `Str::remove` method removes the given value or array of values from the string:
 
@@ -769,7 +769,7 @@ $removed = Str::remove('e', $string);
 
 You may also pass `false` as a third argument to the `remove` method to ignore case when removing strings.
 
-[**`Str::repeat()`**](strings.md#method-str-repeat)
+[**`Str::repeat()`**](strings.md#method-str-repeat)  <a href="#method-str-repeat" id="method-str-repeat"></a>
 
 The `Str::repeat` method repeats the given string:
 
@@ -780,7 +780,7 @@ $repeat = Str::repeat($string, 5);
 // aaaaa
 ```
 
-[**`Str::replace()`**](strings.md#method-str-replace)
+[**`Str::replace()`**](strings.md#method-str-replace)  <a href="#method-str-replace" id="method-str-replace"></a>
 
 The `Str::replace` method replaces a given string within the string:
 
@@ -797,7 +797,7 @@ The `replace` method also accepts a `caseSensitive` argument. By default, the `r
 Str::replace('Framework', 'Laravel', caseSensitive: false);
 ```
 
-[**`Str::replaceArray()`**](strings.md#method-str-replace-array)
+[**`Str::replaceArray()`**](strings.md#method-str-replace-array)  <a href="#method-str-replace-array" id="method-str-replace-array"></a>
 
 The `Str::replaceArray` method replaces a given value in the string sequentially using an array:
 
@@ -808,7 +808,7 @@ $replaced = Str::replaceArray('?', ['8:30', '9:00'], $string);
 // The event will take place between 8:30 and 9:00
 ```
 
-[**`Str::replaceFirst()`**](strings.md#method-str-replace-first)
+[**`Str::replaceFirst()`**](strings.md#method-str-replace-first)  <a href="#method-str-replace-first" id="method-str-replace-first"></a>
 
 The `Str::replaceFirst` method replaces the first occurrence of a given value in a string:
 
@@ -818,7 +818,7 @@ $replaced = Str::replaceFirst('the', 'a', 'the quick brown fox jumps over the la
 // a quick brown fox jumps over the lazy dog
 ```
 
-[**`Str::replaceLast()`**](strings.md#method-str-replace-last)
+[**`Str::replaceLast()`**](strings.md#method-str-replace-last)  <a href="#method-str-replace-last" id="method-str-replace-last"></a>
 
 The `Str::replaceLast` method replaces the last occurrence of a given value in a string:
 
@@ -828,7 +828,7 @@ $replaced = Str::replaceLast('the', 'a', 'the quick brown fox jumps over the laz
 // the quick brown fox jumps over a lazy dog
 ```
 
-[**`Str::replaceMatches()`**](strings.md#method-str-replace-matches)
+[**`Str::replaceMatches()`**](strings.md#method-str-replace-matches)  <a href="#method-str-replace-matches" id="method-str-replace-matches"></a>
 
 The `Str::replaceMatches` method replaces all portions of a string matching a pattern with the given replacement string:
 
@@ -846,7 +846,7 @@ $replaced = Str::replaceMatches('/\d/', function (array $matches) {    return '[
 // '[1][2][3]'
 ```
 
-[**`Str::replaceStart()`**](strings.md#method-str-replace-start)
+[**`Str::replaceStart()`**](strings.md#method-str-replace-start)  <a href="#method-str-replace-start" id="method-str-replace-start"></a>
 
 The `Str::replaceStart` method replaces the first occurrence of the given value only if the value appears at the start of the string:
 
@@ -858,7 +858,7 @@ $replaced = Str::replaceStart('World', 'Laravel', 'Hello World');
 // Hello World
 ```
 
-[**`Str::replaceEnd()`**](strings.md#method-str-replace-end)
+[**`Str::replaceEnd()`**](strings.md#method-str-replace-end)  <a href="#method-str-replace-end" id="method-str-replace-end"></a>
 
 The `Str::replaceEnd` method replaces the last occurrence of the given value only if the value appears at the end of the string:
 
@@ -870,7 +870,7 @@ $replaced = Str::replaceEnd('Hello', 'Laravel', 'Hello World');
 // Hello World
 ```
 
-[**`Str::reverse()`**](strings.md#method-str-reverse)
+[**`Str::reverse()`**](strings.md#method-str-reverse)  <a href="#method-str-reverse" id="method-str-reverse"></a>
 
 The `Str::reverse` method reverses the given string:
 
@@ -880,7 +880,7 @@ $reversed = Str::reverse('Hello World');
 // dlroW olleH
 ```
 
-[**`Str::singular()`**](strings.md#method-str-singular)
+[**`Str::singular()`**](strings.md#method-str-singular)  <a href="#method-str-singular" id="method-str-singular"></a>
 
 The `Str::singular` method converts a string to its singular form. This function supports [any of the languages support by Laravel's pluralizer](strings.md/localization#pluralization-language):
 
@@ -892,7 +892,7 @@ $singular = Str::singular('children');
 // child
 ```
 
-[**`Str::slug()`**](strings.md#method-str-slug)
+[**`Str::slug()`**](strings.md#method-str-slug)  <a href="#method-str-slug" id="method-str-slug"></a>
 
 The `Str::slug` method generates a URL friendly "slug" from the given string:
 
@@ -902,7 +902,7 @@ $slug = Str::slug('Laravel 5 Framework', '-');
 // laravel-5-framework
 ```
 
-[**`Str::snake()`**](strings.md#method-snake-case)
+[**`Str::snake()`**](strings.md#method-snake-case)  <a href="#method-snake-case" id="method-snake-case"></a>
 
 The `Str::snake` method converts the given string to `snake_case`:
 
@@ -914,7 +914,7 @@ $converted = Str::snake('fooBar', '-');
 // foo-bar
 ```
 
-[**`Str::squish()`**](strings.md#method-str-squish)
+[**`Str::squish()`**](strings.md#method-str-squish)  <a href="#method-str-squish" id="method-str-squish"></a>
 
 The `Str::squish` method removes all extraneous white space from a string, including extraneous white space between words:
 
@@ -924,7 +924,7 @@ $string = Str::squish('    laravel    framework    ');
 // laravel framework
 ```
 
-[**`Str::start()`**](strings.md#method-str-start)
+[**`Str::start()`**](strings.md#method-str-start)  <a href="#method-str-start" id="method-str-start"></a>
 
 The `Str::start` method adds a single instance of the given value to a string if it does not already start with that value:
 
@@ -936,7 +936,7 @@ $adjusted = Str::start('/this/string', '/');
 // /this/string
 ```
 
-[**`Str::startsWith()`**](strings.md#method-starts-with)
+[**`Str::startsWith()`**](strings.md#method-starts-with)  <a href="#method-starts-with" id="method-starts-with"></a>
 
 The `Str::startsWith` method determines if the given string begins with the given value:
 
@@ -953,7 +953,7 @@ $result = Str::startsWith('This is my name', ['This', 'That', 'There']);
 // true
 ```
 
-[**`Str::studly()`**](strings.md#method-studly-case)
+[**`Str::studly()`**](strings.md#method-studly-case)  <a href="#method-studly-case" id="method-studly-case"></a>
 
 The `Str::studly` method converts the given string to `StudlyCase`:
 
@@ -963,7 +963,7 @@ $converted = Str::studly('foo_bar');
 // FooBar
 ```
 
-[**`Str::substr()`**](strings.md#method-str-substr)
+[**`Str::substr()`**](strings.md#method-str-substr)  <a href="#method-str-substr" id="method-str-substr"></a>
 
 The `Str::substr` method returns the portion of string specified by the start and length parameters:
 
@@ -973,7 +973,7 @@ $converted = Str::substr('The Laravel Framework', 4, 7);
 // Laravel
 ```
 
-[**`Str::substrCount()`**](strings.md#method-str-substrcount)
+[**`Str::substrCount()`**](strings.md#method-str-substrcount)  <a href="#method-str-substrcount" id="method-str-substrcount"></a>
 
 The `Str::substrCount` method returns the number of occurrences of a given value in the given string:
 
@@ -983,7 +983,7 @@ $count = Str::substrCount('If you like ice cream, you will like snow cones.', 'l
 // 2
 ```
 
-[**`Str::substrReplace()`**](strings.md#method-str-substrreplace)
+[**`Str::substrReplace()`**](strings.md#method-str-substrreplace)  <a href="#method-str-substrreplace" id="method-str-substrreplace"></a>
 
 The `Str::substrReplace` method replaces text within a portion of a string, starting at the position specified by the third argument and replacing the number of characters specified by the fourth argument. Passing `0` to the method's fourth argument will insert the string at the specified position without replacing any of the existing characters in the string:
 
@@ -993,7 +993,7 @@ $result = Str::substrReplace('1300', ':', 2);// 13:
 $result = Str::substrReplace('1300', ':', 2, 0);// 13:00
 ```
 
-[**`Str::swap()`**](strings.md#method-str-swap)
+[**`Str::swap()`**](strings.md#method-str-swap)  <a href="#method-str-swap" id="method-str-swap"></a>
 
 The `Str::swap` method replaces multiple values in the given string using PHP's `strtr` function:
 
@@ -1003,7 +1003,7 @@ $string = Str::swap([    'Tacos' => 'Burritos',    'great' => 'fantastic',], 'Ta
 // Burritos are fantastic!
 ```
 
-[**`Str::take()`**](strings.md#method-take)
+[**`Str::take()`**](strings.md#method-take)  <a href="#method-take" id="method-take"></a>
 
 The `Str::take` method returns a specified number of characters from the beginning of a string:
 
@@ -1013,7 +1013,7 @@ $taken = Str::take('Build something amazing!', 5);
 // Build
 ```
 
-[**`Str::title()`**](strings.md#method-title-case)
+[**`Str::title()`**](strings.md#method-title-case)  <a href="#method-title-case" id="method-title-case"></a>
 
 The `Str::title` method converts the given string to `Title Case`:
 
@@ -1023,7 +1023,7 @@ $converted = Str::title('a nice title uses the correct case');
 // A Nice Title Uses The Correct Case
 ```
 
-[**`Str::toBase64()`**](strings.md#method-str-to-base64)
+[**`Str::toBase64()`**](strings.md#method-str-to-base64)  <a href="#method-str-to-base64" id="method-str-to-base64"></a>
 
 The `Str::toBase64` method converts the given string to Base64:
 
@@ -1033,7 +1033,7 @@ $base64 = Str::toBase64('Laravel');
 // TGFyYXZlbA==
 ```
 
-[**`Str::transliterate()`**](strings.md#method-str-transliterate)
+[**`Str::transliterate()`**](strings.md#method-str-transliterate)  <a href="#method-str-transliterate" id="method-str-transliterate"></a>
 
 The `Str::transliterate` method will attempt to convert a given string into its closest ASCII representation:
 
@@ -1043,7 +1043,7 @@ $email = Str::transliterate('ⓣⓔⓢⓣ@ⓛⓐⓡⓐⓥⓔⓛ.ⓒⓞⓜ');
 // 'test@laravel.com'
 ```
 
-[**`Str::trim()`**](strings.md#method-str-trim)
+[**`Str::trim()`**](strings.md#method-str-trim)  <a href="#method-str-trim" id="method-str-trim"></a>
 
 The `Str::trim` method strips whitespace (or other characters) from the beginning and end of the given string. Unlike PHP's native `trim` function, the `Str::trim` method also removes unicode whitespace characters:
 
@@ -1053,7 +1053,7 @@ $string = Str::trim(' foo bar ');
 // 'foo bar'
 ```
 
-[**`Str::ltrim()`**](strings.md#method-str-ltrim)
+[**`Str::ltrim()`**](strings.md#method-str-ltrim)  <a href="#method-str-ltrim" id="method-str-ltrim"></a>
 
 The `Str::ltrim` method strips whitespace (or other characters) from the beginning of the given string. Unlike PHP's native `ltrim` function, the `Str::ltrim` method also removes unicode whitespace characters:
 
@@ -1063,7 +1063,7 @@ $string = Str::ltrim('  foo bar  ');
 // 'foo bar  '
 ```
 
-[**`Str::rtrim()`**](strings.md#method-str-rtrim)
+[**`Str::rtrim()`**](strings.md#method-str-rtrim)  <a href="#method-str-rtrim" id="method-str-rtrim"></a>
 
 The `Str::rtrim` method strips whitespace (or other characters) from the end of the given string. Unlike PHP's native `rtrim` function, the `Str::rtrim` method also removes unicode whitespace characters:
 
@@ -1073,7 +1073,7 @@ $string = Str::rtrim('  foo bar  ');
 // '  foo bar'
 ```
 
-[**`Str::ucfirst()`**](strings.md#method-str-ucfirst)
+[**`Str::ucfirst()`**](strings.md#method-str-ucfirst)  <a href="#method-str-ucfirst" id="method-str-ucfirst"></a>
 
 The `Str::ucfirst` method returns the given string with the first character capitalized:
 
@@ -1083,7 +1083,7 @@ $string = Str::ucfirst('foo bar');
 // Foo bar
 ```
 
-[**`Str::ucsplit()`**](strings.md#method-str-ucsplit)
+[**`Str::ucsplit()`**](strings.md#method-str-ucsplit)  <a href="#method-str-ucsplit" id="method-str-ucsplit"></a>
 
 The `Str::ucsplit` method splits the given string into an array by uppercase characters:
 
@@ -1093,7 +1093,7 @@ $segments = Str::ucsplit('FooBar');
 // [0 => 'Foo', 1 => 'Bar']
 ```
 
-[**`Str::upper()`**](strings.md#method-str-upper)
+[**`Str::upper()`**](strings.md#method-str-upper)  <a href="#method-str-upper" id="method-str-upper"></a>
 
 The `Str::upper` method converts the given string to uppercase:
 
@@ -1103,7 +1103,7 @@ $string = Str::upper('laravel');
 // LARAVEL
 ```
 
-[**`Str::ulid()`**](strings.md#method-str-ulid)
+[**`Str::ulid()`**](strings.md#method-str-ulid)  <a href="#method-str-ulid" id="method-str-ulid"></a>
 
 The `Str::ulid` method generates a ULID, which is a compact, time-ordered unique identifier:
 
@@ -1133,7 +1133,7 @@ To instruct the `ulid` method to return to generating ULIDs normally, you may in
 Str::createUlidsNormally();
 ```
 
-[**`Str::unwrap()`**](strings.md#method-str-unwrap)
+[**`Str::unwrap()`**](strings.md#method-str-unwrap)  <a href="#method-str-unwrap" id="method-str-unwrap"></a>
 
 The `Str::unwrap` method removes the specified strings from the beginning and end of a given string:
 
@@ -1145,7 +1145,7 @@ Str::unwrap('{framework: "Laravel"}', '{', '}');
 // framework: "Laravel"
 ```
 
-[**`Str::uuid()`**](strings.md#method-str-uuid)
+[**`Str::uuid()`**](strings.md#method-str-uuid)  <a href="#method-str-uuid" id="method-str-uuid"></a>
 
 The `Str::uuid` method generates a UUID (version 4):
 
@@ -1167,7 +1167,7 @@ To instruct the `uuid` method to return to generating UUIDs normally, you may in
 Str::createUuidsNormally();
 ```
 
-[**`Str::wordCount()`**](strings.md#method-str-word-count)
+[**`Str::wordCount()`**](strings.md#method-str-word-count)  <a href="#method-str-word-count" id="method-str-word-count"></a>
 
 The `Str::wordCount` method returns the number of words that a string contains:
 
@@ -1176,7 +1176,7 @@ use Illuminate\Support\Str;
 Str::wordCount('Hello, world!'); // 2
 ```
 
-[**`Str::wordWrap()`**](strings.md#method-str-word-wrap)
+[**`Str::wordWrap()`**](strings.md#method-str-word-wrap)  <a href="#method-str-word-wrap" id="method-str-word-wrap"></a>
 
 The `Str::wordWrap` method wraps a string to a given number of characters:
 
@@ -1187,7 +1187,7 @@ Str::wordWrap($text, characters: 20, break: "<br />\n");
 /*The quick brown fox<br />jumped over the lazy<br />dog.*/
 ```
 
-[**`Str::words()`**](strings.md#method-str-words)
+[**`Str::words()`**](strings.md#method-str-words)  <a href="#method-str-words" id="method-str-words"></a>
 
 The `Str::words` method limits the number of words in a string. An additional string may be passed to this method via its third argument to specify which string should be appended to the end of the truncated string:
 
@@ -1197,7 +1197,7 @@ return Str::words('Perfectly balanced, as all things should be.', 3, ' >>>');
 // Perfectly balanced, as >>>
 ```
 
-[**`Str::wrap()`**](strings.md#method-str-wrap)
+[**`Str::wrap()`**](strings.md#method-str-wrap)  <a href="#method-str-wrap" id="method-str-wrap"></a>
 
 The `Str::wrap` method wraps the given string with an additional string or pair of strings:
 
@@ -1209,7 +1209,7 @@ Str::wrap('is', before: 'This ', after: ' Laravel!');
 // This is Laravel!
 ```
 
-[**`str()`**](strings.md#method-str)
+[**`str()`**](strings.md#method-str)  <a href="#method-str" id="method-str"></a>
 
 The `str` function returns a new `Illuminate\Support\Stringable` instance of the given string. This function is equivalent to the `Str::of` method:
 
@@ -1225,7 +1225,7 @@ $snake = str()->snake('FooBar');
 // 'foo_bar'
 ```
 
-[**`trans()`**](strings.md#method-trans)
+[**`trans()`**](strings.md#method-trans)  <a href="#method-trans" id="method-trans"></a>
 
 The `trans` function translates the given translation key using your [language files](strings.md/localization):
 
@@ -1235,7 +1235,7 @@ echo trans('messages.welcome');
 
 If the specified translation key does not exist, the `trans` function will return the given key. So, using the example above, the `trans` function would return `messages.welcome` if the translation key does not exist.
 
-[**`trans_choice()`**](strings.md#method-trans-choice)
+[**`trans_choice()`**](strings.md#method-trans-choice)  <a href="#method-trans-choice" id="method-trans-choice"></a>
 
 The `trans_choice` function translates the given translation key with inflection:
 
@@ -1249,7 +1249,7 @@ If the specified translation key does not exist, the `trans_choice` function wil
 
 Fluent strings provide a more fluent, object-oriented interface for working with string values, allowing you to chain multiple string operations together using a more readable syntax compared to traditional string operations.
 
-[**`after`**](strings.md#method-fluent-str-after)
+[**`after`**](strings.md#method-fluent-str-after)  <a href="#method-fluent-str-after" id="method-fluent-str-after"></a>
 
 The `after` method returns everything after the given value in a string. The entire string will be returned if the value does not exist within the string:
 
@@ -1259,7 +1259,7 @@ $slice = Str::of('This is my name')->after('This is');
 // ' my name'
 ```
 
-[**`afterLast`**](strings.md#method-fluent-str-after-last)
+[**`afterLast`**](strings.md#method-fluent-str-after-last)  <a href="#method-fluent-str-after-last" id="method-fluent-str-after-last"></a>
 
 The `afterLast` method returns everything after the last occurrence of the given value in a string. The entire string will be returned if the value does not exist within the string:
 
@@ -1269,7 +1269,7 @@ $slice = Str::of('App\Http\Controllers\Controller')->afterLast('\\');
 // 'Controller'
 ```
 
-[**`apa`**](strings.md#method-fluent-str-apa)
+[**`apa`**](strings.md#method-fluent-str-apa)  <a href="#method-fluent-str-apa" id="method-fluent-str-apa"></a>
 
 The `apa` method converts the given string to title case following the [APA guidelines](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case):
 
@@ -1279,7 +1279,7 @@ $converted = Str::of('a nice title uses the correct case')->apa();
 // A Nice Title Uses the Correct Case
 ```
 
-[**`append`**](strings.md#method-fluent-str-append)
+[**`append`**](strings.md#method-fluent-str-append)  <a href="#method-fluent-str-append" id="method-fluent-str-append"></a>
 
 The `append` method appends the given values to the string:
 
@@ -1289,7 +1289,7 @@ $string = Str::of('Taylor')->append(' Otwell');
 // 'Taylor Otwell'
 ```
 
-[**`ascii`**](strings.md#method-fluent-str-ascii)
+[**`ascii`**](strings.md#method-fluent-str-ascii)  <a href="#method-fluent-str-ascii" id="method-fluent-str-ascii"></a>
 
 The `ascii` method will attempt to transliterate the string into an ASCII value:
 
@@ -1299,7 +1299,7 @@ $string = Str::of('ü')->ascii();
 // 'u'
 ```
 
-[**`basename`**](strings.md#method-fluent-str-basename)
+[**`basename`**](strings.md#method-fluent-str-basename)  <a href="#method-fluent-str-basename" id="method-fluent-str-basename"></a>
 
 The `basename` method will return the trailing name component of the given string:
 
@@ -1317,7 +1317,7 @@ $string = Str::of('/foo/bar/baz.jpg')->basename('.jpg');
 // 'baz'
 ```
 
-[**`before`**](strings.md#method-fluent-str-before)
+[**`before`**](strings.md#method-fluent-str-before)  <a href="#method-fluent-str-before" id="method-fluent-str-before"></a>
 
 The `before` method returns everything before the given value in a string:
 
@@ -1327,7 +1327,7 @@ $slice = Str::of('This is my name')->before('my name');
 // 'This is '
 ```
 
-[**`beforeLast`**](strings.md#method-fluent-str-before-last)
+[**`beforeLast`**](strings.md#method-fluent-str-before-last)  <a href="#method-fluent-str-before-last" id="method-fluent-str-before-last"></a>
 
 The `beforeLast` method returns everything before the last occurrence of the given value in a string:
 
@@ -1337,7 +1337,7 @@ $slice = Str::of('This is my name')->beforeLast('is');
 // 'This '
 ```
 
-[**`between`**](strings.md#method-fluent-str-between)
+[**`between`**](strings.md#method-fluent-str-between)  <a href="#method-fluent-str-between" id="method-fluent-str-between"></a>
 
 The `between` method returns the portion of a string between two values:
 
@@ -1347,7 +1347,7 @@ $converted = Str::of('This is my name')->between('This', 'name');
 // ' is my '
 ```
 
-[**`betweenFirst`**](strings.md#method-fluent-str-between-first)
+[**`betweenFirst`**](strings.md#method-fluent-str-between-first)  <a href="#method-fluent-str-between-first" id="method-fluent-str-between-first"></a>
 
 The `betweenFirst` method returns the smallest possible portion of a string between two values:
 
@@ -1357,7 +1357,7 @@ $converted = Str::of('[a] bc [d]')->betweenFirst('[', ']');
 // 'a'
 ```
 
-[**`camel`**](strings.md#method-fluent-str-camel)
+[**`camel`**](strings.md#method-fluent-str-camel)  <a href="#method-fluent-str-camel" id="method-fluent-str-camel"></a>
 
 The `camel` method converts the given string to `camelCase`:
 
@@ -1367,7 +1367,7 @@ $converted = Str::of('foo_bar')->camel();
 // 'fooBar'
 ```
 
-[**`charAt`**](strings.md#method-fluent-str-char-at)
+[**`charAt`**](strings.md#method-fluent-str-char-at)  <a href="#method-fluent-str-char-at" id="method-fluent-str-char-at"></a>
 
 The `charAt` method returns the character at the specified index. If the index is out of bounds, `false` is returned:
 
@@ -1377,7 +1377,7 @@ $character = Str::of('This is my name.')->charAt(6);
 // 's'
 ```
 
-[**`classBasename`**](strings.md#method-fluent-str-class-basename)
+[**`classBasename`**](strings.md#method-fluent-str-class-basename)  <a href="#method-fluent-str-class-basename" id="method-fluent-str-class-basename"></a>
 
 The `classBasename` method returns the class name of the given class with the class's namespace removed:
 
@@ -1387,7 +1387,7 @@ $class = Str::of('Foo\Bar\Baz')->classBasename();
 // 'Baz'
 ```
 
-[**`chopStart`**](strings.md#method-fluent-str-chop-start)
+[**`chopStart`**](strings.md#method-fluent-str-chop-start)  <a href="#method-fluent-str-chop-start" id="method-fluent-str-chop-start"></a>
 
 The `chopStart` method removes the first occurrence of the given value only if the value appears at the start of the string:
 
@@ -1405,7 +1405,7 @@ $url = Str::of('http://laravel.com')->chopStart(['https://', 'http://']);
 // 'laravel.com'
 ```
 
-[**`chopEnd`**](strings.md#method-fluent-str-chop-end)
+[**`chopEnd`**](strings.md#method-fluent-str-chop-end)  <a href="#method-fluent-str-chop-end" id="method-fluent-str-chop-end"></a>
 
 The `chopEnd` method removes the last occurrence of the given value only if the value appears at the end of the string:
 
@@ -1423,7 +1423,7 @@ $url = Str::of('http://laravel.com')->chopEnd(['.com', '.io']);
 // 'http://laravel'
 ```
 
-[**`contains`**](strings.md#method-fluent-str-contains)
+[**`contains`**](strings.md#method-fluent-str-contains)  <a href="#method-fluent-str-contains" id="method-fluent-str-contains"></a>
 
 The `contains` method determines if the given string contains the given value. By default this method is case sensitive:
 
@@ -1449,7 +1449,7 @@ $contains = Str::of('This is my name')->contains('MY', ignoreCase: true);
 // true
 ```
 
-[**`containsAll`**](strings.md#method-fluent-str-contains-all)
+[**`containsAll`**](strings.md#method-fluent-str-contains-all)  <a href="#method-fluent-str-contains-all" id="method-fluent-str-contains-all"></a>
 
 The `containsAll` method determines if the given string contains all of the values in the given array:
 
@@ -1467,7 +1467,7 @@ $containsAll = Str::of('This is my name')->containsAll(['MY', 'NAME'], ignoreCas
 // true
 ```
 
-[**`deduplicate`**](strings.md#method-fluent-str-deduplicate)
+[**`deduplicate`**](strings.md#method-fluent-str-deduplicate)  <a href="#method-fluent-str-deduplicate" id="method-fluent-str-deduplicate"></a>
 
 The `deduplicate` method replaces consecutive instances of a character with a single instance of that character in the given string. By default, the method deduplicates spaces:
 
@@ -1485,7 +1485,7 @@ $result = Str::of('The---Laravel---Framework')->deduplicate('-');
 // The-Laravel-Framework
 ```
 
-[**`dirname`**](strings.md#method-fluent-str-dirname)
+[**`dirname`**](strings.md#method-fluent-str-dirname)  <a href="#method-fluent-str-dirname" id="method-fluent-str-dirname"></a>
 
 The `dirname` method returns the parent directory portion of the given string:
 
@@ -1503,7 +1503,7 @@ $string = Str::of('/foo/bar/baz')->dirname(2);
 // '/foo'
 ```
 
-[**`endsWith`**](strings.md#method-fluent-str-ends-with)
+[**`endsWith`**](strings.md#method-fluent-str-ends-with)  <a href="#method-fluent-str-ends-with" id="method-fluent-str-ends-with"></a>
 
 The `endsWith` method determines if the given string ends with the given value:
 
@@ -1523,7 +1523,7 @@ $result = Str::of('This is my name')->endsWith(['this', 'foo']);
 // false
 ```
 
-[**`exactly`**](strings.md#method-fluent-str-exactly)
+[**`exactly`**](strings.md#method-fluent-str-exactly)  <a href="#method-fluent-str-exactly" id="method-fluent-str-exactly"></a>
 
 The `exactly` method determines if the given string is an exact match with another string:
 
@@ -1533,7 +1533,7 @@ $result = Str::of('Laravel')->exactly('Laravel');
 // true
 ```
 
-[**`excerpt`**](strings.md#method-fluent-str-excerpt)
+[**`excerpt`**](strings.md#method-fluent-str-excerpt)  <a href="#method-fluent-str-excerpt" id="method-fluent-str-excerpt"></a>
 
 The `excerpt` method extracts an excerpt from the string that matches the first instance of a phrase within that string:
 
@@ -1553,7 +1553,7 @@ $excerpt = Str::of('This is my name')->excerpt('name', [    'radius' => 3,    'o
 // '(...) my name'
 ```
 
-[**`explode`**](strings.md#method-fluent-str-explode)
+[**`explode`**](strings.md#method-fluent-str-explode)  <a href="#method-fluent-str-explode" id="method-fluent-str-explode"></a>
 
 The `explode` method splits the string by the given delimiter and returns a collection containing each section of the split string:
 
@@ -1563,7 +1563,7 @@ $collection = Str::of('foo bar baz')->explode(' ');
 // collect(['foo', 'bar', 'baz'])
 ```
 
-[**`finish`**](strings.md#method-fluent-str-finish)
+[**`finish`**](strings.md#method-fluent-str-finish)  <a href="#method-fluent-str-finish" id="method-fluent-str-finish"></a>
 
 The `finish` method adds a single instance of the given value to a string if it does not already end with that value:
 
@@ -1575,7 +1575,7 @@ $adjusted = Str::of('this/string/')->finish('/');
 // this/string/
 ```
 
-[**`headline`**](strings.md#method-fluent-str-headline)
+[**`headline`**](strings.md#method-fluent-str-headline)  <a href="#method-fluent-str-headline" id="method-fluent-str-headline"></a>
 
 The `headline` method will convert strings delimited by casing, hyphens, or underscores into a space delimited string with each word's first letter capitalized:
 
@@ -1587,7 +1587,7 @@ $headline = Str::of('EmailNotificationSent')->headline();
 // Email Notification Sent
 ```
 
-[**`inlineMarkdown`**](strings.md#method-fluent-str-inline-markdown)
+[**`inlineMarkdown`**](strings.md#method-fluent-str-inline-markdown)  <a href="#method-fluent-str-inline-markdown" id="method-fluent-str-inline-markdown"></a>
 
 The `inlineMarkdown` method converts GitHub flavored Markdown into inline HTML using [CommonMark](https://commonmark.thephpleague.com/). However, unlike the `markdown` method, it does not wrap all generated HTML in a block-level element:
 
@@ -1607,7 +1607,7 @@ Str::of('Inject: <script>alert("Hello XSS!");</script>')->inlineMarkdown([    'h
 // Inject: alert(&quot;Hello XSS!&quot;);
 ```
 
-[**`is`**](strings.md#method-fluent-str-is)
+[**`is`**](strings.md#method-fluent-str-is)  <a href="#method-fluent-str-is" id="method-fluent-str-is"></a>
 
 The `is` method determines if a given string matches a given pattern. Asterisks may be used as wildcard values
 
@@ -1619,7 +1619,7 @@ $matches = Str::of('foobar')->is('baz*');
 // false
 ```
 
-[**`isAscii`**](strings.md#method-fluent-str-is-ascii)
+[**`isAscii`**](strings.md#method-fluent-str-is-ascii)  <a href="#method-fluent-str-is-ascii" id="method-fluent-str-is-ascii"></a>
 
 The `isAscii` method determines if a given string is an ASCII string:
 
@@ -1631,7 +1631,7 @@ $result = Str::of('ü')->isAscii();
 // false
 ```
 
-[**`isEmpty`**](strings.md#method-fluent-str-is-empty)
+[**`isEmpty`**](strings.md#method-fluent-str-is-empty)  <a href="#method-fluent-str-is-empty" id="method-fluent-str-is-empty"></a>
 
 The `isEmpty` method determines if the given string is empty:
 
@@ -1643,7 +1643,7 @@ $result = Str::of('Laravel')->trim()->isEmpty();
 // false
 ```
 
-[**`isNotEmpty`**](strings.md#method-fluent-str-is-not-empty)
+[**`isNotEmpty`**](strings.md#method-fluent-str-is-not-empty)  <a href="#method-fluent-str-is-not-empty" id="method-fluent-str-is-not-empty"></a>
 
 The `isNotEmpty` method determines if the given string is not empty:
 
@@ -1655,7 +1655,7 @@ $result = Str::of('Laravel')->trim()->isNotEmpty();
 // true
 ```
 
-[**`isJson`**](strings.md#method-fluent-str-is-json)
+[**`isJson`**](strings.md#method-fluent-str-is-json)  <a href="#method-fluent-str-is-json" id="method-fluent-str-is-json"></a>
 
 The `isJson` method determines if a given string is valid JSON:
 
@@ -1669,7 +1669,7 @@ $result = Str::of('{first: "John", last: "Doe"}')->isJson();
 // false
 ```
 
-[**`isUlid`**](strings.md#method-fluent-str-is-ulid)
+[**`isUlid`**](strings.md#method-fluent-str-is-ulid)  <a href="#method-fluent-str-is-ulid" id="method-fluent-str-is-ulid"></a>
 
 The `isUlid` method determines if a given string is a ULID:
 
@@ -1681,7 +1681,7 @@ $result = Str::of('Taylor')->isUlid();
 // false
 ```
 
-[**`isUrl`**](strings.md#method-fluent-str-is-url)
+[**`isUrl`**](strings.md#method-fluent-str-is-url)  <a href="#method-fluent-str-is-url" id="method-fluent-str-is-url"></a>
 
 The `isUrl` method determines if a given string is a URL:
 
@@ -1699,7 +1699,7 @@ The `isUrl` method considers a wide range of protocols as valid. However, you ma
 $result = Str::of('http://example.com')->isUrl(['http', 'https']);
 ```
 
-[**`isUuid`**](strings.md#method-fluent-str-is-uuid)
+[**`isUuid`**](strings.md#method-fluent-str-is-uuid)  <a href="#method-fluent-str-is-uuid" id="method-fluent-str-is-uuid"></a>
 
 The `isUuid` method determines if a given string is a UUID:
 
@@ -1711,7 +1711,7 @@ $result = Str::of('Taylor')->isUuid();
 // false
 ```
 
-[**`kebab`**](strings.md#method-fluent-str-kebab)
+[**`kebab`**](strings.md#method-fluent-str-kebab)  <a href="#method-fluent-str-kebab" id="method-fluent-str-kebab"></a>
 
 The `kebab` method converts the given string to `kebab-case`:
 
@@ -1721,7 +1721,7 @@ $converted = Str::of('fooBar')->kebab();
 // foo-bar
 ```
 
-[**`lcfirst`**](strings.md#method-fluent-str-lcfirst)
+[**`lcfirst`**](strings.md#method-fluent-str-lcfirst)  <a href="#method-fluent-str-lcfirst" id="method-fluent-str-lcfirst"></a>
 
 The `lcfirst` method returns the given string with the first character lowercased:
 
@@ -1731,7 +1731,7 @@ $string = Str::of('Foo Bar')->lcfirst();
 // foo Bar
 ```
 
-[**`length`**](strings.md#method-fluent-str-length)
+[**`length`**](strings.md#method-fluent-str-length)  <a href="#method-fluent-str-length" id="method-fluent-str-length"></a>
 
 The `length` method returns the length of the given string:
 
@@ -1741,7 +1741,7 @@ $length = Str::of('Laravel')->length();
 // 7
 ```
 
-[**`limit`**](strings.md#method-fluent-str-limit)
+[**`limit`**](strings.md#method-fluent-str-limit)  <a href="#method-fluent-str-limit" id="method-fluent-str-limit"></a>
 
 The `limit` method truncates the given string to the specified length:
 
@@ -1765,7 +1765,7 @@ $truncated = Str::of('The quick brown fox')->limit(12, preserveWords: true);
 // The quick...
 ```
 
-[**`lower`**](strings.md#method-fluent-str-lower)
+[**`lower`**](strings.md#method-fluent-str-lower)  <a href="#method-fluent-str-lower" id="method-fluent-str-lower"></a>
 
 The `lower` method converts the given string to lowercase:
 
@@ -1775,7 +1775,7 @@ $result = Str::of('LARAVEL')->lower();
 // 'laravel'
 ```
 
-[**`markdown`**](strings.md#method-fluent-str-markdown)
+[**`markdown`**](strings.md#method-fluent-str-markdown)  <a href="#method-fluent-str-markdown" id="method-fluent-str-markdown"></a>
 
 The `markdown` method converts GitHub flavored Markdown into HTML:
 
@@ -1797,7 +1797,7 @@ Str::of('Inject: <script>alert("Hello XSS!");</script>')->markdown([    'html_in
 // <p>Inject: alert(&quot;Hello XSS!&quot;);</p>
 ```
 
-[**`mask`**](strings.md#method-fluent-str-mask)
+[**`mask`**](strings.md#method-fluent-str-mask)  <a href="#method-fluent-str-mask" id="method-fluent-str-mask"></a>
 
 The `mask` method masks a portion of a string with a repeated character, and may be used to obfuscate segments of strings such as email addresses and phone numbers:
 
@@ -1816,7 +1816,7 @@ $string = Str::of('taylor@example.com')->mask('*', 4, -4);
 // tayl**********.com
 ```
 
-[**`match`**](strings.md#method-fluent-str-match)
+[**`match`**](strings.md#method-fluent-str-match)  <a href="#method-fluent-str-match" id="method-fluent-str-match"></a>
 
 The `match` method will return the portion of a string that matches a given regular expression pattern:
 
@@ -1828,7 +1828,7 @@ $result = Str::of('foo bar')->match('/foo (.*)/');
 // 'bar'
 ```
 
-[**`matchAll`**](strings.md#method-fluent-str-match-all)
+[**`matchAll`**](strings.md#method-fluent-str-match-all)  <a href="#method-fluent-str-match-all" id="method-fluent-str-match-all"></a>
 
 The `matchAll` method will return a collection containing the portions of a string that match a given regular expression pattern:
 
@@ -1848,7 +1848,7 @@ $result = Str::of('bar fun bar fly')->matchAll('/f(\w*)/');
 
 If no matches are found, an empty collection will be returned.
 
-[**`isMatch`**](strings.md#method-fluent-str-is-match)
+[**`isMatch`**](strings.md#method-fluent-str-is-match)  <a href="#method-fluent-str-is-match" id="method-fluent-str-is-match"></a>
 
 The `isMatch` method will return `true` if the string matches a given regular expression:
 
@@ -1860,7 +1860,7 @@ $result = Str::of('laravel')->isMatch('/foo (.*)/');
 // false
 ```
 
-[**`newLine`**](strings.md#method-fluent-str-new-line)
+[**`newLine`**](strings.md#method-fluent-str-new-line)  <a href="#method-fluent-str-new-line" id="method-fluent-str-new-line"></a>
 
 The `newLine` method appends an "end of line" character to a string:
 
@@ -1870,7 +1870,7 @@ $padded = Str::of('Laravel')->newLine()->append('Framework');
 // 'Laravel//  Framework'
 ```
 
-[**`padBoth`**](strings.md#method-fluent-str-padboth)
+[**`padBoth`**](strings.md#method-fluent-str-padboth)  <a href="#method-fluent-str-padboth" id="method-fluent-str-padboth"></a>
 
 The `padBoth` method wraps PHP's `str_pad` function, padding both sides of a string with another string until the final string reaches the desired length:
 
@@ -1882,7 +1882,7 @@ $padded = Str::of('James')->padBoth(10);
 // '  James   '
 ```
 
-[**`padLeft`**](strings.md#method-fluent-str-padleft)
+[**`padLeft`**](strings.md#method-fluent-str-padleft)  <a href="#method-fluent-str-padleft" id="method-fluent-str-padleft"></a>
 
 The `padLeft` method wraps PHP's `str_pad` function, padding the left side of a string with another string until the final string reaches the desired length:
 
@@ -1894,7 +1894,7 @@ $padded = Str::of('James')->padLeft(10);
 // '     James'
 ```
 
-[**`padRight`**](strings.md#method-fluent-str-padright)
+[**`padRight`**](strings.md#method-fluent-str-padright)  <a href="#method-fluent-str-padright" id="method-fluent-str-padright"></a>
 
 The `padRight` method wraps PHP's `str_pad` function, padding the right side of a string with another string until the final string reaches the desired length:
 
@@ -1906,7 +1906,7 @@ $padded = Str::of('James')->padRight(10);
 // 'James     '
 ```
 
-[**`pipe`**](strings.md#method-fluent-str-pipe)
+[**`pipe`**](strings.md#method-fluent-str-pipe)  <a href="#method-fluent-str-pipe" id="method-fluent-str-pipe"></a>
 
 The `pipe` method allows you to transform the string by passing its current value to the given callable:
 
@@ -1918,7 +1918,7 @@ $closure = Str::of('foo')->pipe(function (Stringable $str) {    return 'bar';});
 // 'bar'
 ```
 
-[**`plural`**](strings.md#method-fluent-str-plural)
+[**`plural`**](strings.md#method-fluent-str-plural)  <a href="#method-fluent-str-plural" id="method-fluent-str-plural"></a>
 
 The `plural` method converts a singular word string to its plural form. This function supports [any of the languages support by Laravel's pluralizer](strings.md/localization#pluralization-language):
 
@@ -1940,7 +1940,7 @@ $plural = Str::of('child')->plural(1);
 // child
 ```
 
-[**`position`**](strings.md#method-fluent-str-position)
+[**`position`**](strings.md#method-fluent-str-position)  <a href="#method-fluent-str-position" id="method-fluent-str-position"></a>
 
 The `position` method returns the position of the first occurrence of a substring in a string. If the substring does not exist within the string, `false` is returned:
 
@@ -1952,7 +1952,7 @@ $position = Str::of('Hello, World!')->position('W');
 // 7
 ```
 
-[**`prepend`**](strings.md#method-fluent-str-prepend)
+[**`prepend`**](strings.md#method-fluent-str-prepend)  <a href="#method-fluent-str-prepend" id="method-fluent-str-prepend"></a>
 
 The `prepend` method prepends the given values onto the string:
 
@@ -1962,7 +1962,7 @@ $string = Str::of('Framework')->prepend('Laravel ');
 // Laravel Framework
 ```
 
-[**`remove`**](strings.md#method-fluent-str-remove)
+[**`remove`**](strings.md#method-fluent-str-remove)  <a href="#method-fluent-str-remove" id="method-fluent-str-remove"></a>
 
 The `remove` method removes the given value or array of values from the string:
 
@@ -1974,7 +1974,7 @@ $string = Str::of('Arkansas is quite beautiful!')->remove('quite');
 
 You may also pass `false` as a second parameter to ignore case when removing strings.
 
-[**`repeat`**](strings.md#method-fluent-str-repeat)
+[**`repeat`**](strings.md#method-fluent-str-repeat)  <a href="#method-fluent-str-repeat" id="method-fluent-str-repeat"></a>
 
 The `repeat` method repeats the given string:
 
@@ -1984,7 +1984,7 @@ $repeated = Str::of('a')->repeat(5);
 // aaaaa
 ```
 
-[**`replace`**](strings.md#method-fluent-str-replace)
+[**`replace`**](strings.md#method-fluent-str-replace)  <a href="#method-fluent-str-replace" id="method-fluent-str-replace"></a>
 
 The `replace` method replaces a given string within the string:
 
@@ -2000,7 +2000,7 @@ The `replace` method also accepts a `caseSensitive` argument. By default, the `r
 $replaced = Str::of('macOS 13.x')->replace(    'macOS', 'iOS', caseSensitive: false);
 ```
 
-[**`replaceArray`**](strings.md#method-fluent-str-replace-array)
+[**`replaceArray`**](strings.md#method-fluent-str-replace-array)  <a href="#method-fluent-str-replace-array" id="method-fluent-str-replace-array"></a>
 
 The `replaceArray` method replaces a given value in the string sequentially using an array:
 
@@ -2011,7 +2011,7 @@ $replaced = Str::of($string)->replaceArray('?', ['8:30', '9:00']);
 // The event will take place between 8:30 and 9:00
 ```
 
-[**`replaceFirst`**](strings.md#method-fluent-str-replace-first)
+[**`replaceFirst`**](strings.md#method-fluent-str-replace-first)  <a href="#method-fluent-str-replace-first" id="method-fluent-str-replace-first"></a>
 
 The `replaceFirst` method replaces the first occurrence of a given value in a string:
 
@@ -2021,7 +2021,7 @@ $replaced = Str::of('the quick brown fox jumps over the lazy dog')->replaceFirst
 // a quick brown fox jumps over the lazy dog
 ```
 
-[**`replaceLast`**](strings.md#method-fluent-str-replace-last)
+[**`replaceLast`**](strings.md#method-fluent-str-replace-last)  <a href="#method-fluent-str-replace-last" id="method-fluent-str-replace-last"></a>
 
 The `replaceLast` method replaces the last occurrence of a given value in a string:
 
@@ -2031,7 +2031,7 @@ $replaced = Str::of('the quick brown fox jumps over the lazy dog')->replaceLast(
 // the quick brown fox jumps over a lazy dog
 ```
 
-[**`replaceMatches`**](strings.md#method-fluent-str-replace-matches)
+[**`replaceMatches`**](strings.md#method-fluent-str-replace-matches)  <a href="#method-fluent-str-replace-matches" id="method-fluent-str-replace-matches"></a>
 
 The `replaceMatches` method replaces all portions of a string matching a pattern with the given replacement string:
 
@@ -2049,7 +2049,7 @@ $replaced = Str::of('123')->replaceMatches('/\d/', function (array $matches) {  
 // '[1][2][3]'
 ```
 
-[**`replaceStart`**](strings.md#method-fluent-str-replace-start)
+[**`replaceStart`**](strings.md#method-fluent-str-replace-start)  <a href="#method-fluent-str-replace-start" id="method-fluent-str-replace-start"></a>
 
 The `replaceStart` method replaces the first occurrence of the given value only if the value appears at the start of the string:
 
@@ -2061,7 +2061,7 @@ $replaced = Str::of('Hello World')->replaceStart('World', 'Laravel');
 // Hello World
 ```
 
-[**`replaceEnd`**](strings.md#method-fluent-str-replace-end)
+[**`replaceEnd`**](strings.md#method-fluent-str-replace-end)  <a href="#method-fluent-str-replace-end" id="method-fluent-str-replace-end"></a>
 
 The `replaceEnd` method replaces the last occurrence of the given value only if the value appears at the end of the string:
 
@@ -2073,7 +2073,7 @@ $replaced = Str::of('Hello World')->replaceEnd('Hello', 'Laravel');
 // Hello World
 ```
 
-[**`scan`**](strings.md#method-fluent-str-scan)
+[**`scan`**](strings.md#method-fluent-str-scan)  <a href="#method-fluent-str-scan" id="method-fluent-str-scan"></a>
 
 The `scan` method parses input from a string into a collection according to a format supported by the [`sscanf` PHP function](https://www.php.net/manual/en/function.sscanf.php):
 
@@ -2083,7 +2083,7 @@ $collection = Str::of('filename.jpg')->scan('%[^.].%s');
 // collect(['filename', 'jpg'])
 ```
 
-[**`singular`**](strings.md#method-fluent-str-singular)
+[**`singular`**](strings.md#method-fluent-str-singular)  <a href="#method-fluent-str-singular" id="method-fluent-str-singular"></a>
 
 The `singular` method converts a string to its singular form. This function supports [any of the languages support by Laravel's pluralizer](strings.md/localization#pluralization-language):
 
@@ -2095,7 +2095,7 @@ $singular = Str::of('children')->singular();
 // child
 ```
 
-[**`slug`**](strings.md#method-fluent-str-slug)
+[**`slug`**](strings.md#method-fluent-str-slug)  <a href="#method-fluent-str-slug" id="method-fluent-str-slug"></a>
 
 The `slug` method generates a URL friendly "slug" from the given string:
 
@@ -2105,7 +2105,7 @@ $slug = Str::of('Laravel Framework')->slug('-');
 // laravel-framework
 ```
 
-[**`snake`**](strings.md#method-fluent-str-snake)
+[**`snake`**](strings.md#method-fluent-str-snake)  <a href="#method-fluent-str-snake" id="method-fluent-str-snake"></a>
 
 The `snake` method converts the given string to `snake_case`:
 
@@ -2115,7 +2115,7 @@ $converted = Str::of('fooBar')->snake();
 // foo_bar
 ```
 
-[**`split`**](strings.md#method-fluent-str-split)
+[**`split`**](strings.md#method-fluent-str-split)  <a href="#method-fluent-str-split" id="method-fluent-str-split"></a>
 
 The `split` method splits a string into a collection using a regular expression:
 
@@ -2125,7 +2125,7 @@ $segments = Str::of('one, two, three')->split('/[\s,]+/');
 // collect(["one", "two", "three"])
 ```
 
-[**`squish`**](strings.md#method-fluent-str-squish)
+[**`squish`**](strings.md#method-fluent-str-squish)  <a href="#method-fluent-str-squish" id="method-fluent-str-squish"></a>
 
 The `squish` method removes all extraneous white space from a string, including extraneous white space between words:
 
@@ -2135,7 +2135,7 @@ $string = Str::of('    laravel    framework    ')->squish();
 // laravel framework
 ```
 
-[**`start`**](strings.md#method-fluent-str-start)
+[**`start`**](strings.md#method-fluent-str-start)  <a href="#method-fluent-str-start" id="method-fluent-str-start"></a>
 
 The `start` method adds a single instance of the given value to a string if it does not already start with that value:
 
@@ -2147,7 +2147,7 @@ $adjusted = Str::of('/this/string')->start('/');
 // /this/string
 ```
 
-[**`startsWith`**](strings.md#method-fluent-str-starts-with)
+[**`startsWith`**](strings.md#method-fluent-str-starts-with)  <a href="#method-fluent-str-starts-with" id="method-fluent-str-starts-with"></a>
 
 The `startsWith` method determines if the given string begins with the given value:
 
@@ -2157,7 +2157,7 @@ $result = Str::of('This is my name')->startsWith('This');
 // true
 ```
 
-[**`stripTags`**](strings.md#method-fluent-str-strip-tags)
+[**`stripTags`**](strings.md#method-fluent-str-strip-tags)  <a href="#method-fluent-str-strip-tags" id="method-fluent-str-strip-tags"></a>
 
 The `stripTags` method removes all HTML and PHP tags from a string:
 
@@ -2169,7 +2169,7 @@ $result = Str::of('<a href="https://laravel.com">Taylor <b>Otwell</b></a>')->str
 // Taylor <b>Otwell</b>
 ```
 
-[**`studly`**](strings.md#method-fluent-str-studly)
+[**`studly`**](strings.md#method-fluent-str-studly)  <a href="#method-fluent-str-studly" id="method-fluent-str-studly"></a>
 
 The `studly` method converts the given string to `StudlyCase`:
 
@@ -2179,7 +2179,7 @@ $converted = Str::of('foo_bar')->studly();
 // FooBar
 ```
 
-[**`substr`**](strings.md#method-fluent-str-substr)
+[**`substr`**](strings.md#method-fluent-str-substr)  <a href="#method-fluent-str-substr" id="method-fluent-str-substr"></a>
 
 The `substr` method returns the portion of the string specified by the given start and length parameters:
 
@@ -2191,7 +2191,7 @@ $string = Str::of('Laravel Framework')->substr(8, 5);
 // Frame
 ```
 
-[**`substrReplace`**](strings.md#method-fluent-str-substrreplace)
+[**`substrReplace`**](strings.md#method-fluent-str-substrreplace)  <a href="#method-fluent-str-substrreplace" id="method-fluent-str-substrreplace"></a>
 
 The `substrReplace` method replaces text within a portion of a string, starting at the position specified by the second argument and replacing the number of characters specified by the third argument. Passing `0` to the method's third argument will insert the string at the specified position without replacing any of the existing characters in the string:
 
@@ -2203,7 +2203,7 @@ $string = Str::of('The Framework')->substrReplace(' Laravel', 3, 0);
 // The Laravel Framework
 ```
 
-[**`swap`**](strings.md#method-fluent-str-swap)
+[**`swap`**](strings.md#method-fluent-str-swap)  <a href="#method-fluent-str-swap" id="method-fluent-str-swap"></a>
 
 The `swap` method replaces multiple values in the string using PHP's `strtr` function:
 
@@ -2213,7 +2213,7 @@ $string = Str::of('Tacos are great!')    ->swap([        'Tacos' => 'Burritos', 
 // Burritos are fantastic!
 ```
 
-[**`take`**](strings.md#method-fluent-str-take)
+[**`take`**](strings.md#method-fluent-str-take)  <a href="#method-fluent-str-take" id="method-fluent-str-take"></a>
 
 The `take` method returns a specified number of characters from the beginning of the string:
 
@@ -2223,7 +2223,7 @@ $taken = Str::of('Build something amazing!')->take(5);
 // Build
 ```
 
-[**`tap`**](strings.md#method-fluent-str-tap)
+[**`tap`**](strings.md#method-fluent-str-tap)  <a href="#method-fluent-str-tap" id="method-fluent-str-tap"></a>
 
 The `tap` method passes the string to the given closure, allowing you to examine and interact with the string while not affecting the string itself. The original string is returned by the `tap` method regardless of what is returned by the closure:
 
@@ -2233,7 +2233,7 @@ $string = Str::of('Laravel')    ->append(' Framework')    ->tap(function (String
 // LARAVEL FRAMEWORK
 ```
 
-[**`test`**](strings.md#method-fluent-str-test)
+[**`test`**](strings.md#method-fluent-str-test)  <a href="#method-fluent-str-test" id="method-fluent-str-test"></a>
 
 The `test` method determines if a string matches the given regular expression pattern:
 
@@ -2243,7 +2243,7 @@ $result = Str::of('Laravel Framework')->test('/Laravel/');
 // true
 ```
 
-[**`title`**](strings.md#method-fluent-str-title)
+[**`title`**](strings.md#method-fluent-str-title)  <a href="#method-fluent-str-title" id="method-fluent-str-title"></a>
 
 The `title` method converts the given string to `Title Case`:
 
@@ -2253,7 +2253,7 @@ $converted = Str::of('a nice title uses the correct case')->title();
 // A Nice Title Uses The Correct Case
 ```
 
-[**`toBase64`**](strings.md#method-fluent-str-to-base64)
+[**`toBase64`**](strings.md#method-fluent-str-to-base64)  <a href="#method-fluent-str-to-base64" id="method-fluent-str-to-base64"></a>
 
 The `toBase64` method converts the given string to Base64:
 
@@ -2263,7 +2263,7 @@ $base64 = Str::of('Laravel')->toBase64();
 // TGFyYXZlbA==
 ```
 
-[**`toHtmlString`**](strings.md#method-fluent-str-to-html-string)
+[**`toHtmlString`**](strings.md#method-fluent-str-to-html-string)  <a href="#method-fluent-str-to-html-string" id="method-fluent-str-to-html-string"></a>
 
 The `toHtmlString` method converts the given string to an instance of `Illuminate\Support\HtmlString`, which will not be escaped when rendered in Blade templates:
 
@@ -2272,7 +2272,7 @@ use Illuminate\Support\Str;
 $htmlString = Str::of('Nuno Maduro')->toHtmlString();
 ```
 
-[**`transliterate`**](strings.md#method-fluent-str-transliterate)
+[**`transliterate`**](strings.md#method-fluent-str-transliterate)  <a href="#method-fluent-str-transliterate" id="method-fluent-str-transliterate"></a>
 
 The `transliterate` method will attempt to convert a given string into its closest ASCII representation:
 
@@ -2282,7 +2282,7 @@ $email = Str::of('ⓣⓔⓢⓣ@ⓛⓐⓡⓐⓥⓔⓛ.ⓒⓞⓜ')->transliterate(
 // 'test@laravel.com'
 ```
 
-[**`trim`**](strings.md#method-fluent-str-trim)
+[**`trim`**](strings.md#method-fluent-str-trim)  <a href="#method-fluent-str-trim" id="method-fluent-str-trim"></a>
 
 The `trim` method trims the given string. Unlike PHP's native `trim` function, Laravel's `trim` method also removes unicode whitespace characters:
 
@@ -2294,7 +2294,7 @@ $string = Str::of('/Laravel/')->trim('/');
 // 'Laravel'
 ```
 
-[**`ltrim`**](strings.md#method-fluent-str-ltrim)
+[**`ltrim`**](strings.md#method-fluent-str-ltrim)  <a href="#method-fluent-str-ltrim" id="method-fluent-str-ltrim"></a>
 
 The `ltrim` method trims the left side of the string. Unlike PHP's native `ltrim` function, Laravel's `ltrim` method also removes unicode whitespace characters:
 
@@ -2306,7 +2306,7 @@ $string = Str::of('/Laravel/')->ltrim('/');
 // 'Laravel/'
 ```
 
-[**`rtrim`**](strings.md#method-fluent-str-rtrim)
+[**`rtrim`**](strings.md#method-fluent-str-rtrim)  <a href="#method-fluent-str-rtrim" id="method-fluent-str-rtrim"></a>
 
 The `rtrim` method trims the right side of the given string. Unlike PHP's native `rtrim` function, Laravel's `rtrim` method also removes unicode whitespace characters:
 
@@ -2318,7 +2318,7 @@ $string = Str::of('/Laravel/')->rtrim('/');
 // '/Laravel'
 ```
 
-[**`ucfirst`**](strings.md#method-fluent-str-ucfirst)
+[**`ucfirst`**](strings.md#method-fluent-str-ucfirst)  <a href="#method-fluent-str-ucfirst" id="method-fluent-str-ucfirst"></a>
 
 The `ucfirst` method returns the given string with the first character capitalized:
 
@@ -2328,7 +2328,7 @@ $string = Str::of('foo bar')->ucfirst();
 // Foo bar
 ```
 
-[**`ucsplit`**](strings.md#method-fluent-str-ucsplit)
+[**`ucsplit`**](strings.md#method-fluent-str-ucsplit)  <a href="#method-fluent-str-ucsplit" id="method-fluent-str-ucsplit"></a>
 
 The `ucsplit` method splits the given string into a collection by uppercase characters:
 
@@ -2338,7 +2338,7 @@ $string = Str::of('Foo Bar')->ucsplit();
 // collect(['Foo', 'Bar'])
 ```
 
-[**`unwrap`**](strings.md#method-fluent-str-unwrap)
+[**`unwrap`**](strings.md#method-fluent-str-unwrap)  <a href="#method-fluent-str-unwrap" id="method-fluent-str-unwrap"></a>
 
 The `unwrap` method removes the specified strings from the beginning and end of a given string:
 
@@ -2350,7 +2350,7 @@ Str::of('{framework: "Laravel"}')->unwrap('{', '}');
 // framework: "Laravel"
 ```
 
-[**`upper`**](strings.md#method-fluent-str-upper)
+[**`upper`**](strings.md#method-fluent-str-upper)  <a href="#method-fluent-str-upper" id="method-fluent-str-upper"></a>
 
 The `upper` method converts the given string to uppercase:
 
@@ -2360,7 +2360,7 @@ $adjusted = Str::of('laravel')->upper();
 // LARAVEL
 ```
 
-[**`when`**](strings.md#method-fluent-str-when)
+[**`when`**](strings.md#method-fluent-str-when)  <a href="#method-fluent-str-when" id="method-fluent-str-when"></a>
 
 The `when` method invokes the given closure if a given condition is `true`. The closure will receive the fluent string instance:
 
@@ -2374,7 +2374,7 @@ return $string->append(' Otwell');
 
 If necessary, you may pass another closure as the third parameter to the `when` method. This closure will execute if the condition parameter evaluates to `false`.
 
-[**`whenContains`**](strings.md#method-fluent-str-when-contains)
+[**`whenContains`**](strings.md#method-fluent-str-when-contains)  <a href="#method-fluent-str-when-contains" id="method-fluent-str-when-contains"></a>
 
 The `whenContains` method invokes the given closure if the string contains the given value. The closure will receive the fluent string instance:
 
@@ -2394,7 +2394,7 @@ $string = Str::of('tony stark')            ->whenContains(['tony', 'hulk'], func
 // Tony Stark
 ```
 
-[**`whenContainsAll`**](strings.md#method-fluent-str-when-contains-all)
+[**`whenContainsAll`**](strings.md#method-fluent-str-when-contains-all)  <a href="#method-fluent-str-when-contains-all" id="method-fluent-str-when-contains-all"></a>
 
 The `whenContainsAll` method invokes the given closure if the string contains all of the given sub-strings. The closure will receive the fluent string instance:
 
@@ -2407,7 +2407,7 @@ return $string->title();                });
 
 If necessary, you may pass another closure as the third parameter to the `when` method. This closure will execute if the condition parameter evaluates to `false`.
 
-[**`whenEmpty`**](strings.md#method-fluent-str-when-empty)
+[**`whenEmpty`**](strings.md#method-fluent-str-when-empty)  <a href="#method-fluent-str-when-empty" id="method-fluent-str-when-empty"></a>
 
 The `whenEmpty` method invokes the given closure if the string is empty. If the closure returns a value, that value will also be returned by the `whenEmpty` method. If the closure does not return a value, the fluent string instance will be returned:
 
@@ -2417,7 +2417,7 @@ $string = Str::of('  ')->whenEmpty(function (Stringable $string) {    return $st
 // 'Laravel'
 ```
 
-[**`whenNotEmpty`**](strings.md#method-fluent-str-when-not-empty)
+[**`whenNotEmpty`**](strings.md#method-fluent-str-when-not-empty)  <a href="#method-fluent-str-when-not-empty" id="method-fluent-str-when-not-empty"></a>
 
 The `whenNotEmpty` method invokes the given closure if the string is not empty. If the closure returns a value, that value will also be returned by the `whenNotEmpty` method. If the closure does not return a value, the fluent string instance will be returned:
 
@@ -2427,7 +2427,7 @@ $string = Str::of('Framework')->whenNotEmpty(function (Stringable $string) {    
 // 'Laravel Framework'
 ```
 
-[**`whenStartsWith`**](strings.md#method-fluent-str-when-starts-with)
+[**`whenStartsWith`**](strings.md#method-fluent-str-when-starts-with)  <a href="#method-fluent-str-when-starts-with" id="method-fluent-str-when-starts-with"></a>
 
 The `whenStartsWith` method invokes the given closure if the string starts with the given sub-string. The closure will receive the fluent string instance:
 
@@ -2437,7 +2437,7 @@ $string = Str::of('disney world')->whenStartsWith('disney', function (Stringable
 // 'Disney World'
 ```
 
-[**`whenEndsWith`**](strings.md#method-fluent-str-when-ends-with)
+[**`whenEndsWith`**](strings.md#method-fluent-str-when-ends-with)  <a href="#method-fluent-str-when-ends-with" id="method-fluent-str-when-ends-with"></a>
 
 The `whenEndsWith` method invokes the given closure if the string ends with the given sub-string. The closure will receive the fluent string instance:
 
@@ -2447,7 +2447,7 @@ $string = Str::of('disney world')->whenEndsWith('world', function (Stringable $s
 // 'Disney World'
 ```
 
-[**`whenExactly`**](strings.md#method-fluent-str-when-exactly)
+[**`whenExactly`**](strings.md#method-fluent-str-when-exactly)  <a href="#method-fluent-str-when-exactly" id="method-fluent-str-when-exactly"></a>
 
 The `whenExactly` method invokes the given closure if the string exactly matches the given string. The closure will receive the fluent string instance:
 
@@ -2457,7 +2457,7 @@ $string = Str::of('laravel')->whenExactly('laravel', function (Stringable $strin
 // 'Laravel'
 ```
 
-[**`whenNotExactly`**](strings.md#method-fluent-str-when-not-exactly)
+[**`whenNotExactly`**](strings.md#method-fluent-str-when-not-exactly)  <a href="#method-fluent-str-when-not-exactly" id="method-fluent-str-when-not-exactly"></a>
 
 The `whenNotExactly` method invokes the given closure if the string does not exactly match the given string. The closure will receive the fluent string instance:
 
@@ -2467,7 +2467,7 @@ $string = Str::of('framework')->whenNotExactly('laravel', function (Stringable $
 // 'Framework'
 ```
 
-[**`whenIs`**](strings.md#method-fluent-str-when-is)
+[**`whenIs`**](strings.md#method-fluent-str-when-is)  <a href="#method-fluent-str-when-is" id="method-fluent-str-when-is"></a>
 
 The `whenIs` method invokes the given closure if the string matches a given pattern. Asterisks may be used as wildcard values. The closure will receive the fluent string instance:
 
@@ -2477,7 +2477,7 @@ $string = Str::of('foo/bar')->whenIs('foo/*', function (Stringable $string) {   
 // 'foo/bar/baz'
 ```
 
-[**`whenIsAscii`**](strings.md#method-fluent-str-when-is-ascii)
+[**`whenIsAscii`**](strings.md#method-fluent-str-when-is-ascii)  <a href="#method-fluent-str-when-is-ascii" id="method-fluent-str-when-is-ascii"></a>
 
 The `whenIsAscii` method invokes the given closure if the string is 7 bit ASCII. The closure will receive the fluent string instance:
 
@@ -2487,7 +2487,7 @@ $string = Str::of('laravel')->whenIsAscii(function (Stringable $string) {    ret
 // 'Laravel'
 ```
 
-[**`whenIsUlid`**](strings.md#method-fluent-str-when-is-ulid)
+[**`whenIsUlid`**](strings.md#method-fluent-str-when-is-ulid)  <a href="#method-fluent-str-when-is-ulid" id="method-fluent-str-when-is-ulid"></a>
 
 The `whenIsUlid` method invokes the given closure if the string is a valid ULID. The closure will receive the fluent string instance:
 
@@ -2497,7 +2497,7 @@ $string = Str::of('01gd6r360bp37zj17nxb55yv40')->whenIsUlid(function (Stringable
 // '01gd6r36'
 ```
 
-[**`whenIsUuid`**](strings.md#method-fluent-str-when-is-uuid)
+[**`whenIsUuid`**](strings.md#method-fluent-str-when-is-uuid)  <a href="#method-fluent-str-when-is-uuid" id="method-fluent-str-when-is-uuid"></a>
 
 The `whenIsUuid` method invokes the given closure if the string is a valid UUID. The closure will receive the fluent string instance:
 
@@ -2507,7 +2507,7 @@ $string = Str::of('a0a2a2d2-0b87-4a18-83f2-2529882be2de')->whenIsUuid(function (
 // 'a0a2a2d2'
 ```
 
-[**`whenTest`**](strings.md#method-fluent-str-when-test)
+[**`whenTest`**](strings.md#method-fluent-str-when-test)  <a href="#method-fluent-str-when-test" id="method-fluent-str-when-test"></a>
 
 The `whenTest` method invokes the given closure if the string matches the given regular expression. The closure will receive the fluent string instance:
 
@@ -2517,7 +2517,7 @@ $string = Str::of('laravel framework')->whenTest('/laravel/', function (Stringab
 // 'Laravel Framework'
 ```
 
-[**`wordCount`**](strings.md#method-fluent-str-word-count)
+[**`wordCount`**](strings.md#method-fluent-str-word-count)  <a href="#method-fluent-str-word-count" id="method-fluent-str-word-count"></a>
 
 The `wordCount` method returns the number of words that a string contains:
 
@@ -2526,7 +2526,7 @@ use Illuminate\Support\Str;
 Str::of('Hello, world!')->wordCount(); // 2
 ```
 
-[**`words`**](strings.md#method-fluent-str-words)
+[**`words`**](strings.md#method-fluent-str-words)  <a href="#method-fluent-str-words" id="method-fluent-str-words"></a>
 
 The `words` method limits the number of words in a string. If necessary, you may specify an additional string that will be appended to the truncated string:
 
@@ -2542,7 +2542,7 @@ $string = Str::of('Perfectly balanced, as all things should be.')->words(3, ' >>
 
 {% endcode %}
 
-[**`wrap`**](strings.md#method-fluent-str-wrap)
+[**`wrap`**](strings.md#method-fluent-str-wrap)  <a href="#method-fluent-str-wrap" id="method-fluent-str-wrap"></a>
 
 The `wrap` method wraps the given string with an additional string or pair of strings:
 
