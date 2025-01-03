@@ -39,6 +39,7 @@
 * [🔗 Token](the-basics/token.md)
 * [🕘 Message Queue](the-basics/message-queue.md)
 * [🖼️ Media](the-basics/media.md)
+* [Collections](the-basics/collections.md)
 
 ## Commerce Modules
 
