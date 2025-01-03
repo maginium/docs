@@ -14,6 +14,7 @@
 * [🔤 Strings](the-basics/strings.md)
 * [⚙️ Actions](the-basics/actions.md)
 * [🗃️ Cache](the-basics/cache.md)
+* [🗂️ Collections](the-basics/collections.md)
 * [🔲 Component](the-basics/component.md)
 * [⚙️ Config](the-basics/config.md)
 * [💬 Console](the-basics/console.md)
@@ -39,7 +40,6 @@
 * [🔗 Token](the-basics/token.md)
 * [🕘 Message Queue](the-basics/message-queue.md)
 * [🖼️ Media](the-basics/media.md)
-* [🗂️ Collections](the-basics/collections.md)
 
 ## Commerce Modules
 
