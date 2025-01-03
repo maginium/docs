@@ -1,2 +1,2 @@
-# Hashing
+# 🔐 Hashing
 

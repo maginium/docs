@@ -1,4 +1,4 @@
-# Strings
+# 🔤 Strings
 
 * [Introduction](strings.md#introduction)
 * [Available Methods](strings.md#available-methods)

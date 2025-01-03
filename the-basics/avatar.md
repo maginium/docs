@@ -1,2 +1,2 @@
-# Avatar
+# 👤 Avatar
 

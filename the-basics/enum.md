@@ -1,2 +1,2 @@
-# Enum
+# 🔠 Enum
 

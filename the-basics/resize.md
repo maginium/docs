@@ -1,2 +1,2 @@
-# Resize
+# 📏 Resize
 
