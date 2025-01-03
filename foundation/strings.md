@@ -11,54 +11,38 @@ Laravel includes a variety of functions for manipulating string values. Many of 
 
 #### [Strings](strings.md/strings/#strings-method-list) <a href="#strings-method-list" id="strings-method-list"></a>
 
-#### &#x20;<a href="#strings-method-list" id="strings-method-list"></a>
-
-<div style="display: flex; gap: 20px;">
-  <ul>
-    <li><a href="strings.md/strings#method-__">__</a></li>
-    <li><a href="strings.md/strings#method-class-basename">class_basename</a></li>
-    <li><a href="strings.md/strings#method-e">e</a></li>
-    <li><a href="strings.md/strings#method-preg-replace-array">preg_replace_array</a></li>
-    <li><a href="strings.md/strings#method-str-after">Str::after</a></li>
-    <li><a href="strings.md/strings#method-str-after-last">Str::afterLast</a></li>
-    <li><a href="strings.md/strings#method-str-apa">Str::apa</a></li>
-    <li><a href="strings.md/strings#method-str-ascii">Str::ascii</a></li>
-    <li><a href="strings.md/strings#method-str-before">Str::before</a></li>
-    <li><a href="strings.md/strings#method-str-before-last">Str::beforeLast</a></li>
-    <li><a href="strings.md/strings#method-str-between">Str::between</a></li>
-    <li><a href="strings.md/strings#method-str-between-first">Str::betweenFirst</a></li>
-    <li><a href="strings.md/strings#method-camel-case">Str::camel</a></li>
-    <li><a href="strings.md/strings#method-char-at">Str::charAt</a></li>
-    <li><a href="strings.md/strings#method-str-chop-start">Str::chopStart</a></li>
-    <li><a href="strings.md/strings#method-str-chop-end">Str::chopEnd</a></li>
-    <li><a href="strings.md/strings#method-str-contains">Str::contains</a></li>
-    <li><a href="strings.md/strings#method-str-contains-all">Str::containsAll</a></li>
-    <li><a href="strings.md/strings#method-str-doesnt-contain">Str::doesntContain</a></li>
-    <li><a href="strings.md/strings#method-deduplicate">Str::deduplicate</a></li>
-  </ul>
-  <ul>
-    <li><a href="strings.md/strings#method-ends-with">Str::endsWith</a></li>
-    <li><a href="strings.md/strings#method-excerpt">Str::excerpt</a></li>
-    <li><a href="strings.md/strings#method-str-finish">Str::finish</a></li>
-    <li><a href="strings.md/strings#method-str-headline">Str::headline</a></li>
-    <li><a href="strings.md/strings#method-str-inline-markdown">Str::inlineMarkdown</a></li>
-    <li><a href="strings.md/strings#method-str-is">Str::is</a></li>
-    <li><a href="strings.md/strings#method-str-is-ascii">Str::isAscii</a></li>
-    <li><a href="strings.md/strings#method-str-is-json">Str::isJson</a></li>
-    <li><a href="strings.md/strings#method-str-is-ulid">Str::isUlid</a></li>
-    <li><a href="strings.md/strings#method-str-is-url">Str::isUrl</a></li>
-    <li><a href="strings.md/strings#method-str-is-uuid">Str::isUuid</a></li>
-    <li><a href="strings.md/strings#method-kebab-case">Str::kebab</a></li>
-    <li><a href="strings.md/strings#method-str-lcfirst">Str::lcfirst</a></li>
-    <li><a href="strings.md/strings#method-str-length">Str::length</a></li>
-    <li><a href="strings.md/strings#method-str-limit">Str::limit</a></li>
-    <li><a href="strings.md/strings#method-str-lower">Str::lower</a></li>
-    <li><a href="strings.md/strings#method-str-markdown">Str::markdown</a></li>
-    <li><a href="strings.md/strings#method-str-mask">Str::mask</a></li>
-    <li><a href="strings.md/strings#method-str-ordered-uuid">Str::orderedUuid</a></li>
-    <li><a href="strings.md/strings#method-str-padboth">Str::padBoth</a></li>
-  </ul>
-</div>
+| Column 1                              | Column 2                              | Column 3                              |
+|---------------------------------------|---------------------------------------|---------------------------------------|
+| [__](strings.md/strings#method-__)    | [class_basename](strings.md/strings#method-class-basename) | [e](strings.md/strings#method-e) |
+| [preg_replace_array](strings.md/strings#method-preg-replace-array) | [Str::after](strings.md/strings#method-str-after) | [Str::afterLast](strings.md/strings#method-str-after-last) |
+| [Str::apa](strings.md/strings#method-str-apa) | [Str::ascii](strings.md/strings#method-str-ascii) | [Str::before](strings.md/strings#method-str-before) |
+| [Str::beforeLast](strings.md/strings#method-str-before-last) | [Str::between](strings.md/strings#method-str-between) | [Str::betweenFirst](strings.md/strings#method-str-between-first) |
+| [Str::camel](strings.md/strings#method-camel-case) | [Str::charAt](strings.md/strings#method-char-at) | [Str::chopStart](strings.md/strings#method-str-chop-start) |
+| [Str::chopEnd](strings.md/strings#method-str-chop-end) | [Str::contains](strings.md/strings#method-str-contains) | [Str::containsAll](strings.md/strings#method-str-contains-all) |
+| [Str::doesntContain](strings.md/strings#method-str-doesnt-contain) | [Str::deduplicate](strings.md/strings#method-deduplicate) | [Str::endsWith](strings.md/strings#method-ends-with) |
+| [Str::excerpt](strings.md/strings#method-excerpt) | [Str::finish](strings.md/strings#method-str-finish) | [Str::headline](strings.md/strings#method-str-headline) |
+| [Str::inlineMarkdown](strings.md/strings#method-str-inline-markdown) | [Str::is](strings.md/strings#method-str-is) | [Str::isAscii](strings.md/strings#method-str-is-ascii) |
+| [Str::isJson](strings.md/strings#method-str-is-json) | [Str::isUlid](strings.md/strings#method-str-is-ulid) | [Str::isUrl](strings.md/strings#method-str-is-url) |
+| [Str::isUuid](strings.md/strings#method-str-is-uuid) | [Str::kebab](strings.md/strings#method-kebab-case) | [Str::lcfirst](strings.md/strings#method-str-lcfirst) |
+| [Str::length](strings.md/strings#method-str-length) | [Str::limit](strings.md/strings#method-str-limit) | [Str::lower](strings.md/strings#method-str-lower) |
+| [Str::markdown](strings.md/strings#method-str-markdown) | [Str::mask](strings.md/strings#method-str-mask) | [Str::orderedUuid](strings.md/strings#method-str-ordered-uuid) |
+| [Str::padBoth](strings.md/strings#method-str-padboth) | [Str::padLeft](strings.md/strings#method-str-padleft) | [Str::padRight](strings.md/strings#method-str-padright) |
+| [Str::password](strings.md/strings#method-str-password) | [Str::plural](strings.md/strings#method-str-plural) | [Str::pluralStudly](strings.md/strings#method-str-plural-studly) |
+| [Str::position](strings.md/strings#method-str-position) | [Str::random](strings.md/strings#method-str-random) | [Str::remove](strings.md/strings#method-str-remove) |
+| [Str::repeat](strings.md/strings#method-str-repeat) | [Str::replace](strings.md/strings#method-str-replace) | [Str::replaceArray](strings.md/strings#method-str-replace-array) |
+| [Str::replaceFirst](strings.md/strings#method-str-replace-first) | [Str::replaceLast](strings.md/strings#method-str-replace-last) | [Str::replaceMatches](strings.md/strings#method-str-replace-matches) |
+| [Str::replaceStart](strings.md/strings#method-str-replace-start) | [Str::replaceEnd](strings.md/strings#method-str-replace-end) | [Str::reverse](strings.md/strings#method-str-reverse) |
+| [Str::singular](strings.md/strings#method-str-singular) | [Str::slug](strings.md/strings#method-str-slug) | [Str::snake](strings.md/strings#method-snake-case) |
+| [Str::squish](strings.md/strings#method-str-squish) | [Str::start](strings.md/strings#method-str-start) | [Str::startsWith](strings.md/strings#method-starts-with) |
+| [Str::studly](strings.md/strings#method-studly-case) | [Str::substr](strings.md/strings#method-str-substr) | [Str::substrCount](strings.md/strings#method-str-substrcount) |
+| [Str::substrReplace](strings.md/strings#method-str-substrreplace) | [Str::swap](strings.md/strings#method-str-swap) | [Str::take](strings.md/strings#method-take) |
+| [Str::title](strings.md/strings#method-title-case) | [Str::toBase64](strings.md/strings#method-str-to-base64) | [Str::transliterate](strings.md/strings#method-str-transliterate) |
+| [Str::trim](strings.md/strings#method-str-trim) | [Str::ltrim](strings.md/strings#method-str-ltrim) | [Str::rtrim](strings.md/strings#method-str-rtrim) |
+| [Str::ucfirst](strings.md/strings#method-str-ucfirst) | [Str::ucsplit](strings.md/strings#method-str-ucsplit) | [Str::upper](strings.md/strings#method-str-upper) |
+| [Str::ulid](strings.md/strings#method-str-ulid) | [Str::unwrap](strings.md/strings#method-str-unwrap) | [Str::uuid](strings.md/strings#method-str-uuid) |
+| [Str::wordCount](strings.md/strings#method-str-word-count) | [Str::wordWrap](strings.md/strings#method-str-word-wrap) | [Str::words](strings.md/strings#method-str-words) |
+| [Str::wrap](strings.md/strings#method-str-wrap) | [str](strings.md/strings#method-str) | [trans](strings.md/strings#method-trans) |
+| [trans_choice](strings.md/strings#method-trans-choice) |                                   |                                   |
 
 #### [Fluent Strings](strings.md/strings/#fluent-strings-method-list) <a href="#fluent-strings-method-list" id="fluent-strings-method-list"></a>
 
