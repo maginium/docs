@@ -1,8 +1,17 @@
 # 👤 Avatar
 
+* ​[Introduction](https://app.gitbook.com/o/-MPhpm6jDv_mkGK-DS4c/s/QUqmoTAixbfwsdTXwL2O/the-basics/concurrency#introduction)​
+* Usage
+
+## Introduction
+
+Display a unique avatar for any user based on their (initials) name.
+
 {% hint style="warning" %}
 This Module is inspired by [Laravolt](https://github.com/laravolt/avatar)
 {% endhint %}
+
+## Usage
 
 ### Output as base64
 
