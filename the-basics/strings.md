@@ -86,7 +86,7 @@ Laravel includes a variety of functions for manipulating string values. Many of 
 
 [**`__()`**](strings.md#method-__)
 
-The `__` function translates the given translation string or translation key using your [language files](../strings.md/localization/):
+The `__` function translates the given translation string or translation key using your [language files](../foundation/strings.md/localization/):
 
 ```php
 echo __('Welcome to our application');
@@ -681,7 +681,7 @@ $password = Str::password(12);
 
 [**`Str::plural()`**](strings.md#method-str-plural)
 
-The `Str::plural` method converts a singular word string to its plural form. This function supports [any of the languages support by Laravel's pluralizer](../strings.md/localization/#pluralization-language):
+The `Str::plural` method converts a singular word string to its plural form. This function supports [any of the languages support by Laravel's pluralizer](../foundation/strings.md/localization/#pluralization-language):
 
 ```php
 use Illuminate\Support\Str;
@@ -703,7 +703,7 @@ $singular = Str::plural('child', 1);
 
 [**`Str::pluralStudly()`**](strings.md#method-str-plural-studly)
 
-The `Str::pluralStudly` method converts a singular word string formatted in studly caps case to its plural form. This function supports [any of the languages support by Laravel's pluralizer](../strings.md/localization/#pluralization-language):
+The `Str::pluralStudly` method converts a singular word string formatted in studly caps case to its plural form. This function supports [any of the languages support by Laravel's pluralizer](../foundation/strings.md/localization/#pluralization-language):
 
 ```php
 use Illuminate\Support\Str;
@@ -882,7 +882,7 @@ $reversed = Str::reverse('Hello World');
 
 [**`Str::singular()`**](strings.md#method-str-singular)
 
-The `Str::singular` method converts a string to its singular form. This function supports [any of the languages support by Laravel's pluralizer](../strings.md/localization/#pluralization-language):
+The `Str::singular` method converts a string to its singular form. This function supports [any of the languages support by Laravel's pluralizer](../foundation/strings.md/localization/#pluralization-language):
 
 ```php
 use Illuminate\Support\Str;
@@ -1227,7 +1227,7 @@ $snake = str()->snake('FooBar');
 
 [**`trans()`**](strings.md#method-trans)
 
-The `trans` function translates the given translation key using your [language files](../strings.md/localization/):
+The `trans` function translates the given translation key using your [language files](../foundation/strings.md/localization/):
 
 ```php
 echo trans('messages.welcome');
@@ -1920,7 +1920,7 @@ $closure = Str::of('foo')->pipe(function (Stringable $str) {    return 'bar';});
 
 [**`plural`**](strings.md#method-fluent-str-plural)
 
-The `plural` method converts a singular word string to its plural form. This function supports [any of the languages support by Laravel's pluralizer](../strings.md/localization/#pluralization-language):
+The `plural` method converts a singular word string to its plural form. This function supports [any of the languages support by Laravel's pluralizer](../foundation/strings.md/localization/#pluralization-language):
 
 ```php
 use Illuminate\Support\Str;
@@ -2085,7 +2085,7 @@ $collection = Str::of('filename.jpg')->scan('%[^.].%s');
 
 [**`singular`**](strings.md#method-fluent-str-singular)
 
-The `singular` method converts a string to its singular form. This function supports [any of the languages support by Laravel's pluralizer](../strings.md/localization/#pluralization-language):
+The `singular` method converts a string to its singular form. This function supports [any of the languages support by Laravel's pluralizer](../foundation/strings.md/localization/#pluralization-language):
 
 ```php
 use Illuminate\Support\Str;
