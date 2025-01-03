@@ -242,8 +242,9 @@ The `forever` method may be used to store an item in the cache permanently. Sinc
 Cache::forever('key', 'value');
 ```
 
-> \[!NOTE]\
-> If you are using the Memcached driver, items that are stored "forever" may be removed when the cache reaches its size limit.
+{% hint style="info" %}
+If you are using the Memcached driver, items that are stored "forever" may be removed when the cache reaches its size limit.
+{% endhint %}
 
 #### [Removing Items From the Cache](cache.md#removing-items-from-the-cache)
 
@@ -267,8 +268,10 @@ You may clear the entire cache using the `flush` method:
 Cache::flush();
 ```
 
-> \[!WARNING]\
-> Flushing the cache does not respect your configured cache "prefix" and will remove all entries from the cache. Consider this carefully when clearing a cache which is shared by other applications.
+
+{% hint style="info" %}
+Flushing the cache does not respect your configured cache "prefix" and will remove all entries from the cache. Consider this carefully when clearing a cache which is shared by other applications.
+{% endhint %}
 
 #### [The Cache Helper](cache.md#the-cache-helper)
 
@@ -300,8 +303,9 @@ When testing calls to the global `cache` function, you may use the `Cache::shoul
 
 ## [Atomic Locks](cache.md#atomic-locks)
 
-> \[!WARNING]\
-> To utilize this feature, your application must be using the `memcached`, `redis`, `dynamodb`, `database`, `file`, or `array` cache driver as your application's default cache driver. In addition, all servers must be communicating with the same central cache server.
+{% hint style="info" %}
+To utilize this feature, your application must be using the `memcached`, `redis`, `dynamodb`, `database`, `file`, or `array` cache driver as your application's default cache driver. In addition, all servers must be communicating with the same central cache server.
+{% endhint %}
 
 #### [Managing Locks](cache.md#managing-locks)
 
