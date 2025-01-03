@@ -10,7 +10,7 @@
 
 ## The Basics
 
-* [🔄 Concurrency](the-basics/concurrency.md)
+* [Concurrency](the-basics/concurrency.md)
 * [🔤 Strings](the-basics/strings.md)
 * [⚙️ Actions](the-basics/actions.md)
 * [🗃️ Cache](the-basics/cache.md)
