@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Maginium Documentation](README.md)
-* [Welcome](readme-1.md)
+* [Welcome](README.md)
 
 ## Getting Started
 
