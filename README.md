@@ -5,7 +5,7 @@ icon: hand-wave
 
 # ReadMe
 
-You can find the online version of the Laravel documentation at \[[https://laravel.com/docs](https://pixiedia.gitbook.io/maginium)
+You can find the online version of the Laravel documentation at \[[https://pixiedia.gitbook.io/maginium](https://pixiedia.gitbook.io/maginium)
 
 ## Contribution Guidelines
 
