@@ -13,7 +13,7 @@
 
 ## [Introduction](collections.md#introduction) <a href="#introduction" id="introduction" name="introduction"></a>
 
-The `Illuminate\Support\Collection` class provides a fluent, convenient wrapper for working with arrays of data. For example, check out the following code. We'll use the `collect` helper to create a new collection instance from the array, run the `strtoupper` function on each element, and then remove all empty elements:
+The `Maginium\Framework\Support\Collection` class provides a fluent, convenient wrapper for working with arrays of data. For example, check out the following code. We'll use the `collect` helper to create a new collection instance from the array, run the `strtoupper` function on each element, and then remove all empty elements:
 
     $collection = collect(['taylor', 'abigail', null])->map(function (?string $name) {
         return strtoupper($name);
@@ -25,7 +25,7 @@ As you can see, the `Collection` class allows you to chain its methods to perfor
 
 ### [Creating Collections](collections.md#creating-collections) <a href="#creating-collections" id="creating-collections" name="creating-collections"></a>
 
-As mentioned above, the `collect` helper returns a new `Illuminate\Support\Collection` instance for the given array. So, creating a collection is as simple as:
+As mentioned above, the `collect` helper returns a new `Maginium\Framework\Support\Collection` instance for the given array. So, creating a collection is as simple as:
 
     $collection = collect([1, 2, 3]);
 
@@ -34,10 +34,10 @@ As mentioned above, the `collect` helper returns a new `Illuminate\Support\Colle
 
 ### [Extending Collections](collections.md#extending-collections) <a href="#extending-collections" id="extending-collections" name="extending-collections"></a>
 
-Collections are "macroable", which allows you to add additional methods to the `Collection` class at run time. The `Illuminate\Support\Collection` class' `macro` method accepts a closure that will be executed when your macro is called. The macro closure may access the collection's other methods via `$this`, just as if it were a real method of the collection class. For example, the following code adds a `toUpper` method to the `Collection` class:
+Collections are "macroable", which allows you to add additional methods to the `Collection` class at run time. The `Maginium\Framework\Support\Collection` class' `macro` method accepts a closure that will be executed when your macro is called. The macro closure may access the collection's other methods via `$this`, just as if it were a real method of the collection class. For example, the following code adds a `toUpper` method to the `Collection` class:
 
-    use Illuminate\Support\Collection;
-    use Illuminate\Support\Str;
+    use Maginium\Framework\Support\Collection;
+    use Maginium\Framework\Support\Str;
 
     Collection::macro('toUpper', function () {
         return $this->map(function (string $value) {
@@ -57,8 +57,8 @@ Typically, you should declare collection macros in the `boot` method of a [servi
 
 If necessary, you may define macros that accept additional arguments:
 
-    use Illuminate\Support\Collection;
-    use Illuminate\Support\Facades\Lang;
+    use Maginium\Framework\Support\Collection;
+    use Maginium\Framework\Support\Facades\Lang;
 
     Collection::macro('toLocale', function (string $locale) {
         return $this->map(function (string $value) use ($locale) {
@@ -89,154 +89,58 @@ For the majority of the remaining collection documentation, we'll discuss each m
 
 <div class="collection-method-list" markdown="1">
 
-[after](#method-after)
-[all](#method-all)
-[average](#method-average)
-[avg](#method-avg)
-[before](#method-before)
-[chunk](#method-chunk)
-[chunkWhile](#method-chunkwhile)
-[collapse](#method-collapse)
-[collect](#method-collect)
-[combine](#method-combine)
-[concat](#method-concat)
-[contains](#method-contains)
-[containsOneItem](#method-containsoneitem)
-[containsStrict](#method-containsstrict)
-[count](#method-count)
-[countBy](#method-countBy)
-[crossJoin](#method-crossjoin)
-[dd](#method-dd)
-[diff](#method-diff)
-[diffAssoc](#method-diffassoc)
-[diffAssocUsing](#method-diffassocusing)
-[diffKeys](#method-diffkeys)
-[doesntContain](#method-doesntcontain)
-[dot](#method-dot)
-[dump](#method-dump)
-[duplicates](#method-duplicates)
-[duplicatesStrict](#method-duplicatesstrict)
-[each](#method-each)
-[eachSpread](#method-eachspread)
-[ensure](#method-ensure)
-[every](#method-every)
-[except](#method-except)
-[filter](#method-filter)
-[first](#method-first)
-[firstOrFail](#method-first-or-fail)
-[firstWhere](#method-first-where)
-[flatMap](#method-flatmap)
-[flatten](#method-flatten)
-[flip](#method-flip)
-[forget](#method-forget)
-[forPage](#method-forpage)
-[get](#method-get)
-[groupBy](#method-groupby)
-[has](#method-has)
-[hasAny](#method-hasany)
-[implode](#method-implode)
-[intersect](#method-intersect)
-[intersectAssoc](#method-intersectAssoc)
-[intersectByKeys](#method-intersectbykeys)
-[isEmpty](#method-isempty)
-[isNotEmpty](#method-isnotempty)
-[join](#method-join)
-[keyBy](#method-keyby)
-[keys](#method-keys)
-[last](#method-last)
-[lazy](#method-lazy)
-[macro](#method-macro)
-[make](#method-make)
-[map](#method-map)
-[mapInto](#method-mapinto)
-[mapSpread](#method-mapspread)
-[mapToGroups](#method-maptogroups)
-[mapWithKeys](#method-mapwithkeys)
-[max](#method-max)
-[median](#method-median)
-[merge](#method-merge)
-[mergeRecursive](#method-mergerecursive)
-[min](#method-min)
-[mode](#method-mode)
-[multiply](#method-multiply)
-[nth](#method-nth)
-[only](#method-only)
-[pad](#method-pad)
-[partition](#method-partition)
-[percentage](#method-percentage)
-[pipe](#method-pipe)
-[pipeInto](#method-pipeinto)
-[pipeThrough](#method-pipethrough)
-[pluck](#method-pluck)
-[pop](#method-pop)
-[prepend](#method-prepend)
-[pull](#method-pull)
-[push](#method-push)
-[put](#method-put)
-[random](#method-random)
-[range](#method-range)
-[reduce](#method-reduce)
-[reduceSpread](#method-reduce-spread)
-[reject](#method-reject)
-[replace](#method-replace)
-[replaceRecursive](#method-replacerecursive)
-[reverse](#method-reverse)
-[search](#method-search)
-[select](#method-select)
-[shift](#method-shift)
-[shuffle](#method-shuffle)
-[skip](#method-skip)
-[skipUntil](#method-skipuntil)
-[skipWhile](#method-skipwhile)
-[slice](#method-slice)
-[sliding](#method-sliding)
-[sole](#method-sole)
-[some](#method-some)
-[sort](#method-sort)
-[sortBy](#method-sortby)
-[sortByDesc](#method-sortbydesc)
-[sortDesc](#method-sortdesc)
-[sortKeys](#method-sortkeys)
-[sortKeysDesc](#method-sortkeysdesc)
-[sortKeysUsing](#method-sortkeysusing)
-[splice](#method-splice)
-[split](#method-split)
-[splitIn](#method-splitin)
-[sum](#method-sum)
-[take](#method-take)
-[takeUntil](#method-takeuntil)
-[takeWhile](#method-takewhile)
-[tap](#method-tap)
-[times](#method-times)
-[toArray](#method-toarray)
-[toJson](#method-tojson)
-[transform](#method-transform)
-[undot](#method-undot)
-[union](#method-union)
-[unique](#method-unique)
-[uniqueStrict](#method-uniquestrict)
-[unless](#method-unless)
-[unlessEmpty](#method-unlessempty)
-[unlessNotEmpty](#method-unlessnotempty)
-[unwrap](#method-unwrap)
-[value](#method-value)
-[values](#method-values)
-[when](#method-when)
-[whenEmpty](#method-whenempty)
-[whenNotEmpty](#method-whennotempty)
-[where](#method-where)
-[whereStrict](#method-wherestrict)
-[whereBetween](#method-wherebetween)
-[whereIn](#method-wherein)
-[whereInStrict](#method-whereinstrict)
-[whereInstanceOf](#method-whereinstanceof)
-[whereNotBetween](#method-wherenotbetween)
-[whereNotIn](#method-wherenotin)
-[whereNotInStrict](#method-wherenotinstrict)
-[whereNotNull](#method-wherenotnull)
-[whereNull](#method-wherenull)
-[wrap](#method-wrap)
-[zip](#method-zip)
+| Column 1                              | Column 2                              | Column 3                              |
+|---------------------------------------|---------------------------------------|---------------------------------------|
+| [after](#method-after)                | [all](#method-all)                    | [average](#method-average)           |
+| [avg](#method-avg)                    | [before](#method-before)              | [chunk](#method-chunk)               |
+| [chunkWhile](#method-chunkwhile)      | [collapse](#method-collapse)          | [collect](#method-collect)           |
+| [combine](#method-combine)            | [concat](#method-concat)              | [contains](#method-contains)         |
+| [containsOneItem](#method-containsoneitem) | [containsStrict](#method-containsstrict) | [count](#method-count)           |
+| [countBy](#method-countBy)            | [crossJoin](#method-crossjoin)        | [dd](#method-dd)                     |
+| [diff](#method-diff)                  | [diffAssoc](#method-diffassoc)        | [diffAssocUsing](#method-diffassocusing) |
+| [diffKeys](#method-diffkeys)          | [doesntContain](#method-doesntcontain) | [dot](#method-dot)                 |
+| [dump](#method-dump)                  | [duplicates](#method-duplicates)      | [duplicatesStrict](#method-duplicatesstrict) |
+| [each](#method-each)                  | [eachSpread](#method-eachspread)      | [ensure](#method-ensure)             |
+| [every](#method-every)                | [except](#method-except)              | [filter](#method-filter)             |
+| [first](#method-first)                | [firstOrFail](#method-first-or-fail)  | [firstWhere](#method-first-where)    |
+| [flatMap](#method-flatmap)            | [flatten](#method-flatten)            | [flip](#method-flip)                 |
+| [forget](#method-forget)              | [forPage](#method-forpage)            | [get](#method-get)                   |
+| [groupBy](#method-groupby)            | [has](#method-has)                    | [hasAny](#method-hasany)             |
+| [implode](#method-implode)            | [intersect](#method-intersect)        | [intersectAssoc](#method-intersectAssoc) |
+| [intersectByKeys](#method-intersectbykeys) | [isEmpty](#method-isempty)        | [isNotEmpty](#method-isnotempty)     |
+| [join](#method-join)                  | [keyBy](#method-keyby)                | [keys](#method-keys)                 |
+| [last](#method-last)                  | [lazy](#method-lazy)                  | [macro](#method-macro)               |
+| [make](#method-make)                  | [map](#method-map)                    | [mapInto](#method-mapinto)           |
+| [mapSpread](#method-mapspread)        | [mapToGroups](#method-maptogroups)    | [mapWithKeys](#method-mapwithkeys)   |
+| [max](#method-max)                    | [median](#method-median)              | [merge](#method-merge)               |
+| [mergeRecursive](#method-mergerecursive) | [min](#method-min)                | [mode](#method-mode)                 |
+| [multiply](#method-multiply)          | [nth](#method-nth)                    | [only](#method-only)                 |
+| [pad](#method-pad)                    | [partition](#method-partition)        | [percentage](#method-percentage)     |
+| [pipe](#method-pipe)                  | [pipeInto](#method-pipeinto)          | [pipeThrough](#method-pipethrough)   |
+| [pluck](#method-pluck)                | [pop](#method-pop)                    | [prepend](#method-prepend)           |
+| [pull](#method-pull)                  | [push](#method-push)                  | [put](#method-put)                   |
+| [random](#method-random)              | [range](#method-range)                | [reduce](#method-reduce)             |
+| [reduceSpread](#method-reduce-spread) | [reject](#method-reject)              | [replace](#method-replace)           |
+| [replaceRecursive](#method-replacerecursive) | [reverse](#method-reverse)     | [search](#method-search)             |
+| [select](#method-select)              | [shift](#method-shift)                | [shuffle](#method-shuffle)           |
+| [skip](#method-skip)                  | [skipUntil](#method-skipuntil)        | [skipWhile](#method-skipwhile)       |
+| [slice](#method-slice)                | [sliding](#method-sliding)            | [sole](#method-sole)                 |
+| [some](#method-some)                  | [sort](#method-sort)                  | [sortBy](#method-sortby)             |
+| [sortByDesc](#method-sortbydesc)      | [sortDesc](#method-sortdesc)          | [sortKeys](#method-sortkeys)         |
+| [sortKeysDesc](#method-sortkeysdesc)  | [sortKeysUsing](#method-sortkeysusing) | [splice](#method-splice)            |
+| [split](#method-split)                | [splitIn](#method-splitin)            | [sum](#method-sum)                   |
+| [take](#method-take)                  | [takeUntil](#method-takeuntil)        | [takeWhile](#method-takewhile)       |
+| [tap](#method-tap)                    | [times](#method-times)                | [toArray](#method-toarray)           |
+| [toJson](#method-tojson)              | [transform](#method-transform)        | [undot](#method-undot)               |
+| [union](#method-union)                | [unique](#method-unique)              | [uniqueStrict](#method-uniquestrict) |
+| [unless](#method-unless)              | [unlessEmpty](#method-unlessempty)    | [unlessNotEmpty](#method-unlessnotempty) |
+| [unwrap](#method-unwrap)              | [value](#method-value)                | [values](#method-values)             |
+| [when](#method-when)                  | [whenEmpty](#method-whenempty)        | [whenNotEmpty](#method-whennotempty) |
+| [where](#method-where)                | [whereStrict](#method-wherestrict)    | [whereBetween](#method-wherebetween) |
+| [whereIn](#method-wherein)            | [whereInStrict](#method-whereinstrict) | [whereInstanceOf](#method-whereinstanceof) |
+| [whereNotBetween](#method-wherenotbetween) | [whereNotIn](#method-wherenotin) | [whereNotInStrict](#method-wherenotinstrict) |
+| [whereNotNull](#method-wherenotnull)  | [whereNull](#method-wherenull)        | [wrap](#method-wrap)                 |
+| [zip](#method-zip)                    |                                       |                                       |
 
 </div>
 
@@ -411,7 +315,7 @@ The `collect` method is primarily useful for converting [lazy collections](#lazy
 
     $collection::class;
 
-    // 'Illuminate\Support\Collection'
+    // 'Maginium\Framework\Support\Collection'
 
     $collection->all();
 
@@ -902,7 +806,7 @@ You may also call the `first` method with no arguments to get the first element 
 
 #### [`firstOrFail()` {.collection-method}](collections.md#method-first-or-fail) <a href="#method-first-or-fail" id="method-first-or-fail" name="method-first-or-fail"></a>
 
-The `firstOrFail` method is identical to the `first` method; however, if no result is found, an `Illuminate\Support\ItemNotFoundException` exception will be thrown:
+The `firstOrFail` method is identical to the `first` method; however, if no result is found, an `Maginium\Framework\Support\ItemNotFoundException` exception will be thrown:
 
     collect([1, 2, 3, 4])->firstOrFail(function (int $value, int $key) {
         return $value > 5;
@@ -910,7 +814,7 @@ The `firstOrFail` method is identical to the `first` method; however, if no resu
 
     // Throws ItemNotFoundException...
 
-You may also call the `firstOrFail` method with no arguments to get the first element in the collection. If the collection is empty, an `Illuminate\Support\ItemNotFoundException` exception will be thrown:
+You may also call the `firstOrFail` method with no arguments to get the first element in the collection. If the collection is empty, an `Maginium\Framework\Support\ItemNotFoundException` exception will be thrown:
 
     collect([])->firstOrFail();
 
@@ -1012,24 +916,24 @@ In this example, calling `flatten` without providing the depth would have also f
 
 The `flip` method swaps the collection's keys with their corresponding values:
 
-    $collection = collect(['name' => 'taylor', 'framework' => 'laravel']);
+    $collection = collect(['name' => 'taylor', 'framework' => 'maginium']);
 
     $flipped = $collection->flip();
 
     $flipped->all();
 
-    // ['taylor' => 'name', 'laravel' => 'framework']
+    // ['taylor' => 'name', 'maginium' => 'framework']
 
 #### [`forget()` {.collection-method}](collections.md#method-forget) <a href="#method-forget" id="method-forget" name="method-forget"></a>
 
 The `forget` method removes an item from the collection by its key:
 
-    $collection = collect(['name' => 'taylor', 'framework' => 'laravel']);
+    $collection = collect(['name' => 'taylor', 'framework' => 'maginium']);
 
     // Forget a single key...
     $collection->forget('name');
 
-    // ['framework' => 'laravel']
+    // ['framework' => 'maginium']
 
     // Forget multiple keys...
     $collection->forget(['name', 'framework']);
@@ -1055,7 +959,7 @@ The `forPage` method returns a new collection containing the items that would be
 
 The `get` method returns the item at a given key. If the key does not exist, `null` is returned:
 
-    $collection = collect(['name' => 'taylor', 'framework' => 'laravel']);
+    $collection = collect(['name' => 'taylor', 'framework' => 'maginium']);
 
     $value = $collection->get('name');
 
@@ -1063,7 +967,7 @@ The `get` method returns the item at a given key. If the key does not exist, `nu
 
 You may optionally pass a default value as the second argument:
 
-    $collection = collect(['name' => 'taylor', 'framework' => 'laravel']);
+    $collection = collect(['name' => 'taylor', 'framework' => 'maginium']);
 
     $value = $collection->get('age', 34);
 
@@ -1371,7 +1275,7 @@ The `lazy` method returns a new [`LazyCollection`](#lazy-collections) instance f
 
     $lazyCollection::class;
 
-    // Illuminate\Support\LazyCollection
+    // Maginium\Framework\Support\LazyCollection
 
     $lazyCollection->all();
 
@@ -1775,7 +1679,7 @@ The `pipeInto` method creates a new instance of the given class and passes the c
 
 The `pipeThrough` method passes the collection to the given array of closures and returns the result of the executed closures:
 
-    use Illuminate\Support\Collection;
+    use Maginium\Framework\Support\Collection;
 
     $collection = collect([1, 2, 3]);
 
@@ -1959,7 +1863,7 @@ If the collection instance has fewer items than requested, the `random` method w
 
 The `random` method also accepts a closure, which will receive the current collection instance:
 
-    use Illuminate\Support\Collection;
+    use Maginium\Framework\Support\Collection;
 
     $random = $collection->random(fn (Collection $items) => min(10, count($items)));
 
@@ -3290,7 +3194,7 @@ The `whereNull` method returns items from the collection where the given key is 
 
 The static `wrap` method wraps the given value in a collection when applicable:
 
-    use Illuminate\Support\Collection;
+    use Maginium\Framework\Support\Collection;
 
     $collection = Collection::wrap('John Doe');
 
@@ -3345,14 +3249,14 @@ Likewise, we can use the `sum` higher order message to gather the total number o
 ### [Introduction](collections.md#lazy-collection-introduction) <a href="#lazy-collection-introduction" id="lazy-collection-introduction" name="lazy-collection-introduction"></a>
 
 > [!WARNING]  
-> Before learning more about Laravel's lazy collections, take some time to familiarize yourself with [PHP generators](https://www.php.net/manual/en/language.generators.overview.php).
+> Before learning more about Maginium's lazy collections, take some time to familiarize yourself with [PHP generators](https://www.php.net/manual/en/language.generators.overview.php).
 
 To supplement the already powerful `Collection` class, the `LazyCollection` class leverages PHP's [generators](https://www.php.net/manual/en/language.generators.overview.php) to allow you to work with very large datasets while keeping memory usage low.
 
-For example, imagine your application needs to process a multi-gigabyte log file while taking advantage of Laravel's collection methods to parse the logs. Instead of reading the entire file into memory at once, lazy collections may be used to keep only a small part of the file in memory at a given time:
+For example, imagine your application needs to process a multi-gigabyte log file while taking advantage of Maginium's collection methods to parse the logs. Instead of reading the entire file into memory at once, lazy collections may be used to keep only a small part of the file in memory at a given time:
 
     use App\Models\LogEntry;
-    use Illuminate\Support\LazyCollection;
+    use Maginium\Framework\Support\LazyCollection;
 
     LazyCollection::make(function () {
         $handle = fopen('log.txt', 'r');
@@ -3366,7 +3270,7 @@ For example, imagine your application needs to process a multi-gigabyte log file
         // Process the log entry...
     });
 
-Or, imagine you need to iterate through 10,000 Eloquent models. When using traditional Laravel collections, all 10,000 Eloquent models must be loaded into memory at the same time:
+Or, imagine you need to iterate through 10,000 Eloquent models. When using traditional Maginium collections, all 10,000 Eloquent models must be loaded into memory at the same time:
 
     use App\Models\User;
 
@@ -3390,7 +3294,7 @@ However, the query builder's `cursor` method returns a `LazyCollection` instance
 
 To create a lazy collection instance, you should pass a PHP generator function to the collection's `make` method:
 
-    use Illuminate\Support\LazyCollection;
+    use Maginium\Framework\Support\LazyCollection;
 
     LazyCollection::make(function () {
         $handle = fopen('log.txt', 'r');
@@ -3402,7 +3306,7 @@ To create a lazy collection instance, you should pass a PHP generator function t
 
 ### [The Enumerable Contract](collections.md#the-enumerable-contract) <a href="#the-enumerable-contract" id="the-enumerable-contract" name="the-enumerable-contract"></a>
 
-Almost all methods available on the `Collection` class are also available on the `LazyCollection` class. Both of these classes implement the `Illuminate\Support\Enumerable` contract, which defines the following methods:
+Almost all methods available on the `Collection` class are also available on the `LazyCollection` class. Both of these classes implement the `Maginium\Framework\Support\Enumerable` contract, which defines the following methods:
 
 <style>
     .collection-method-list > p {
@@ -3562,11 +3466,11 @@ The `takeUntilTimeout` method returns a new lazy collection that will enumerate 
 To illustrate the usage of this method, imagine an application that submits invoices from the database using a cursor. You could define a [scheduled task](/docs/{{version}}/scheduling) that runs every 15 minutes and only processes invoices for a maximum of 14 minutes:
 
     use App\Models\Invoice;
-    use Illuminate\Support\Carbon;
+    use Maginium\Framework\Support\Carbon;
 
     Invoice::pending()->cursor()
         ->takeUntilTimeout(
-            Carbon::createFromTimestamp(LARAVEL_START)->add(14, 'minutes')
+            Carbon::createFromTimestamp(MAGINIUM_START)->add(14, 'minutes')
         )
         ->each(fn (Invoice $invoice) => $invoice->submit());
 
