@@ -12,7 +12,7 @@ Maginium's `Concurrency` facade is currently in beta while we gather community f
 
 Sometimes you may need to execute several slow tasks that do not depend on one another. In many cases, significant performance improvements can be realized by executing the tasks concurrently. Maginium's `Concurrency` facade provides a simple, convenient API for executing closures concurrently.
 
-[<mark style="background-color:green;">**Concurrency Compatibility**</mark>](concurrency.md#concurrency-compatibility)
+[<mark style="color:white;">**Concurrency Compatibility**</mark>](concurrency.md#concurrency-compatibility)
 
 Maginium extends the `Illuminate\Concurrency` classes to make it compatible with Maginium, a framework built on top of Magento 2. This integration enables Magento applications to leverage concurrency for better task execution.
 
