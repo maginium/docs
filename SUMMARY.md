@@ -1,6 +1,6 @@
 # Table of contents
 
-* [ReadMe](README.md)
+* [Laravel Documentation](README.md)
 * [Welcome](readme-1.md)
 
 ## Getting Started
